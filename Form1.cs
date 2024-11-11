@@ -15,6 +15,44 @@ namespace defaultwinform
         public Form1()
         {
             InitializeComponent();
+            this.Size = new Size(1111, 719);
+            this.MinimumSize = new Size(1111, 719);
+            this.MaximumSize = new Size(1111, 719);
+            this.CenterToScreen();
+        }
+
+        private void profileOverlay_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorPicker = new ColorDialog();
+
+            if (colorPicker.ShowDialog() == DialogResult.OK)
+            {
+                profileUnderlay.BackColor = colorPicker.Color;
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homeButton_MouseHover(object sender, EventArgs e)
+        {
+        }
+
+        private void leaderboardButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void leaderboardButton_MouseHover(object sender, EventArgs e)
+        {
+        }
+
+        private void shopButton_Click(object sender, EventArgs e)
+        {
+            Shop form = new Shop();
+            form.Show();
+            this.Close();
         }
     }
 }

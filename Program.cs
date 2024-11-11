@@ -16,7 +16,10 @@ namespace defaultwinform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            LoginForm loginFrm = new LoginForm();
+            loginFrm.Show();
+            Application.Run();
         }
     }
 }

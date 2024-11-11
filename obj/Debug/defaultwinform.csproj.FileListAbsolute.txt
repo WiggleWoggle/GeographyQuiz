@@ -1,0 +1,13 @@
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\defaultwinform.exe.config
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\defaultwinform.exe
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\defaultwinform.pdb
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.csproj.AssemblyReference.cache
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.Properties.Resources.resources
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.csproj.GenerateResource.cache
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.csproj.CoreCompileInputs.cache
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.exe
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.pdb
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.Form1.resources
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.LoginForm.resources
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.SignupForm.resources
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.Shop.resources
