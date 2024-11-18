@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,16 @@ namespace defaultwinform
             this.MinimumSize = new Size(1111, 719);
             this.MaximumSize = new Size(1111, 719);
             this.CenterToScreen();
+
+            String hashed = PasswordHandler.SHA256Hash("testpassword");
+
+            Console.WriteLine(hashed);
+
+            if (PasswordHandler.compareHashes("testpassword", hashed))
+            {
+
+                Console.WriteLine("Successful match!");
+            }
         }
 
         private void profileOverlay_Click(object sender, EventArgs e)

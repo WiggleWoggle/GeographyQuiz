@@ -11,3 +11,16 @@ D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.Form1.res
 D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.LoginForm.resources
 D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.SignupForm.resources
 D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.Shop.resources
+C:\Users\s195870\Source\Repos\GeographyQuiz\bin\Debug\defaultwinform.exe.config
+C:\Users\s195870\Source\Repos\GeographyQuiz\bin\Debug\defaultwinform.exe
+C:\Users\s195870\Source\Repos\GeographyQuiz\bin\Debug\defaultwinform.pdb
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.csproj.AssemblyReference.cache
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.Form1.resources
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.LoginForm.resources
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.Properties.Resources.resources
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.Shop.resources
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.SignupForm.resources
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.csproj.GenerateResource.cache
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.csproj.CoreCompileInputs.cache
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.exe
+C:\Users\s195870\Source\Repos\GeographyQuiz\obj\Debug\defaultwinform.pdb
