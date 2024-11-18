@@ -9,6 +9,41 @@ namespace defaultwinform
 {
     internal class PasswordHandler
     {
+
+        //Encryption and decryption
+        public static String encryptPassword(String password)
+        {
+
+            String sha256Step = SHA256Hash(password);
+            String base64Step = base64Encrypt(sha256Step);
+
+            return base64Step;
+        }
+
+        public static Boolean decryptPassword(String password, String encrypted)
+        {
+            String base64Step = base64Decrypt(encrypted);
+
+            if (compareHashes(password, base64Step))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        //Base 64 Encryption
+        public static String base64Encrypt(String hashed)
+        {
+            return "";
+        }
+
+        public static String base64Decrypt(String base64)
+        {
+            return "";
+        }
+
+        //SHA256 Encryption
         public static String SHA256Hash(String password)
         {
 
