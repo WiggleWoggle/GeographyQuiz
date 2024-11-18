@@ -14,17 +14,25 @@ namespace defaultwinform
         public static String encryptPassword(String password)
         {
 
-            String sha256Step = SHA256Hash(password);
-            String base64Step = base64Encrypt(sha256Step);
+            //convert the password to a base64 value first
+            String base64Step = base64Encrypt(password);
 
-            return base64Step;
+            //convert the base64 value to a sha256 encrypted value
+            String sha256Step = SHA256Hash(base64Step);
+
+            return sha256Step;
         }
 
         public static Boolean decryptPassword(String password, String encrypted)
         {
-            String base64Step = base64Decrypt(encrypted);
+            //convert the attempt password to a base64 value first
+            String base64Step = base64Encrypt(password);
 
-            if (compareHashes(password, base64Step))
+            //convert the base64 value to a sha256 encrypted value
+            String sha256Step = SHA256Hash(base64Step);
+
+            //see if repeating the process gave us the same value as the target value
+            if (compareHashes(password, sha256Step))
             {
                 return true;
             }
