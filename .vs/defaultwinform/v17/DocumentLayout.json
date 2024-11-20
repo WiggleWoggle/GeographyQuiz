@@ -70,12 +70,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -90,6 +86,10 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
@@ -99,8 +99,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T23:54:06.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T23:54:06.505Z"
             },
             {
               "$type": "Document",
@@ -111,8 +110,7 @@
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Shop.cs [Design]",
               "RelativeToolTip": "Shop.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:45:14.437Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-11T05:45:14.437Z"
             },
             {
               "$type": "Document",
@@ -124,8 +122,7 @@
               "RelativeToolTip": "Shop.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:47:06.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T05:47:06.56Z"
             },
             {
               "$type": "Document",
@@ -252,8 +249,7 @@
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T15:00:55.978Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-08T15:00:55.978Z"
             }
           ]
         }
