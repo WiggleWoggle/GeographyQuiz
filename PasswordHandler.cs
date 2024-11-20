@@ -43,12 +43,9 @@ namespace defaultwinform
         //Base 64 Encryption
         public static String base64Encrypt(String hashed)
         {
-            return "";
-        }
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(hashed);
 
-        public static String base64Decrypt(String base64)
-        {
-            return "";
+            return System.Convert.ToBase64String(plainTextBytes);
         }
 
         //SHA256 Encryption
