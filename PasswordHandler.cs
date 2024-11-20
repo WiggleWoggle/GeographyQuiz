@@ -32,7 +32,7 @@ namespace defaultwinform
             String sha256Step = SHA256Hash(base64Step);
 
             //see if repeating the process gave us the same value as the target value
-            if (compareHashes(password, sha256Step))
+            if (encrypted.Equals(sha256Step))
             {
                 return true;
             }
@@ -63,16 +63,6 @@ namespace defaultwinform
             }
 
             return stringBuilder.ToString();
-        }
-
-        public static Boolean compareHashes(String inputPassword, String registeredHash)
-        {
-            if (SHA256Hash(inputPassword).Equals(registeredHash))
-            {
-                return true;
-            }
-
-            return false;
         }
     }
 }

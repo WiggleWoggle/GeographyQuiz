@@ -21,11 +21,11 @@ namespace defaultwinform
             this.MaximumSize = new Size(1111, 719);
             this.CenterToScreen();
 
-            String hashed = PasswordHandler.SHA256Hash("testpassword");
+            String hashed = PasswordHandler.encryptPassword("testpassword");
 
             Console.WriteLine(hashed);
 
-            if (PasswordHandler.compareHashes("testpassword", hashed))
+            if (PasswordHandler.decryptPassword("testpassword", hashed))
             {
 
                 Console.WriteLine("Successful match!");
