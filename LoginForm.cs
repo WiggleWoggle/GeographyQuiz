@@ -46,6 +46,19 @@ namespace defaultwinform
         private void loginButton_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
+
+            String preCheckPassword = usernameField.Text;
+
+            //database call
+            if (preCheckPassword == "")
+            {
+                form.Show();
+                this.Close();
+            } else
+            {
+
+            }
+
             form.Show();
             this.Close();
         }

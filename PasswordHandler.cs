@@ -9,6 +9,35 @@ namespace defaultwinform
 {
     internal class PasswordHandler
     {
+        public static Boolean validPassword(String password)
+        {
+            if (min8Characters(password))
+            {
+                if (containsSymbols(password))
+                {
+                    if (containsNumbers(password))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+        public static Boolean containsSymbols(String password)
+        {
+            return true;
+        }
+
+        public static Boolean containsNumbers(String password)
+        {
+            return true;
+        }
+
+        public static Boolean min8Characters(String password)
+        {
+            return true;
+        }
 
         //Encryption and decryption
         public static String encryptPassword(String password)

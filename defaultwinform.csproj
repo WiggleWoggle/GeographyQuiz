@@ -58,6 +58,8 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MultipleAnswer.cs" />
+    <Compile Include="MultipleChoice.cs" />
     <Compile Include="PasswordHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Shop.Designer.cs">
       <DependentUpon>Shop.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShortResponse.cs" />
     <Compile Include="SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>

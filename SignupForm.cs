@@ -27,5 +27,23 @@ namespace defaultwinform
             form.Show();
             this.Close();
         }
+
+        private void signupButton_Click(object sender, EventArgs e)
+        {
+
+            Form1 form = new Form1();
+
+            String preCheckPassword = passwordField.Text;
+
+            if (PasswordHandler.validPassword(preCheckPassword))
+            {
+                form.Show();
+                this.Close();
+            }
+            else
+            {
+
+            }
+        }
     }
 }
