@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "defaultwinform", "defaultwi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9383A3F3-CDBA-4DD6-BEEE-8B79C8D36478}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProgramDatabase", "..\ProgramDatabase\ProgramDatabase.sqlproj", "{5BE675DE-1B36-4F14-A50B-8F9E15FDF08A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,12 @@ Global
 		{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE675DE-1B36-4F14-A50B-8F9E15FDF08A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE675DE-1B36-4F14-A50B-8F9E15FDF08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE675DE-1B36-4F14-A50B-8F9E15FDF08A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5BE675DE-1B36-4F14-A50B-8F9E15FDF08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE675DE-1B36-4F14-A50B-8F9E15FDF08A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE675DE-1B36-4F14-A50B-8F9E15FDF08A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -30,20 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignupForm));
             this.loginLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nameField = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.passwordField = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.login = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.signupButton = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usernameField = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.incorrectLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,15 +60,15 @@
             this.loginLabel.TabIndex = 1;
             this.loginLabel.Text = "Student Sign Up";
             // 
-            // textBox1
+            // nameField
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 24);
-            this.textBox1.TabIndex = 0;
+            this.nameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.nameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nameField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameField.Location = new System.Drawing.Point(147, 62);
+            this.nameField.Name = "nameField";
+            this.nameField.Size = new System.Drawing.Size(182, 24);
+            this.nameField.TabIndex = 0;
             // 
             // panel2
             // 
@@ -83,13 +84,13 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
             this.panel1.Controls.Add(this.passwordField);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.login);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.signupButton);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.usernameField);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.nameField);
             this.panel1.Location = new System.Drawing.Point(109, 214);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(369, 301);
@@ -115,17 +116,17 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Password: ";
             // 
-            // label4
+            // login
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(132)))), ((int)(((byte)(217)))));
-            this.label4.Location = new System.Drawing.Point(239, 255);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Log In";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.login.AutoSize = true;
+            this.login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline);
+            this.login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(132)))), ((int)(((byte)(217)))));
+            this.login.Location = new System.Drawing.Point(239, 255);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(43, 17);
+            this.login.TabIndex = 7;
+            this.login.Text = "Log In";
+            this.login.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -152,15 +153,15 @@
             this.signupButton.UseVisualStyleBackColor = false;
             this.signupButton.Click += new System.EventHandler(this.signupButton_Click);
             // 
-            // textBox2
+            // usernameField
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(147, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 24);
-            this.textBox2.TabIndex = 4;
+            this.usernameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.usernameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.usernameField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameField.Location = new System.Drawing.Point(147, 110);
+            this.usernameField.Name = "usernameField";
+            this.usernameField.Size = new System.Drawing.Size(182, 24);
+            this.usernameField.TabIndex = 4;
             // 
             // label2
             // 
@@ -212,12 +213,27 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "GeoMind";
             // 
+            // incorrectLabel
+            // 
+            this.incorrectLabel.AutoSize = true;
+            this.incorrectLabel.Enabled = false;
+            this.incorrectLabel.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.incorrectLabel.ForeColor = System.Drawing.Color.Red;
+            this.incorrectLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.incorrectLabel.Location = new System.Drawing.Point(106, 518);
+            this.incorrectLabel.Name = "incorrectLabel";
+            this.incorrectLabel.Size = new System.Drawing.Size(71, 17);
+            this.incorrectLabel.TabIndex = 10;
+            this.incorrectLabel.Text = "VisibleText";
+            this.incorrectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(578, 653);
+            this.Controls.Add(this.incorrectLabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
@@ -238,13 +254,13 @@
 
         #endregion
         private System.Windows.Forms.Label loginLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nameField;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label login;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button signupButton;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usernameField;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox passwordField;
@@ -252,5 +268,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label incorrectLabel;
     }
 }

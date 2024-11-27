@@ -20,16 +20,6 @@ namespace defaultwinform
             this.MinimumSize = new Size(1111, 719);
             this.MaximumSize = new Size(1111, 719);
             this.CenterToScreen();
-
-            String hashed = PasswordHandler.encryptPassword("testpassword");
-
-            Console.WriteLine(hashed);
-
-            if (PasswordHandler.decryptPassword("testpassword", hashed))
-            {
-
-                Console.WriteLine("Successful match!");
-            }
         }
 
         private void profileOverlay_Click(object sender, EventArgs e)

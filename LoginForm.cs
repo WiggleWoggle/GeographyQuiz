@@ -19,6 +19,9 @@ namespace defaultwinform
             this.Size = new Size(594, 692);
             this.MinimumSize = new Size(594, 692);
             this.MaximumSize = new Size(594, 692);
+
+            AccountDAO accountDAO = new AccountDAO();
+            accountDAO.getAccounts();
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -47,20 +50,33 @@ namespace defaultwinform
         {
             Form1 form = new Form1();
 
-            String preCheckPassword = usernameField.Text;
+            String inputtedUsername = usernameField.Text;
+            String inputtedPassword = passwordField.Text;
+            String encryptedPassword = PasswordHandler.encryptPassword(inputtedPassword);
 
             //database call
-            if (preCheckPassword == "")
-            {
-                form.Show();
-                this.Close();
-            } else
+
+            foreach (UserAccount account in AccountDAO.userAccounts)
             {
 
+                if (account.getUsername().Equals(usernameField.Text))
+                {
+                    if (account.getEncryptedPassword().Equals(encryptedPassword))
+                    {
+                        form.Show();
+                        this.Close();
+                    } else
+                    {
+
+                        incorrectLabel.Text = "THIS PASSWORD IS WRONG!";
+                    }
+                }
             }
+        }
 
-            form.Show();
-            this.Close();
+        private void incorrectLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

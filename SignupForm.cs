@@ -19,6 +19,8 @@ namespace defaultwinform
             this.Size = new Size(594, 692);
             this.MinimumSize = new Size(594, 692);
             this.MaximumSize = new Size(594, 692);
+
+            incorrectLabel.Text = " ";
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -34,15 +36,34 @@ namespace defaultwinform
             Form1 form = new Form1();
 
             String preCheckPassword = passwordField.Text;
+            String preCheckUsername = usernameField.Text;
+            String preCheckName = nameField.Text;
 
             if (PasswordHandler.validPassword(preCheckPassword))
             {
-                form.Show();
-                this.Close();
-            }
-            else
-            {
 
+                if (PasswordHandler.validUsername(preCheckUsername))
+                {
+                    if (PasswordHandler.validUsername(preCheckName))
+                    {
+
+                        AccountDAO accountDAO = new AccountDAO();
+
+                        //make the other constructor
+                        UserAccount newAccount = new UserAccount();
+                        newAccount.setName(preCheckName);
+                        newAccount.setUserName(preCheckUsername);
+                        newAccount.setEncryptedPassword(PasswordHandler.encryptPassword(preCheckPassword));
+
+                        accountDAO.addAccount(newAccount);
+
+                        form.Show();
+                        this.Close();
+                    }
+                }
+            } else
+            {
+                incorrectLabel.Text = PasswordHandler.passwordIssue;
             }
         }
     }

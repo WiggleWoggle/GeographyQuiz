@@ -33,7 +33,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.passwordField = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.usernameField = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.incorrectLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,7 +54,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.loginButton);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.passwordField);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.usernameField);
@@ -100,15 +100,15 @@
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
-            // textBox2
+            // passwordField
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(147, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 24);
-            this.textBox2.TabIndex = 4;
+            this.passwordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordField.Location = new System.Drawing.Point(147, 110);
+            this.passwordField.Name = "passwordField";
+            this.passwordField.Size = new System.Drawing.Size(182, 24);
+            this.passwordField.TabIndex = 4;
             // 
             // label2
             // 
@@ -191,17 +191,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label7
+            // incorrectLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Enabled = false;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.label7.ForeColor = System.Drawing.Color.IndianRed;
-            this.label7.Location = new System.Drawing.Point(221, 464);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "This password is incorrect!";
+            this.incorrectLabel.AutoSize = true;
+            this.incorrectLabel.Enabled = false;
+            this.incorrectLabel.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.incorrectLabel.ForeColor = System.Drawing.Color.IndianRed;
+            this.incorrectLabel.Location = new System.Drawing.Point(210, 464);
+            this.incorrectLabel.Name = "incorrectLabel";
+            this.incorrectLabel.Size = new System.Drawing.Size(0, 17);
+            this.incorrectLabel.TabIndex = 8;
+            this.incorrectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.incorrectLabel.Click += new System.EventHandler(this.incorrectLabel_Click);
             // 
             // LoginForm
             // 
@@ -209,7 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(578, 653);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.incorrectLabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
@@ -237,12 +238,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox usernameField;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox passwordField;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label incorrectLabel;
     }
 }
