@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|d:\\users\\sulvi\\documents\\github\\geographyquiz\\passwordhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:passwordhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|d:\\users\\sulvi\\documents\\github\\geographyquiz\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,17 +86,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "AccountDAO.cs",
               "DocumentMoniker": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\AccountDAO.cs",
               "RelativeDocumentMoniker": "AccountDAO.cs",
               "ToolTip": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\AccountDAO.cs",
               "RelativeToolTip": "AccountDAO.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwEsAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T04:29:25.497Z",
               "EditorCaption": ""
@@ -111,8 +111,7 @@
               "RelativeToolTip": "UserAccount.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAawCsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:29:44.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T05:29:44.802Z"
             },
             {
               "$type": "Document",
@@ -124,8 +123,7 @@
               "RelativeToolTip": "LoginForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T00:37:35.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T00:37:35.38Z"
             },
             {
               "$type": "Document",
@@ -137,8 +135,7 @@
               "RelativeToolTip": "MultipleChoice.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T16:21:19.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T16:21:19.745Z"
             },
             {
               "$type": "Document",
@@ -150,8 +147,7 @@
               "RelativeToolTip": "MultipleAnswer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T16:18:53.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T16:18:53.702Z"
             },
             {
               "$type": "Document",
@@ -163,12 +159,11 @@
               "RelativeToolTip": "ShortResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T15:22:37.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T15:22:37.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PasswordHandler.cs",
               "DocumentMoniker": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\PasswordHandler.cs",
               "RelativeDocumentMoniker": "PasswordHandler.cs",
@@ -189,8 +184,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T23:54:06.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T23:54:06.505Z"
             },
             {
               "$type": "Document",
@@ -201,8 +195,7 @@
               "ToolTip": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\Shop.cs [Design]",
               "RelativeToolTip": "Shop.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:45:14.437Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-11T05:45:14.437Z"
             },
             {
               "$type": "Document",
@@ -214,8 +207,7 @@
               "RelativeToolTip": "Shop.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:47:06.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T05:47:06.56Z"
             },
             {
               "$type": "Document",
@@ -227,8 +219,7 @@
               "RelativeToolTip": "TrueFalseQuestion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:34:25.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T05:34:25.592Z"
             },
             {
               "$type": "Document",
@@ -240,12 +231,11 @@
               "RelativeToolTip": "Question.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAkwC0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:31:18.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T05:31:18.835Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -253,12 +243,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T23:54:02.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T23:54:02.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SignupForm.cs",
               "DocumentMoniker": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\SignupForm.cs",
               "RelativeDocumentMoniker": "SignupForm.cs",
@@ -266,20 +255,18 @@
               "RelativeToolTip": "SignupForm.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T01:56:39.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T01:56:39.832Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SignupForm.cs [Design]",
               "DocumentMoniker": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\SignupForm.cs",
               "RelativeDocumentMoniker": "SignupForm.cs",
               "ToolTip": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\SignupForm.cs [Design]",
               "RelativeToolTip": "SignupForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T01:06:53.647Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-11T01:06:53.647Z"
             },
             {
               "$type": "Document",
@@ -290,8 +277,7 @@
               "ToolTip": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\LoginForm.cs [Design]",
               "RelativeToolTip": "LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T23:33:06.618Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-10T23:33:06.618Z"
             },
             {
               "$type": "Document",
@@ -303,8 +289,7 @@
               "RelativeToolTip": "Quiz.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T20:13:40.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T20:13:40.504Z"
             },
             {
               "$type": "Document",
@@ -316,8 +301,7 @@
               "RelativeToolTip": "RoundedPanel.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T19:42:54.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T19:42:54.428Z"
             },
             {
               "$type": "Document",
@@ -328,8 +312,7 @@
               "ToolTip": "D:\\Users\\sulvi\\Documents\\Github\\GeographyQuiz\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T15:00:55.978Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-08T15:00:55.978Z"
             }
           ]
         }
