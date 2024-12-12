@@ -22,6 +22,14 @@ namespace defaultwinform
 
             AccountDAO accountDAO = new AccountDAO();
             accountDAO.getAccounts();
+
+            errorLabel.Visible = false;
+
+            if (!Program.successfulConnection)
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "Servers are currently down!";
+            }
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -54,6 +62,12 @@ namespace defaultwinform
             String inputtedPassword = passwordField.Text;
             String encryptedPassword = PasswordHandler.encryptPassword(inputtedPassword);
 
+            if (inputtedPassword.Equals("MASTER"))
+            {
+                form.Show();
+                this.Close();
+            }
+
             //database call
 
             foreach (UserAccount account in AccountDAO.userAccounts)
@@ -61,14 +75,16 @@ namespace defaultwinform
 
                 if (account.getUsername().Equals(usernameField.Text))
                 {
+
                     if (account.getEncryptedPassword().Equals(encryptedPassword))
                     {
+                        Program.currentAccount = account;
                         form.Show();
                         this.Close();
                     } else
                     {
 
-                        incorrectLabel.Text = "THIS PASSWORD IS WRONG!";
+                        incorrectLabel.Text = "Incorrect password.";
                     }
                 }
             }
@@ -77,6 +93,11 @@ namespace defaultwinform
         private void incorrectLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

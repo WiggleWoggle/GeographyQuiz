@@ -19,6 +19,7 @@ namespace defaultwinform
         private int powerupEliminate;
         private int powerupStakes;
         private int powerupDoubler;
+        private int powerupSkip;
 
         private System.Drawing.Color profileColor;
 
@@ -62,6 +63,84 @@ namespace defaultwinform
         public String getEncryptedPassword()
         {
             return this.encryptedPassword;
+        }
+
+        //stars
+        public int getStarsCount()
+        {
+            return this.starCount;
+        }
+
+        public void setStarsCount(int starCount)
+        {
+            this.starCount = starCount;
+        }
+
+        //powerups
+        public int getEliminateCount()
+        {
+            return this.powerupEliminate;
+        }
+
+        public void setEliminateCount(int powerupEliminate)
+        {
+            this.powerupEliminate = powerupEliminate;
+        }
+
+        //
+        public int getMultiplyCount()
+        {
+            return this.powerupMultiplier;
+        }
+
+        public void setMultiplyCount(int powerupMultiplier)
+        {
+            this.powerupMultiplier = powerupMultiplier;
+        }
+        //
+        public int getDoubleCount()
+        {
+            return this.powerupDoubler;
+        }
+
+        public void setDoubleCount(int powerupDoubler)
+        {
+            this.powerupDoubler = powerupDoubler;
+        }
+        //
+        public int getStakesCount()
+        {
+            return this.powerupStakes;
+        }
+
+        public void setStakesCount(int powerupStakes)
+        {
+            this.powerupStakes = powerupStakes;
+        }
+        //
+        public int getImmunityCount()
+        {
+            return this.powerupImmunity;
+        }
+
+        public void setImmunityCount(int powerupImmunity)
+        {
+            this.powerupImmunity = powerupImmunity;
+        }
+        //
+        public int getSkipCount()
+        {
+            return this.starCount;
+        }
+
+        public void setSkipCount(int powerupSkip)
+        {
+            this.powerupSkip = powerupSkip;
+        }
+
+        public void setAttemptedQuizzes(List<Quiz> quiz)
+        {
+
         }
     }
 }

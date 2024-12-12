@@ -8,6 +8,10 @@ namespace defaultwinform
 {
     internal static class Program
     {
+
+        public static Boolean successfulConnection = true;
+        public static UserAccount currentAccount = null;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

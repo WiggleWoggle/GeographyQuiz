@@ -22,8 +22,6 @@ namespace defaultwinform
 
             MySqlConnection connection = new MySqlConnection(connectionString);
 
-            Boolean successfulConnection = true;
-
             try
             {
                 connection.Open();
@@ -31,11 +29,11 @@ namespace defaultwinform
             catch (Exception ex)
             {
                 //server down
-                successfulConnection = false;
+                Program.successfulConnection = false;
                 Console.Write("FALLBACK");
             }
 
-            if (successfulConnection) {
+            if (Program.successfulConnection) {
                 MySqlCommand command = new MySqlCommand("SELECT * FROM USERACCOUNT", connection);
 
                 using (MySqlDataReader reader = command.ExecuteReader())
