@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,27 +22,40 @@ namespace defaultwinform
 
             MySqlConnection connection = new MySqlConnection(connectionString);
 
-            connection.Open();
+            Boolean successfulConnection = true;
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM USERACCOUNT", connection);
-
-            using (MySqlDataReader reader = command.ExecuteReader())
+            try
             {
-
-                while (reader.Read())
-                {
-
-                    UserAccount account = new UserAccount();
-
-                    account.setName(reader.GetString(1));
-                    account.setUserName(reader.GetString(2));
-                    account.setEncryptedPassword(reader.GetString(3));
-
-                    userAccounts.Add(account);
-                }
+                connection.Open();
+            }
+            catch (Exception ex)
+            {
+                //server down
+                successfulConnection = false;
+                Console.Write("FALLBACK");
             }
 
-            connection.Close();
+            if (successfulConnection) {
+                MySqlCommand command = new MySqlCommand("SELECT * FROM USERACCOUNT", connection);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+
+                    while (reader.Read())
+                    {
+
+                        UserAccount account = new UserAccount();
+
+                        account.setName(reader.GetString(1));
+                        account.setUserName(reader.GetString(2));
+                        account.setEncryptedPassword(reader.GetString(3));
+
+                        userAccounts.Add(account);
+                    }
+                }
+
+                connection.Close();
+            }
         }
 
         public void addAccount(UserAccount importedAccount)
