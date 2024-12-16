@@ -12,10 +12,11 @@ namespace defaultwinform
         private String URLString;
         private int starValue;
 
-        public Question(String question, int starValue) {
+        public Question(String question, int starValue, String URLString) {
         
             this.question = question;
             this.starValue = starValue;
+            this.URLString = URLString;
         }
 
         public String getQuestion()

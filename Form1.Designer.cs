@@ -41,25 +41,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.homeButton = new System.Windows.Forms.PictureBox();
             this.todoFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.studentNameDisplay = new System.Windows.Forms.Label();
             this.todoLabel = new System.Windows.Forms.Label();
             this.profileUnderlay = new defaultwinform.RoundedPanel();
             this.profileOverlay = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.completedFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teachersButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradesButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeButton)).BeginInit();
-            this.todoFlowLayout.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.profileUnderlay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileOverlay)).BeginInit();
             this.SuspendLayout();
@@ -191,34 +184,10 @@
             // todoFlowLayout
             // 
             this.todoFlowLayout.AutoScroll = true;
-            this.todoFlowLayout.Controls.Add(this.panel2);
             this.todoFlowLayout.Location = new System.Drawing.Point(143, 111);
             this.todoFlowLayout.Name = "todoFlowLayout";
             this.todoFlowLayout.Size = new System.Drawing.Size(940, 220);
             this.todoFlowLayout.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 207);
-            this.panel2.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // studentNameDisplay
             // 
@@ -268,47 +237,28 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(3, 128);
+            this.label6.Location = new System.Drawing.Point(139, 345);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 23);
+            this.label6.Size = new System.Drawing.Size(121, 23);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Quiz4";
+            this.label6.Text = "Completed:";
             // 
-            // label7
+            // completedFlowLayout
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label7.Location = new System.Drawing.Point(3, 153);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 19);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Topic: State Geography";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label8.Location = new System.Drawing.Point(3, 177);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 19);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "20 Questions";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label9.Location = new System.Drawing.Point(130, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 19);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Unattempted";
+            this.completedFlowLayout.AutoScroll = true;
+            this.completedFlowLayout.Location = new System.Drawing.Point(143, 373);
+            this.completedFlowLayout.Name = "completedFlowLayout";
+            this.completedFlowLayout.Size = new System.Drawing.Size(940, 220);
+            this.completedFlowLayout.TabIndex = 4;
             // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1095, 680);
+            this.Controls.Add(this.completedFlowLayout);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.todoLabel);
             this.Controls.Add(this.studentNameDisplay);
             this.Controls.Add(this.todoFlowLayout);
@@ -324,10 +274,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.shopButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeButton)).EndInit();
-            this.todoFlowLayout.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.profileUnderlay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.profileOverlay)).EndInit();
             this.ResumeLayout(false);
@@ -352,12 +298,8 @@
         private System.Windows.Forms.FlowLayoutPanel todoFlowLayout;
         private System.Windows.Forms.Label studentNameDisplay;
         private System.Windows.Forms.Label todoLabel;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.FlowLayoutPanel completedFlowLayout;
     }
 }
 

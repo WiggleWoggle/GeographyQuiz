@@ -119,6 +119,13 @@
     <Compile Include="Question.cs" />
     <Compile Include="Quiz.cs" />
     <Compile Include="QuizDAO.cs" />
+    <Compile Include="QuizPanel.cs" />
+    <Compile Include="QuizTakingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuizTakingForm.Designer.cs">
+      <DependentUpon>QuizTakingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -152,6 +159,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuizTakingForm.resx">
+      <DependentUpon>QuizTakingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,9 @@ namespace defaultwinform
         private Boolean isTrue;
         private int starValue;
 
-        public TrueFalseQuestion(string question, int starValue) : base(question, starValue)
+        public TrueFalseQuestion(string question, int starValue, String URLString) : base(question, starValue, URLString)
         {
+            setURLString(URLString);
             this.question = question;
             this.starValue = starValue;
         }

@@ -13,6 +13,7 @@ namespace defaultwinform
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -56,13 +57,48 @@ namespace defaultwinform
                 Label quizTopic = new Label();
                 quizTopic.Text = "Topic: " + quiz.getTopic();
                 quizTopic.Font = new Font("Century Gothic", 10);
+                quizTopic.Size = new Size(quizTopic.Size.Width + 100, quizTopic.Size.Height);
                 quizTopic.Location = new Point(2, 155);
+
+                Label questionCount = new Label();
+                questionCount.Text = quiz.getQuestions().Count + "";
+
+                if (quiz.getQuestions().Count != 1)
+                {
+                    questionCount.Text += " Questions";
+                } else
+                {
+                    questionCount.Text += " Question";
+                }
+
+                questionCount.Font = new Font("Century Gothic", 10);
+                questionCount.Location = new Point(2, 178);
+
+                Label attemptedStatus = new Label();
+                attemptedStatus.Text = "Unattempted";
+                attemptedStatus.Font = new Font("Century Gothic", 10);
+                attemptedStatus.TextAlign = ContentAlignment.MiddleRight;
+                attemptedStatus.Size = new Size(attemptedStatus.Size.Width + 40, attemptedStatus.Size.Height);
+                attemptedStatus.Location = new Point(90, 127);
 
                 panel.Controls.Add(pictureBox);
                 panel.Controls.Add(quizName);
                 panel.Controls.Add(quizTopic);
+                panel.Controls.Add(questionCount);
+                panel.Controls.Add(attemptedStatus);
 
                 todoFlowLayout.Controls.Add(panel);
+
+                QuizPanel quizPanel = new QuizPanel(quiz, panel, quizName, questionCount, quizTopic, attemptedStatus, pictureBox);
+
+                QuizDAO.addQuizPanel(quizPanel);
+
+                panel.Click += openQuiz;
+                questionCount.Click += openQuiz;
+                quizName.Click += openQuiz;
+                quizTopic.Click += openQuiz;
+                attemptedStatus.Click += openQuiz;
+                pictureBox.Click += openQuiz;
             }
         }
 
@@ -74,6 +110,13 @@ namespace defaultwinform
             {
                 profileUnderlay.BackColor = colorPicker.Color;
             }
+        }
+
+        private void openQuiz(object sender, EventArgs e)
+        {
+            QuizTakingForm form = new QuizTakingForm();
+            form.Show();
+            this.Close();
         }
 
         private void label5_Click(object sender, EventArgs e)

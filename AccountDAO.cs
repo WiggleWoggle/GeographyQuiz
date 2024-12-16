@@ -63,11 +63,11 @@ namespace defaultwinform
             String username = importedAccount.getUsername();
             String encryptedPassword = importedAccount.getEncryptedPassword();
 
-            int stars = 0;
-            int skips = 0;
-            int eliminates = 0;
-            int doubles = 0;
-            int multipliers = 0;
+            int stars = importedAccount.getStarsCount();
+            int skips = importedAccount.getSkipCount();
+            int eliminates = importedAccount.getEliminateCount();
+            int doubles = importedAccount.getDoubleCount();
+            int multipliers = importedAccount.getMultiplyCount();
 
             MySqlConnection connection = new MySqlConnection(connectionString);
 

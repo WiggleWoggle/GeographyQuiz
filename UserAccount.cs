@@ -8,18 +8,18 @@ namespace defaultwinform
 {
     internal class UserAccount
     {
-        private String name;
-        private String username;
-        private String encryptedPassword;
+        private String name = "";
+        private String username = "";
+        private String encryptedPassword = "";
 
-        private int starCount;
+        private int starCount = 0;
 
-        private int powerupMultiplier;
-        private int powerupImmunity;
-        private int powerupEliminate;
-        private int powerupStakes;
-        private int powerupDoubler;
-        private int powerupSkip;
+        private int powerupMultiplier = 0;
+        private int powerupImmunity = 0;
+        private int powerupEliminate = 0;
+        private int powerupStakes = 0;
+        private int powerupDoubler = 0;
+        private int powerupSkip = 0;
 
         private System.Drawing.Color profileColor;
 

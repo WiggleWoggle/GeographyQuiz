@@ -9,7 +9,7 @@ namespace defaultwinform
 {
     internal class Quiz
     {
-        List<Question> questions;
+        List<Question> questions = new List<Question>();
         String imageURL;
         String topic;
 
