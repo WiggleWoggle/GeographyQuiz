@@ -13,11 +13,12 @@ namespace defaultwinform
         private Boolean isTrue;
         private int starValue;
 
-        public TrueFalseQuestion(string question, int starValue, String URLString) : base(question, starValue, URLString)
+        public TrueFalseQuestion(string question, int starValue, Boolean isTrue, String URLString) : base(question, starValue, URLString)
         {
             setURLString(URLString);
             this.question = question;
             this.starValue = starValue;
+            this.isTrue = isTrue;
         }
 
         public void SetTrue()

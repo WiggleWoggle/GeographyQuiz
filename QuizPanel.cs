@@ -34,5 +34,15 @@ namespace defaultwinform
             this.attemptedStatus = attemptedStatus;
             this.associatedQuiz = associatedQuiz;
         }
+
+        public Label getTitle()
+        {
+            return title;
+        }
+
+        public Label getTopic()
+        {
+            return topic;
+        }
     }
 }

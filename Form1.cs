@@ -114,9 +114,27 @@ namespace defaultwinform
 
         private void openQuiz(object sender, EventArgs e)
         {
-            QuizTakingForm form = new QuizTakingForm();
-            form.Show();
-            this.Close();
+
+            foreach (Quiz quiz in QuizDAO.getQuizzes())
+            {
+
+                foreach (QuizPanel panel in QuizDAO.getQuizPanels())
+                {
+
+                    if (panel.getTopic().Text.Contains(quiz.getTopic()))
+                    {
+                        QuizDAO.setCurrentQuiz(quiz);
+
+                        Console.Write("FOUND QUIZ");
+
+
+                        QuizTakingForm form = new QuizTakingForm();
+
+                        form.Show();
+                        this.Close();
+                    }
+                }
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)

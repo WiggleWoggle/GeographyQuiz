@@ -9,7 +9,7 @@ namespace defaultwinform
     internal class QuizDAO
     {
 
-        public static List<QuizPanel> quizPanels = new List<QuizPanel>();
+        private static List<QuizPanel> quizPanels = new List<QuizPanel>();
 
         private static List<Quiz> assignedQuizzes = new List<Quiz>();
 
@@ -31,8 +31,8 @@ namespace defaultwinform
             quiz.setTopic("State Geography");
             quiz.setImage("https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop");
 
-            MultipleChoice question = new MultipleChoice("What type of geographic feature is this?", 1, "", null, "TEST");
-            quiz.addQuestion(question);
+            quiz.addQuestion(new MultipleChoice("What type of geographic feature is this?", 1, "", null, "TEST"));
+            quiz.addQuestion(new TrueFalseQuestion("Mountains are a geography feature", 1, true, ""));
 
             assignedQuizzes.Add(quiz);
         }
@@ -42,10 +42,25 @@ namespace defaultwinform
             return assignedQuizzes;
         }
 
+        public static List<QuizPanel> getQuizPanels()
+        {
+            return quizPanels;
+        }
+
         public static void addQuizPanel(QuizPanel quizPanel)
         {
 
             quizPanels.Add(quizPanel);
+        }
+
+        public static void setCurrentQuiz(Quiz quiz)
+        {
+            currentQuiz = quiz;
+        }
+
+        public static Quiz getCurrentQuiz()
+        {
+            return currentQuiz;
         }
     }
 }

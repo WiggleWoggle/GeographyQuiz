@@ -64,6 +64,9 @@ namespace defaultwinform
 
             if (inputtedPassword.Equals("MASTER"))
             {
+
+                Program.currentAccount = new UserAccount();
+
                 form.Show();
                 this.Close();
             }

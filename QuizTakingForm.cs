@@ -13,6 +13,12 @@ namespace defaultwinform
     public partial class QuizTakingForm : Form
     {
 
+        private Quiz currentQuiz;
+
+        private int currentQuestion;
+
+        private int questionCount;
+
         public QuizTakingForm()
         {
             InitializeComponent();
@@ -21,12 +27,36 @@ namespace defaultwinform
             this.MaximumSize = new Size(1111, 758);
             this.CenterToScreen();
 
-            disableAllButtons();
+            immunityCount.Text = Program.currentAccount.getImmunityCount() + "";
+            highStakesCount.Text = Program.currentAccount.getStakesCount() + "";
+            doubleStarsCount.Text = Program.currentAccount.getDoubleCount() + "";
+            multiplierCount.Text = Program.currentAccount.getMultiplyCount() + "";
+            skipCount.Text = Program.currentAccount.getSkipCount() + "";
+            eliminateCount.Text = Program.currentAccount.getEliminateCount() + "";
+
+            currentQuiz = QuizDAO.getCurrentQuiz();
+
+            questionCount = currentQuiz.getQuestions().Count;
+            currentQuestion = 0;
+
+            buildToQuestion();
         }
 
         private void buildToQuestion()
         {
-            
+
+            disableAllButtons();
+
+            if (currentQuiz.getQuestion(currentQuestion) is MultipleChoice) {
+
+                enableMultipleChoiceButtons();
+            }
+
+            if (currentQuiz.getQuestion(currentQuestion) is TrueFalseQuestion)
+            {
+
+                enableTrueOrFalseButtons();
+            }
         }
 
         private void disableAllButtons()
@@ -60,6 +90,16 @@ namespace defaultwinform
 
             truePanel.Visible = true;
             falsePanel.Visible = true;
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            if ((currentQuestion + 1) < questionCount)
+            {
+                currentQuestion++;
+
+                buildToQuestion();
+            }
         }
     }
 }
