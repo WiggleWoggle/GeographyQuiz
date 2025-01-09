@@ -125,7 +125,7 @@ namespace defaultwinform
                     {
                         QuizDAO.setCurrentQuiz(quiz);
 
-                        Console.Write("FOUND QUIZ");
+                        //Console.Write("FOUND QUIZ");
 
 
                         QuizTakingForm form = new QuizTakingForm();

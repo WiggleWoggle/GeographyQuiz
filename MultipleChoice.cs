@@ -32,5 +32,25 @@ namespace defaultwinform
         {
             return choices;
         }
+
+        public String getFirstChoice()
+        {
+            return choices[0];
+        }
+
+        public String getSecondChoice()
+        {
+            return choices[1];
+        }
+
+        public String getThirdChoice()
+        {
+            return choices[2];
+        }
+
+        public String getFourthChoice()
+        {
+            return choices[3];
+        }
     }
 }

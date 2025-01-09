@@ -75,10 +75,8 @@ namespace defaultwinform
 
             foreach (UserAccount account in AccountDAO.userAccounts)
             {
-
                 if (account.getUsername().Equals(usernameField.Text))
                 {
-
                     if (account.getEncryptedPassword().Equals(encryptedPassword))
                     {
                         Program.currentAccount = account;
@@ -86,7 +84,6 @@ namespace defaultwinform
                         this.Close();
                     } else
                     {
-
                         incorrectLabel.Text = "Incorrect password.";
                     }
                 }

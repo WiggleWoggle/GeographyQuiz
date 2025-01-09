@@ -30,5 +30,10 @@ namespace defaultwinform
         {
             this.isTrue = false;
         }
+
+        public Boolean IsTrue()
+        {
+            return this.isTrue;
+        }
     }
 }
