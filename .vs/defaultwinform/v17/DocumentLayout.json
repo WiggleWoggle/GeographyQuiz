@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\quiztakingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\quiztakingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quiztakingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quiztakingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -101,8 +101,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QuizTakingForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizTakingForm.cs",
+              "RelativeDocumentMoniker": "QuizTakingForm.cs",
+              "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizTakingForm.cs [Design]",
+              "RelativeToolTip": "QuizTakingForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:17:18.187Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -117,20 +129,7 @@
               "RelativeToolTip": "LoginForm.cs",
               "ViewState": "AQIAACwAAAAAAAAAAAAwwGMAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T00:37:35.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "QuizTakingForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizTakingForm.cs",
-              "RelativeDocumentMoniker": "QuizTakingForm.cs",
-              "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizTakingForm.cs [Design]",
-              "RelativeToolTip": "QuizTakingForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:17:18.187Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-11T00:37:35.38Z"
             },
             {
               "$type": "Document",
@@ -142,8 +141,7 @@
               "RelativeToolTip": "QuizTakingForm.cs",
               "ViewState": "AQIAAG4AAAAAAAAAAAAswIsAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T16:10:59.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T16:10:59.506Z"
             },
             {
               "$type": "Document",
@@ -155,8 +153,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AQIAAG0AAAAAAAAAAAAcwH8AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T23:54:06.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T23:54:06.505Z"
             },
             {
               "$type": "Document",
@@ -179,8 +176,7 @@
               "RelativeToolTip": "AccountDAO.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAgwEUAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T04:29:25.497Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T04:29:25.497Z"
             },
             {
               "$type": "Document",
@@ -192,8 +188,7 @@
               "RelativeToolTip": "UserAccount.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:29:44.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T05:29:44.802Z"
             },
             {
               "$type": "Document",
@@ -205,8 +200,7 @@
               "RelativeToolTip": "MultipleChoice.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAcwDIAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T16:21:19.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T16:21:19.745Z"
             },
             {
               "$type": "Document",
@@ -218,8 +212,7 @@
               "RelativeToolTip": "QuizDAO.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAQwCIAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:00:56.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T16:00:56.699Z"
             },
             {
               "$type": "Document",
@@ -231,8 +224,7 @@
               "RelativeToolTip": "MultipleAnswer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBIAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T16:18:53.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T16:18:53.702Z"
             },
             {
               "$type": "Document",
@@ -244,8 +236,7 @@
               "RelativeToolTip": "ShortResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T15:22:37.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T15:22:37.299Z"
             },
             {
               "$type": "Document",
@@ -257,8 +248,7 @@
               "RelativeToolTip": "PasswordHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T16:14:25.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T16:14:25.577Z"
             },
             {
               "$type": "Document",
@@ -293,8 +283,7 @@
               "RelativeToolTip": "TrueFalseQuestion.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAIwB4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:34:25.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T05:34:25.592Z"
             },
             {
               "$type": "Document",
@@ -318,8 +307,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAADgvxkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T23:54:02.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T23:54:02.551Z"
             },
             {
               "$type": "Document",
@@ -364,8 +352,7 @@
               "RelativeToolTip": "Quiz.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAAjwEgAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T20:13:40.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T20:13:40.504Z"
             },
             {
               "$type": "Document",
@@ -388,8 +375,7 @@
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T15:00:55.978Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-08T15:00:55.978Z"
             }
           ]
         }
