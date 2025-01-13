@@ -90,5 +90,19 @@ namespace defaultwinform
             Random random = new Random();
             questions.OrderBy(x => random.Next()).ToList();
         }
+
+        public int getQuestionPosition(Question question)
+        {
+
+            for (int i = 0; i < questions.Count; i++)
+            {
+                if (questions[i].Equals(question))
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
     }
 }

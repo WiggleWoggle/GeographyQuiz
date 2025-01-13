@@ -34,6 +34,8 @@ namespace defaultwinform
         private Boolean skipActivated;
         private Boolean eliminateActivated;
 
+        private List<Question> missedQuestions;
+        private List<String> incorrectAnswersTracked;
         private int amountRight;
 
         public QuizTakingForm()
@@ -58,6 +60,8 @@ namespace defaultwinform
             sessionStarCount = 0;
             currentQuestionAnswered = false;
             amountRight = 0;
+            missedQuestions = new List<Question>();
+            incorrectAnswersTracked = new List<String>();
 
             buildToQuestion();
         }
@@ -84,7 +88,7 @@ namespace defaultwinform
 
             questionImage.ImageLocation = currentQuestion.getURLString();
 
-            starValueLabel.Text = "x " + currentQuestion.getStarValue();
+            starValueLabel.Text = "+ " + currentQuestion.getStarValue();
 
             sessionStarLabel.Text = "" + sessionStarCount;
 
@@ -100,6 +104,10 @@ namespace defaultwinform
 
         private void disableAllButtons()
         {
+            redTextPanel.Visible = false;
+            yellowTextPanel.Visible = false;
+            greenTextPanel.Visible = false;
+            blueTextPanel.Visible = false;
 
             selectedIndicator.Visible = false;
 
@@ -139,10 +147,97 @@ namespace defaultwinform
             teachersButton.Visible = false;
             panel1.Visible = false;
             progressBacking.Visible = false;
+            additionalBackPanel.Visible = false;
+            additionalStarIcon.Visible = false;
+            starValueLabel.Visible = false;
+
+            performanceOverlay.Visible = false;
+            peformanceUnderlay.Visible = true;
+
+            pictureBox3.Visible = false;
+            sessionStarLabel.Visible = false;
+            roundedPanel9.Visible = false;
+        }
+
+        private void enableSummaryPanel()
+        {
+            topicLabel.Text = currentQuiz.getTopic();
+            performanceOverlay.Visible = true;
+            peformanceUnderlay.Visible = true;
+            performanceInfoLabel.Visible = true;
+            questionsCorrectLabel.Visible = true;
+
+            completionLabel.Visible = true;
+            topicLabel.Visible = true;
+            performancePanel.Visible = true;
+            missedQuestionPanel.Visible = true;
+            performanceLabel.Visible = true;
+            missedLabel.Visible = true;
+            label7.Visible = true;
+            pictureBox1.Visible = true;
+            roundedPanel7.Visible = true;
+
+            performanceInfoLabel.Text = "You got " + sessionStarCount + " stars!";
+            questionsCorrectLabel.Text = "You answered " + amountRight + " out of " + questionCount + " questions correctly!";
+            label7.Text = sessionStarCount.ToString();
+
+            //performanceOverlay.Width = (amountRight/questionCount) * 500;
+
+            int currentTrackedQuestion = 0;
+
+            foreach (Question question in missedQuestions)
+            {
+
+                Panel missedQuestion = new Panel();
+                missedQuestion.Width = 470;
+                missedQuestion.Height = 90;
+                missedQuestion.BackColor = Color.FromArgb(228, 234, 239);
+
+                Label questionNumber = new Label();
+                questionNumber.Font = new Font("Century Gothic", 12);
+                questionNumber.Text = "Question " + (currentQuiz.getQuestionPosition(question) + 1);
+                questionNumber.Location = new Point(5, 5);
+                questionNumber.AutoSize = true;
+
+                missedQuestion.Controls.Add(questionNumber);
+
+                Label remindQuestion = new Label();
+                remindQuestion.Text = question.getQuestion();
+                remindQuestion.Font = new Font("Century Gothic", 10, FontStyle.Italic);
+                remindQuestion.Location = new Point(5, 30);
+                remindQuestion.AutoSize = true;
+
+                Label incorrectX = new Label();
+                incorrectX.Text = "X";
+                incorrectX.Font = new Font("Century Gothic", 10, FontStyle.Bold);
+                incorrectX.ForeColor = Color.FromArgb(255, 87, 87);
+                incorrectX.Location = new Point(5, 55);
+                incorrectX.AutoSize = true;
+
+                Label incorrectChoice = new Label();
+                incorrectChoice.Text = "You chose: " + incorrectAnswersTracked[currentTrackedQuestion];
+                incorrectChoice.Font = new Font("Century Gothic", 10, FontStyle.Italic);
+                incorrectChoice.Location = new Point(20, 55);
+                incorrectChoice.AutoSize = true;
+
+                missedQuestion.Controls.Add(remindQuestion);
+                missedQuestion.Controls.Add(incorrectChoice);
+                missedQuestion.Controls.Add(incorrectX);
+                missedQuestion.Margin = new Padding(left: 3, top: 15, right: 3, bottom: 3);
+
+                missedQuestionPanel.Controls.Add(missedQuestion);
+
+                currentTrackedQuestion++;
+            }
         }
 
         private void enableMultipleChoiceButtons()
         {
+            redTextPanel.Visible = true;
+            yellowTextPanel.Visible = true;
+            greenTextPanel.Visible = true;
+            blueTextPanel.Visible = true;
+
             redButton.Visible = true;
             yellowButton.Visible = true;
             greenButton.Visible = true;
@@ -203,6 +298,7 @@ namespace defaultwinform
                 {
                     disableAllButtons();
                     disableAllPanels();
+                    enableSummaryPanel();
                 }
             }
         }
@@ -218,6 +314,11 @@ namespace defaultwinform
                 {
                     sessionStarCount += clone.getStarValue();
                     amountRight++;
+                } else
+                {
+                    missedQuestions.Add(clone);
+
+                    incorrectAnswersTracked.Add(multipleChoiceAnswer);
                 }
             }
             else if (currentQuestion is TrueFalseQuestion)
@@ -228,6 +329,18 @@ namespace defaultwinform
                 {
                     sessionStarCount += clone.getStarValue();
                     amountRight++;
+                } else
+                {
+                    missedQuestions.Add(clone);
+
+                    String returnValue = "True";
+
+                    if (!trueOrFalseAnswer)
+                    {
+                        returnValue = "False";
+                    }
+
+                    incorrectAnswersTracked.Add(returnValue);
                 }
             }
 
@@ -276,7 +389,7 @@ namespace defaultwinform
                 multipleChoiceAnswer = greenLabel.Text;
             } else if (color.Equals("blue"))
             {
-                selectedIndicator.Location = new Point(929, 677);
+                selectedIndicator.Location = new Point(946, 677);
                 multipleChoiceAnswer = blueLabel.Text;
             }
         }
@@ -352,6 +465,11 @@ namespace defaultwinform
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void missedLabel_Click(object sender, EventArgs e)
         {
 
         }

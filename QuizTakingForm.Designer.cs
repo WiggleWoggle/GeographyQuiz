@@ -54,7 +54,6 @@
             this.falsePanel = new System.Windows.Forms.PictureBox();
             this.trueLabel = new System.Windows.Forms.Label();
             this.falseLabel = new System.Windows.Forms.Label();
-            this.redLabel = new System.Windows.Forms.Label();
             this.yellowLabel = new System.Windows.Forms.Label();
             this.greenLabel = new System.Windows.Forms.Label();
             this.blueLabel = new System.Windows.Forms.Label();
@@ -68,9 +67,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.questionBacking = new defaultwinform.RoundedPanel();
             this.questionLabel = new System.Windows.Forms.Label();
-            this.roundedPanel7 = new defaultwinform.RoundedPanel();
+            this.additionalBackPanel = new defaultwinform.RoundedPanel();
             this.starValueLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.additionalStarIcon = new System.Windows.Forms.PictureBox();
             this.roundedPanel6 = new defaultwinform.RoundedPanel();
             this.immunityCount = new System.Windows.Forms.Label();
             this.roundedPanel5 = new defaultwinform.RoundedPanel();
@@ -82,6 +81,25 @@
             this.skipCount = new System.Windows.Forms.Label();
             this.roundedPanel1 = new defaultwinform.RoundedPanel();
             this.multiplierCount = new System.Windows.Forms.Label();
+            this.performancePanel = new System.Windows.Forms.Panel();
+            this.completionLabel = new System.Windows.Forms.Label();
+            this.performanceLabel = new System.Windows.Forms.Label();
+            this.missedLabel = new System.Windows.Forms.Label();
+            this.peformanceUnderlay = new System.Windows.Forms.Panel();
+            this.performanceOverlay = new System.Windows.Forms.Panel();
+            this.roundedPanel7 = new defaultwinform.RoundedPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.missedQuestionPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.returnHomeButton = new System.Windows.Forms.Button();
+            this.topicLabel = new System.Windows.Forms.Label();
+            this.performanceInfoLabel = new System.Windows.Forms.Label();
+            this.questionsCorrectLabel = new System.Windows.Forms.Label();
+            this.redLabel = new System.Windows.Forms.Label();
+            this.blueTextPanel = new System.Windows.Forms.Panel();
+            this.greenTextPanel = new System.Windows.Forms.Panel();
+            this.yellowTextPanel = new System.Windows.Forms.Panel();
+            this.redTextPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skipButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachersButton)).BeginInit();
@@ -103,13 +121,20 @@
             this.roundedPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.questionBacking.SuspendLayout();
-            this.roundedPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.additionalBackPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalStarIcon)).BeginInit();
             this.roundedPanel6.SuspendLayout();
             this.roundedPanel5.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
+            this.performancePanel.SuspendLayout();
+            this.roundedPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.blueTextPanel.SuspendLayout();
+            this.greenTextPanel.SuspendLayout();
+            this.yellowTextPanel.SuspendLayout();
+            this.redTextPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -407,30 +432,16 @@
             this.falseLabel.Text = "False";
             this.falseLabel.Click += new System.EventHandler(this.falseLabel_Click);
             // 
-            // redLabel
-            // 
-            this.redLabel.AutoSize = true;
-            this.redLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.redLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.redLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.redLabel.ForeColor = System.Drawing.Color.White;
-            this.redLabel.Location = new System.Drawing.Point(249, 559);
-            this.redLabel.Name = "redLabel";
-            this.redLabel.Size = new System.Drawing.Size(70, 39);
-            this.redLabel.TabIndex = 15;
-            this.redLabel.Text = "test";
-            this.redLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.redLabel.Click += new System.EventHandler(this.redLabel_Click);
-            // 
             // yellowLabel
             // 
             this.yellowLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(177)))), ((int)(((byte)(85)))));
+            this.yellowLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.yellowLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.yellowLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yellowLabel.ForeColor = System.Drawing.Color.White;
-            this.yellowLabel.Location = new System.Drawing.Point(472, 559);
+            this.yellowLabel.Location = new System.Drawing.Point(0, 0);
             this.yellowLabel.Name = "yellowLabel";
-            this.yellowLabel.Size = new System.Drawing.Size(70, 39);
+            this.yellowLabel.Size = new System.Drawing.Size(214, 159);
             this.yellowLabel.TabIndex = 16;
             this.yellowLabel.Text = "test";
             this.yellowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -438,14 +449,14 @@
             // 
             // greenLabel
             // 
-            this.greenLabel.AutoSize = true;
             this.greenLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(182)))), ((int)(((byte)(97)))));
+            this.greenLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.greenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.greenLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.greenLabel.ForeColor = System.Drawing.Color.White;
-            this.greenLabel.Location = new System.Drawing.Point(702, 559);
+            this.greenLabel.Location = new System.Drawing.Point(0, 0);
             this.greenLabel.Name = "greenLabel";
-            this.greenLabel.Size = new System.Drawing.Size(70, 39);
+            this.greenLabel.Size = new System.Drawing.Size(214, 159);
             this.greenLabel.TabIndex = 17;
             this.greenLabel.Text = "test";
             this.greenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -453,14 +464,14 @@
             // 
             // blueLabel
             // 
-            this.blueLabel.AutoSize = true;
             this.blueLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(192)))), ((int)(((byte)(223)))));
+            this.blueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blueLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.blueLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blueLabel.ForeColor = System.Drawing.Color.White;
-            this.blueLabel.Location = new System.Drawing.Point(931, 559);
+            this.blueLabel.Location = new System.Drawing.Point(0, 0);
             this.blueLabel.Name = "blueLabel";
-            this.blueLabel.Size = new System.Drawing.Size(70, 39);
+            this.blueLabel.Size = new System.Drawing.Size(214, 159);
             this.blueLabel.TabIndex = 18;
             this.blueLabel.Text = "test";
             this.blueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -487,7 +498,7 @@
             this.selectedIndicator.ErrorImage = ((System.Drawing.Image)(resources.GetObject("selectedIndicator.ErrorImage")));
             this.selectedIndicator.Image = ((System.Drawing.Image)(resources.GetObject("selectedIndicator.Image")));
             this.selectedIndicator.InitialImage = ((System.Drawing.Image)(resources.GetObject("selectedIndicator.InitialImage")));
-            this.selectedIndicator.Location = new System.Drawing.Point(371, 677);
+            this.selectedIndicator.Location = new System.Drawing.Point(946, 677);
             this.selectedIndicator.Name = "selectedIndicator";
             this.selectedIndicator.Size = new System.Drawing.Size(36, 30);
             this.selectedIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -583,17 +594,17 @@
             this.questionLabel.Text = "Question";
             this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // roundedPanel7
+            // additionalBackPanel
             // 
-            this.roundedPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.roundedPanel7.BorderRadius = 30;
-            this.roundedPanel7.Controls.Add(this.starValueLabel);
-            this.roundedPanel7.Controls.Add(this.pictureBox2);
-            this.roundedPanel7.ForeColor = System.Drawing.Color.Black;
-            this.roundedPanel7.Location = new System.Drawing.Point(559, 83);
-            this.roundedPanel7.Name = "roundedPanel7";
-            this.roundedPanel7.Size = new System.Drawing.Size(110, 41);
-            this.roundedPanel7.TabIndex = 22;
+            this.additionalBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.additionalBackPanel.BorderRadius = 30;
+            this.additionalBackPanel.Controls.Add(this.starValueLabel);
+            this.additionalBackPanel.Controls.Add(this.additionalStarIcon);
+            this.additionalBackPanel.ForeColor = System.Drawing.Color.Black;
+            this.additionalBackPanel.Location = new System.Drawing.Point(559, 83);
+            this.additionalBackPanel.Name = "additionalBackPanel";
+            this.additionalBackPanel.Size = new System.Drawing.Size(110, 41);
+            this.additionalBackPanel.TabIndex = 22;
             // 
             // starValueLabel
             // 
@@ -607,19 +618,19 @@
             this.starValueLabel.Text = "x 1";
             this.starValueLabel.Click += new System.EventHandler(this.label7_Click);
             // 
-            // pictureBox2
+            // additionalStarIcon
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(15, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.additionalStarIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.additionalStarIcon.ErrorImage = ((System.Drawing.Image)(resources.GetObject("additionalStarIcon.ErrorImage")));
+            this.additionalStarIcon.Image = ((System.Drawing.Image)(resources.GetObject("additionalStarIcon.Image")));
+            this.additionalStarIcon.InitialImage = ((System.Drawing.Image)(resources.GetObject("additionalStarIcon.InitialImage")));
+            this.additionalStarIcon.Location = new System.Drawing.Point(15, 5);
+            this.additionalStarIcon.Name = "additionalStarIcon";
+            this.additionalStarIcon.Size = new System.Drawing.Size(33, 32);
+            this.additionalStarIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.additionalStarIcon.TabIndex = 24;
+            this.additionalStarIcon.TabStop = false;
+            this.additionalStarIcon.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // roundedPanel6
             // 
@@ -741,22 +752,241 @@
             this.multiplierCount.TabIndex = 13;
             this.multiplierCount.Text = "1";
             // 
+            // performancePanel
+            // 
+            this.performancePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
+            this.performancePanel.Controls.Add(this.questionsCorrectLabel);
+            this.performancePanel.Controls.Add(this.performanceInfoLabel);
+            this.performancePanel.Controls.Add(this.performanceOverlay);
+            this.performancePanel.Controls.Add(this.roundedPanel7);
+            this.performancePanel.Controls.Add(this.peformanceUnderlay);
+            this.performancePanel.Location = new System.Drawing.Point(330, 178);
+            this.performancePanel.Name = "performancePanel";
+            this.performancePanel.Size = new System.Drawing.Size(473, 100);
+            this.performancePanel.TabIndex = 9;
+            this.performancePanel.Visible = false;
+            // 
+            // completionLabel
+            // 
+            this.completionLabel.AutoSize = true;
+            this.completionLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold);
+            this.completionLabel.Location = new System.Drawing.Point(407, 64);
+            this.completionLabel.Name = "completionLabel";
+            this.completionLabel.Size = new System.Drawing.Size(311, 32);
+            this.completionLabel.TabIndex = 28;
+            this.completionLabel.Text = "You completed Quiz 4!";
+            this.completionLabel.Visible = false;
+            // 
+            // performanceLabel
+            // 
+            this.performanceLabel.AutoSize = true;
+            this.performanceLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.performanceLabel.Location = new System.Drawing.Point(330, 156);
+            this.performanceLabel.Name = "performanceLabel";
+            this.performanceLabel.Size = new System.Drawing.Size(109, 19);
+            this.performanceLabel.TabIndex = 29;
+            this.performanceLabel.Text = "Performance";
+            this.performanceLabel.Visible = false;
+            // 
+            // missedLabel
+            // 
+            this.missedLabel.AutoSize = true;
+            this.missedLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.missedLabel.Location = new System.Drawing.Point(326, 296);
+            this.missedLabel.Name = "missedLabel";
+            this.missedLabel.Size = new System.Drawing.Size(137, 19);
+            this.missedLabel.TabIndex = 30;
+            this.missedLabel.Text = "Missed Questions";
+            this.missedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.missedLabel.Visible = false;
+            this.missedLabel.Click += new System.EventHandler(this.missedLabel_Click);
+            // 
+            // peformanceUnderlay
+            // 
+            this.peformanceUnderlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.peformanceUnderlay.Location = new System.Drawing.Point(129, 36);
+            this.peformanceUnderlay.Name = "peformanceUnderlay";
+            this.peformanceUnderlay.Size = new System.Drawing.Size(316, 22);
+            this.peformanceUnderlay.TabIndex = 0;
+            this.peformanceUnderlay.Visible = false;
+            // 
+            // performanceOverlay
+            // 
+            this.performanceOverlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
+            this.performanceOverlay.Location = new System.Drawing.Point(129, 35);
+            this.performanceOverlay.Name = "performanceOverlay";
+            this.performanceOverlay.Size = new System.Drawing.Size(169, 23);
+            this.performanceOverlay.TabIndex = 1;
+            this.performanceOverlay.Visible = false;
+            // 
+            // roundedPanel7
+            // 
+            this.roundedPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.roundedPanel7.BorderRadius = 30;
+            this.roundedPanel7.Controls.Add(this.label7);
+            this.roundedPanel7.Controls.Add(this.pictureBox1);
+            this.roundedPanel7.ForeColor = System.Drawing.Color.Black;
+            this.roundedPanel7.Location = new System.Drawing.Point(25, 24);
+            this.roundedPanel7.Name = "roundedPanel7";
+            this.roundedPanel7.Size = new System.Drawing.Size(84, 41);
+            this.roundedPanel7.TabIndex = 27;
+            this.roundedPanel7.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(42, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 32);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "1";
+            this.label7.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // missedQuestionPanel
+            // 
+            this.missedQuestionPanel.AutoSize = true;
+            this.missedQuestionPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.missedQuestionPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.missedQuestionPanel.Location = new System.Drawing.Point(330, 318);
+            this.missedQuestionPanel.Name = "missedQuestionPanel";
+            this.missedQuestionPanel.Size = new System.Drawing.Size(0, 0);
+            this.missedQuestionPanel.TabIndex = 31;
+            this.missedQuestionPanel.Visible = false;
+            // 
+            // returnHomeButton
+            // 
+            this.returnHomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(132)))), ((int)(((byte)(217)))));
+            this.returnHomeButton.FlatAppearance.BorderSize = 0;
+            this.returnHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnHomeButton.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.returnHomeButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.returnHomeButton.Location = new System.Drawing.Point(435, 531);
+            this.returnHomeButton.Name = "returnHomeButton";
+            this.returnHomeButton.Size = new System.Drawing.Size(292, 34);
+            this.returnHomeButton.TabIndex = 6;
+            this.returnHomeButton.Text = "Return Home";
+            this.returnHomeButton.UseVisualStyleBackColor = false;
+            this.returnHomeButton.Visible = false;
+            // 
+            // topicLabel
+            // 
+            this.topicLabel.AutoSize = true;
+            this.topicLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topicLabel.Location = new System.Drawing.Point(475, 102);
+            this.topicLabel.Name = "topicLabel";
+            this.topicLabel.Size = new System.Drawing.Size(172, 22);
+            this.topicLabel.TabIndex = 32;
+            this.topicLabel.Text = "State Geography";
+            this.topicLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.topicLabel.Visible = false;
+            // 
+            // performanceInfoLabel
+            // 
+            this.performanceInfoLabel.AutoSize = true;
+            this.performanceInfoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.performanceInfoLabel.Location = new System.Drawing.Point(22, 72);
+            this.performanceInfoLabel.Name = "performanceInfoLabel";
+            this.performanceInfoLabel.Size = new System.Drawing.Size(104, 17);
+            this.performanceInfoLabel.TabIndex = 33;
+            this.performanceInfoLabel.Text = "You got x stars!";
+            this.performanceInfoLabel.Visible = false;
+            // 
+            // questionsCorrectLabel
+            // 
+            this.questionsCorrectLabel.AutoSize = true;
+            this.questionsCorrectLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionsCorrectLabel.Location = new System.Drawing.Point(157, 72);
+            this.questionsCorrectLabel.Name = "questionsCorrectLabel";
+            this.questionsCorrectLabel.Size = new System.Drawing.Size(288, 17);
+            this.questionsCorrectLabel.TabIndex = 34;
+            this.questionsCorrectLabel.Text = "You answered x out of x questions correctly!";
+            this.questionsCorrectLabel.Visible = false;
+            // 
+            // redLabel
+            // 
+            this.redLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.redLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.redLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.redLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redLabel.ForeColor = System.Drawing.Color.White;
+            this.redLabel.Location = new System.Drawing.Point(0, 0);
+            this.redLabel.Name = "redLabel";
+            this.redLabel.Size = new System.Drawing.Size(214, 159);
+            this.redLabel.TabIndex = 15;
+            this.redLabel.Text = "test";
+            this.redLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.redLabel.Click += new System.EventHandler(this.redLabel_Click);
+            // 
+            // blueTextPanel
+            // 
+            this.blueTextPanel.Controls.Add(this.blueLabel);
+            this.blueTextPanel.Location = new System.Drawing.Point(852, 491);
+            this.blueTextPanel.Name = "blueTextPanel";
+            this.blueTextPanel.Size = new System.Drawing.Size(214, 159);
+            this.blueTextPanel.TabIndex = 33;
+            // 
+            // greenTextPanel
+            // 
+            this.greenTextPanel.Controls.Add(this.greenLabel);
+            this.greenTextPanel.Location = new System.Drawing.Point(623, 491);
+            this.greenTextPanel.Name = "greenTextPanel";
+            this.greenTextPanel.Size = new System.Drawing.Size(214, 159);
+            this.greenTextPanel.TabIndex = 34;
+            // 
+            // yellowTextPanel
+            // 
+            this.yellowTextPanel.Controls.Add(this.yellowLabel);
+            this.yellowTextPanel.Location = new System.Drawing.Point(396, 491);
+            this.yellowTextPanel.Name = "yellowTextPanel";
+            this.yellowTextPanel.Size = new System.Drawing.Size(214, 159);
+            this.yellowTextPanel.TabIndex = 35;
+            // 
+            // redTextPanel
+            // 
+            this.redTextPanel.Controls.Add(this.redLabel);
+            this.redTextPanel.Location = new System.Drawing.Point(170, 491);
+            this.redTextPanel.Name = "redTextPanel";
+            this.redTextPanel.Size = new System.Drawing.Size(214, 159);
+            this.redTextPanel.TabIndex = 36;
+            // 
             // QuizTakingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 719);
+            this.Controls.Add(this.redTextPanel);
+            this.Controls.Add(this.yellowTextPanel);
+            this.Controls.Add(this.greenTextPanel);
+            this.Controls.Add(this.blueTextPanel);
+            this.Controls.Add(this.topicLabel);
+            this.Controls.Add(this.returnHomeButton);
+            this.Controls.Add(this.missedQuestionPanel);
+            this.Controls.Add(this.missedLabel);
+            this.Controls.Add(this.performanceLabel);
+            this.Controls.Add(this.completionLabel);
+            this.Controls.Add(this.performancePanel);
             this.Controls.Add(this.progressBacking);
             this.Controls.Add(this.roundedPanel9);
             this.Controls.Add(this.questionBacking);
-            this.Controls.Add(this.roundedPanel7);
+            this.Controls.Add(this.additionalBackPanel);
             this.Controls.Add(this.feedbackPane);
             this.Controls.Add(this.selectedIndicator);
             this.Controls.Add(this.nextLabel);
-            this.Controls.Add(this.blueLabel);
-            this.Controls.Add(this.greenLabel);
-            this.Controls.Add(this.yellowLabel);
-            this.Controls.Add(this.redLabel);
             this.Controls.Add(this.falseLabel);
             this.Controls.Add(this.trueLabel);
             this.Controls.Add(this.nextButton);
@@ -793,9 +1023,9 @@
             this.roundedPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.questionBacking.ResumeLayout(false);
-            this.roundedPanel7.ResumeLayout(false);
-            this.roundedPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.additionalBackPanel.ResumeLayout(false);
+            this.additionalBackPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalStarIcon)).EndInit();
             this.roundedPanel6.ResumeLayout(false);
             this.roundedPanel6.PerformLayout();
             this.roundedPanel5.ResumeLayout(false);
@@ -806,6 +1036,14 @@
             this.roundedPanel2.PerformLayout();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
+            this.performancePanel.ResumeLayout(false);
+            this.performancePanel.PerformLayout();
+            this.roundedPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.blueTextPanel.ResumeLayout(false);
+            this.greenTextPanel.ResumeLayout(false);
+            this.yellowTextPanel.ResumeLayout(false);
+            this.redTextPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -849,16 +1087,15 @@
         private System.Windows.Forms.Label skipCount;
         private System.Windows.Forms.Label trueLabel;
         private System.Windows.Forms.Label falseLabel;
-        private System.Windows.Forms.Label redLabel;
         private System.Windows.Forms.Label yellowLabel;
         private System.Windows.Forms.Label greenLabel;
         private System.Windows.Forms.Label blueLabel;
         private System.Windows.Forms.Label nextLabel;
         private System.Windows.Forms.PictureBox selectedIndicator;
         private System.Windows.Forms.Label feedbackPane;
-        private RoundedPanel roundedPanel7;
+        private RoundedPanel additionalBackPanel;
         private RoundedPanel questionBacking;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox additionalStarIcon;
         private System.Windows.Forms.Label starValueLabel;
         private System.Windows.Forms.Label questionLabel;
         private RoundedPanel roundedPanel9;
@@ -866,5 +1103,25 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private RoundedPanel progressBacking;
         private System.Windows.Forms.Label quizProgressLabel;
+        private System.Windows.Forms.Panel performancePanel;
+        private System.Windows.Forms.Label completionLabel;
+        private System.Windows.Forms.Label performanceLabel;
+        private System.Windows.Forms.Label missedLabel;
+        private System.Windows.Forms.Panel peformanceUnderlay;
+        private System.Windows.Forms.Panel performanceOverlay;
+        private RoundedPanel roundedPanel7;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.FlowLayoutPanel missedQuestionPanel;
+        private System.Windows.Forms.Button returnHomeButton;
+        private System.Windows.Forms.Label topicLabel;
+        private System.Windows.Forms.Label performanceInfoLabel;
+        private System.Windows.Forms.Label questionsCorrectLabel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label redLabel;
+        private System.Windows.Forms.Panel blueTextPanel;
+        private System.Windows.Forms.Panel greenTextPanel;
+        private System.Windows.Forms.Panel yellowTextPanel;
+        private System.Windows.Forms.Panel redTextPanel;
     }
 }

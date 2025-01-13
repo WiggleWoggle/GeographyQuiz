@@ -31,8 +31,8 @@ namespace defaultwinform
             quiz.setTopic("State Geography");
             quiz.setImage("https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop");
 
-            quiz.addQuestion(new MultipleChoice("What type of geographic feature is this?", 1, "https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop", new List<String> {"q1", "q2", "q3", "q4"}, "q1"));
-            quiz.addQuestion(new TrueFalseQuestion("Mountains are a geography feature", 3, true, ""));
+            quiz.addQuestion(new MultipleChoice("What type of geographic feature is this?", 1, "https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop", new List<String> {"Valley", "Plateu", "Mountains", "Canyon"}, "Valley"));
+            quiz.addQuestion(new TrueFalseQuestion("Mountains are a geography feature.", 3, true, ""));
 
             assignedQuizzes.Add(quiz);
         }
