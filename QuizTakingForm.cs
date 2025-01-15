@@ -84,6 +84,12 @@ namespace defaultwinform
                 enableTrueOrFalseButtons();
             }
 
+            if (currentQuiz.getQuestion(currentQuestion) is MultipleAnswer)
+            {
+
+                enableMultipleAnswerButtons();
+            }
+
             questionLabel.Text = currentQuestion.getQuestion();
 
             questionImage.ImageLocation = currentQuestion.getURLString();
@@ -104,6 +110,12 @@ namespace defaultwinform
 
         private void disableAllButtons()
         {
+
+            redSelector.Visible = false;
+            yellowSelector.Visible = false;
+            greenSelector.Visible = false;
+            blueSelector.Visible = false;
+
             redTextPanel.Visible = false;
             yellowTextPanel.Visible = false;
             greenTextPanel.Visible = false;
@@ -180,6 +192,8 @@ namespace defaultwinform
             performanceInfoLabel.Text = "You got " + sessionStarCount + " stars!";
             questionsCorrectLabel.Text = "You answered " + amountRight + " out of " + questionCount + " questions correctly!";
             label7.Text = sessionStarCount.ToString();
+            returnHomeButton.Visible = true;
+            returnHomeButton.Location = new Point(returnHomeButton.Location.X, returnHomeButton.Location.Y + (missedQuestions.Count * 110));
 
             //performanceOverlay.Width = (amountRight/questionCount) * 500;
 
@@ -252,6 +266,39 @@ namespace defaultwinform
             blueLabel.Visible = true;
 
             MultipleChoice question = (MultipleChoice)currentQuestion;
+
+            redLabel.Text = question.getFirstChoice();
+            yellowLabel.Text = question.getSecondChoice();
+            greenLabel.Text = question.getThirdChoice();
+            blueLabel.Text = question.getFourthChoice();
+        }
+
+        private void enableMultipleAnswerButtons()
+        {
+            redTextPanel.Visible = true;
+            yellowTextPanel.Visible = true;
+            greenTextPanel.Visible = true;
+            blueTextPanel.Visible = true;
+
+            redButton.Visible = true;
+            yellowButton.Visible = true;
+            greenButton.Visible = true;
+            blueButton.Visible = true;
+
+            truePanel.Visible = false;
+            falsePanel.Visible = false;
+
+            redLabel.Visible = true;
+            yellowLabel.Visible = true;
+            greenLabel.Visible = true;
+            blueLabel.Visible = true;
+
+            redSelector.Visible = true;
+            yellowSelector.Visible = true;
+            greenSelector.Visible = true;
+            blueSelector.Visible = true;
+
+            MultipleAnswer question = (MultipleAnswer) currentQuestion;
 
             redLabel.Text = question.getFirstChoice();
             yellowLabel.Text = question.getSecondChoice();
@@ -366,6 +413,11 @@ namespace defaultwinform
             }
         }
 
+        private void selectMultipleAnswer(String color)
+        {
+
+        }
+
         private void selectMultipleChoiceAnswer(String color)
         {
 
@@ -396,42 +448,98 @@ namespace defaultwinform
 
         private void redButton_Click(object sender, EventArgs e)
         {
-            selectMultipleChoiceAnswer("red");
+
+            if (currentQuestion is MultipleChoice)
+            {
+                selectMultipleChoiceAnswer("red");
+            } else
+            {
+                selectMultipleAnswer("red");
+            }
         }
 
         private void redLabel_Click(object sender, EventArgs e)
         {
-            selectMultipleChoiceAnswer("red");
+            if (currentQuestion is MultipleChoice)
+            {
+                selectMultipleChoiceAnswer("red");
+            }
+            else
+            {
+                selectMultipleAnswer("red");
+            }
         }
 
         private void yellowButton_Click(object sender, EventArgs e)
         {
-            selectMultipleChoiceAnswer("yellow");
+            if (currentQuestion is MultipleChoice)
+            {
+                selectMultipleChoiceAnswer("yellow");
+            }
+            else
+            {
+                selectMultipleAnswer("yellow");
+            }
         }
 
         private void yellowLabel_Click(object sender, EventArgs e)
         {
-            selectMultipleChoiceAnswer("yellow");
+            if (currentQuestion is MultipleChoice)
+            {
+                selectMultipleChoiceAnswer("yellow");
+            }
+            else
+            {
+                selectMultipleAnswer("yellow");
+            }
         }
 
         private void greenButton_Click(object sender, EventArgs e)
         {
-            selectMultipleChoiceAnswer("green");
+            if (currentQuestion is MultipleChoice)
+            {
+                selectMultipleChoiceAnswer("green");
+            }
+            else
+            {
+                selectMultipleAnswer("green");
+            }
         }
 
         private void greenLabel_Click(object sender, EventArgs e)
         {
-            selectMultipleChoiceAnswer("green");
+            if (currentQuestion is MultipleChoice)
+            {
+                selectMultipleChoiceAnswer("green");
+            }
+            else
+            {
+                selectMultipleAnswer("green");
+            }
         }
 
         private void blueButton_Click(object sender, EventArgs e)
         {
-            selectMultipleChoiceAnswer("blue");
+            if (currentQuestion is MultipleChoice)
+            {
+                selectMultipleChoiceAnswer("blue");
+            }
+            else
+            {
+                selectMultipleAnswer("blue");
+            }
         }
 
         private void blueLabel_Click(object sender, EventArgs e)
         {
-            selectMultipleChoiceAnswer("blue");
+            if (currentQuestion is MultipleChoice)
+            {
+                selectMultipleChoiceAnswer("blue");
+            }
+            else
+            {
+                selectMultipleAnswer("blue");
+            }
         }
 
         private void truePanel_Click(object sender, EventArgs e)
@@ -472,6 +580,14 @@ namespace defaultwinform
         private void missedLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void returnHomeButton_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+
+            form.Show();
+            this.Close();
         }
     }
 }

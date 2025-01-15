@@ -22,6 +22,7 @@ namespace defaultwinform
             Application.SetCompatibleTextRenderingDefault(false);
 
             LoginForm loginFrm = new LoginForm();
+            QuizDAO.tempQuiz();
             loginFrm.Show();
             Application.Run();
         }

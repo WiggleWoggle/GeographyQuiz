@@ -56,7 +56,6 @@ namespace defaultwinform
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
 
             String inputtedUsername = usernameField.Text;
             String inputtedPassword = passwordField.Text;
@@ -66,6 +65,8 @@ namespace defaultwinform
             {
 
                 Program.currentAccount = new UserAccount();
+
+                Form1 form = new Form1();
 
                 form.Show();
                 this.Close();
@@ -79,6 +80,9 @@ namespace defaultwinform
                 {
                     if (account.getEncryptedPassword().Equals(encryptedPassword))
                     {
+
+                        Form1 form = new Form1();
+
                         Program.currentAccount = account;
                         form.Show();
                         this.Close();
