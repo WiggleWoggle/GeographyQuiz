@@ -12,11 +12,17 @@ namespace defaultwinform
         private List<String> phrases;
         private int starValue;
 
-        public ShortResponse(string question, int starValue, String URLString) : base(question, starValue, URLString)
+        public ShortResponse(string question, int starValue, List<String> phrases, String URLString) : base(question, starValue, URLString)
         { 
             setURLString(URLString);
             this.question = question;
             this.starValue = starValue; 
+            this.phrases = phrases;
+        }
+
+        public List<String> getPhrases()
+        {
+            return phrases;
         }
     }
 }

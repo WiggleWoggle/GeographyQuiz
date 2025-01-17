@@ -47,5 +47,10 @@ namespace defaultwinform
         {
             return choices[3];
         }
+
+        public List<String> getAnswers()
+        {
+            return answers;
+        }
     }
 }

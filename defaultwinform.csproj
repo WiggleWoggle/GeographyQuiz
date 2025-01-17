@@ -158,6 +158,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuizTakingForm.resx">
       <DependentUpon>QuizTakingForm.cs</DependentUpon>
@@ -181,6 +182,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emptyBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emptyGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emptyRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emptyYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedYellow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

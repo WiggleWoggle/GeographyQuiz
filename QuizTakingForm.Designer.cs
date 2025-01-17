@@ -56,7 +56,6 @@
             this.falseLabel = new System.Windows.Forms.Label();
             this.yellowLabel = new System.Windows.Forms.Label();
             this.greenLabel = new System.Windows.Forms.Label();
-            this.blueLabel = new System.Windows.Forms.Label();
             this.nextLabel = new System.Windows.Forms.Label();
             this.selectedIndicator = new System.Windows.Forms.PictureBox();
             this.feedbackPane = new System.Windows.Forms.Label();
@@ -72,10 +71,17 @@
             this.returnHomeButton = new System.Windows.Forms.Button();
             this.topicLabel = new System.Windows.Forms.Label();
             this.redLabel = new System.Windows.Forms.Label();
-            this.blueTextPanel = new System.Windows.Forms.Panel();
             this.greenTextPanel = new System.Windows.Forms.Panel();
+            this.greenSelector = new System.Windows.Forms.PictureBox();
             this.yellowTextPanel = new System.Windows.Forms.Panel();
+            this.yellowSelector = new System.Windows.Forms.PictureBox();
             this.redTextPanel = new System.Windows.Forms.Panel();
+            this.redSelector = new System.Windows.Forms.PictureBox();
+            this.shortResponseUnder = new System.Windows.Forms.Panel();
+            this.shortAnswerBox = new System.Windows.Forms.TextBox();
+            this.blueSelector = new System.Windows.Forms.PictureBox();
+            this.blueTextPanel = new System.Windows.Forms.Panel();
+            this.blueLabel = new System.Windows.Forms.Label();
             this.roundedPanel7 = new defaultwinform.RoundedPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -85,6 +91,7 @@
             this.sessionStarLabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.questionBacking = new defaultwinform.RoundedPanel();
+            this.secondaryQuestionLabel = new System.Windows.Forms.Label();
             this.questionLabel = new System.Windows.Forms.Label();
             this.additionalBackPanel = new defaultwinform.RoundedPanel();
             this.starValueLabel = new System.Windows.Forms.Label();
@@ -100,10 +107,6 @@
             this.skipCount = new System.Windows.Forms.Label();
             this.roundedPanel1 = new defaultwinform.RoundedPanel();
             this.multiplierCount = new System.Windows.Forms.Label();
-            this.redSelector = new System.Windows.Forms.PictureBox();
-            this.yellowSelector = new System.Windows.Forms.PictureBox();
-            this.greenSelector = new System.Windows.Forms.PictureBox();
-            this.blueSelector = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skipButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachersButton)).BeginInit();
@@ -122,10 +125,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.falsePanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectedIndicator)).BeginInit();
             this.performancePanel.SuspendLayout();
-            this.blueTextPanel.SuspendLayout();
             this.greenTextPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.greenSelector)).BeginInit();
             this.yellowTextPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yellowSelector)).BeginInit();
             this.redTextPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.redSelector)).BeginInit();
+            this.shortResponseUnder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.blueSelector)).BeginInit();
+            this.blueTextPanel.SuspendLayout();
             this.roundedPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.progressBacking.SuspendLayout();
@@ -139,10 +147,6 @@
             this.roundedPanel4.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.redSelector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yellowSelector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.greenSelector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueSelector)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -310,7 +314,7 @@
             this.redButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("redButton.ErrorImage")));
             this.redButton.Image = ((System.Drawing.Image)(resources.GetObject("redButton.Image")));
             this.redButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("redButton.InitialImage")));
-            this.redButton.Location = new System.Drawing.Point(170, 491);
+            this.redButton.Location = new System.Drawing.Point(169, 512);
             this.redButton.Name = "redButton";
             this.redButton.Size = new System.Drawing.Size(214, 180);
             this.redButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -323,7 +327,7 @@
             this.yellowButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("yellowButton.ErrorImage")));
             this.yellowButton.Image = ((System.Drawing.Image)(resources.GetObject("yellowButton.Image")));
             this.yellowButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("yellowButton.InitialImage")));
-            this.yellowButton.Location = new System.Drawing.Point(396, 491);
+            this.yellowButton.Location = new System.Drawing.Point(395, 512);
             this.yellowButton.Name = "yellowButton";
             this.yellowButton.Size = new System.Drawing.Size(214, 180);
             this.yellowButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -336,7 +340,7 @@
             this.greenButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("greenButton.ErrorImage")));
             this.greenButton.Image = ((System.Drawing.Image)(resources.GetObject("greenButton.Image")));
             this.greenButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("greenButton.InitialImage")));
-            this.greenButton.Location = new System.Drawing.Point(623, 491);
+            this.greenButton.Location = new System.Drawing.Point(622, 512);
             this.greenButton.Name = "greenButton";
             this.greenButton.Size = new System.Drawing.Size(214, 180);
             this.greenButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -349,7 +353,7 @@
             this.blueButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("blueButton.ErrorImage")));
             this.blueButton.Image = ((System.Drawing.Image)(resources.GetObject("blueButton.Image")));
             this.blueButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("blueButton.InitialImage")));
-            this.blueButton.Location = new System.Drawing.Point(852, 491);
+            this.blueButton.Location = new System.Drawing.Point(851, 512);
             this.blueButton.Name = "blueButton";
             this.blueButton.Size = new System.Drawing.Size(214, 180);
             this.blueButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -370,7 +374,7 @@
             // 
             this.questionImageUnder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
             this.questionImageUnder.Controls.Add(this.questionImage);
-            this.questionImageUnder.Location = new System.Drawing.Point(419, 130);
+            this.questionImageUnder.Location = new System.Drawing.Point(419, 150);
             this.questionImageUnder.Name = "questionImageUnder";
             this.questionImageUnder.Size = new System.Drawing.Size(384, 344);
             this.questionImageUnder.TabIndex = 9;
@@ -393,7 +397,7 @@
             this.truePanel.ErrorImage = ((System.Drawing.Image)(resources.GetObject("truePanel.ErrorImage")));
             this.truePanel.Image = ((System.Drawing.Image)(resources.GetObject("truePanel.Image")));
             this.truePanel.InitialImage = ((System.Drawing.Image)(resources.GetObject("truePanel.InitialImage")));
-            this.truePanel.Location = new System.Drawing.Point(170, 491);
+            this.truePanel.Location = new System.Drawing.Point(169, 512);
             this.truePanel.Name = "truePanel";
             this.truePanel.Size = new System.Drawing.Size(440, 180);
             this.truePanel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -406,7 +410,7 @@
             this.falsePanel.ErrorImage = ((System.Drawing.Image)(resources.GetObject("falsePanel.ErrorImage")));
             this.falsePanel.Image = ((System.Drawing.Image)(resources.GetObject("falsePanel.Image")));
             this.falsePanel.InitialImage = ((System.Drawing.Image)(resources.GetObject("falsePanel.InitialImage")));
-            this.falsePanel.Location = new System.Drawing.Point(623, 491);
+            this.falsePanel.Location = new System.Drawing.Point(622, 512);
             this.falsePanel.Name = "falsePanel";
             this.falsePanel.Size = new System.Drawing.Size(443, 180);
             this.falsePanel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -420,7 +424,7 @@
             this.trueLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
             this.trueLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trueLabel.ForeColor = System.Drawing.Color.White;
-            this.trueLabel.Location = new System.Drawing.Point(349, 559);
+            this.trueLabel.Location = new System.Drawing.Point(348, 580);
             this.trueLabel.Name = "trueLabel";
             this.trueLabel.Size = new System.Drawing.Size(80, 39);
             this.trueLabel.TabIndex = 13;
@@ -433,7 +437,7 @@
             this.falseLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(192)))), ((int)(((byte)(223)))));
             this.falseLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.falseLabel.ForeColor = System.Drawing.Color.White;
-            this.falseLabel.Location = new System.Drawing.Point(803, 559);
+            this.falseLabel.Location = new System.Drawing.Point(802, 580);
             this.falseLabel.Name = "falseLabel";
             this.falseLabel.Size = new System.Drawing.Size(94, 39);
             this.falseLabel.TabIndex = 14;
@@ -470,21 +474,6 @@
             this.greenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.greenLabel.Click += new System.EventHandler(this.greenLabel_Click);
             // 
-            // blueLabel
-            // 
-            this.blueLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(192)))), ((int)(((byte)(223)))));
-            this.blueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.blueLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.blueLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blueLabel.ForeColor = System.Drawing.Color.White;
-            this.blueLabel.Location = new System.Drawing.Point(0, 0);
-            this.blueLabel.Name = "blueLabel";
-            this.blueLabel.Size = new System.Drawing.Size(214, 159);
-            this.blueLabel.TabIndex = 18;
-            this.blueLabel.Text = "test";
-            this.blueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.blueLabel.Click += new System.EventHandler(this.blueLabel_Click);
-            // 
             // nextLabel
             // 
             this.nextLabel.AutoSize = true;
@@ -506,7 +495,7 @@
             this.selectedIndicator.ErrorImage = ((System.Drawing.Image)(resources.GetObject("selectedIndicator.ErrorImage")));
             this.selectedIndicator.Image = ((System.Drawing.Image)(resources.GetObject("selectedIndicator.Image")));
             this.selectedIndicator.InitialImage = ((System.Drawing.Image)(resources.GetObject("selectedIndicator.InitialImage")));
-            this.selectedIndicator.Location = new System.Drawing.Point(946, 677);
+            this.selectedIndicator.Location = new System.Drawing.Point(945, 698);
             this.selectedIndicator.Name = "selectedIndicator";
             this.selectedIndicator.Size = new System.Drawing.Size(36, 30);
             this.selectedIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -664,41 +653,116 @@
             this.redLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.redLabel.Click += new System.EventHandler(this.redLabel_Click);
             // 
-            // blueTextPanel
-            // 
-            this.blueTextPanel.Controls.Add(this.blueSelector);
-            this.blueTextPanel.Controls.Add(this.blueLabel);
-            this.blueTextPanel.Location = new System.Drawing.Point(852, 491);
-            this.blueTextPanel.Name = "blueTextPanel";
-            this.blueTextPanel.Size = new System.Drawing.Size(214, 159);
-            this.blueTextPanel.TabIndex = 33;
-            // 
             // greenTextPanel
             // 
             this.greenTextPanel.Controls.Add(this.greenSelector);
             this.greenTextPanel.Controls.Add(this.greenLabel);
-            this.greenTextPanel.Location = new System.Drawing.Point(623, 491);
+            this.greenTextPanel.Location = new System.Drawing.Point(622, 512);
             this.greenTextPanel.Name = "greenTextPanel";
             this.greenTextPanel.Size = new System.Drawing.Size(214, 159);
             this.greenTextPanel.TabIndex = 34;
+            // 
+            // greenSelector
+            // 
+            this.greenSelector.Image = ((System.Drawing.Image)(resources.GetObject("greenSelector.Image")));
+            this.greenSelector.Location = new System.Drawing.Point(7, 5);
+            this.greenSelector.Name = "greenSelector";
+            this.greenSelector.Size = new System.Drawing.Size(30, 30);
+            this.greenSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.greenSelector.TabIndex = 18;
+            this.greenSelector.TabStop = false;
             // 
             // yellowTextPanel
             // 
             this.yellowTextPanel.Controls.Add(this.yellowSelector);
             this.yellowTextPanel.Controls.Add(this.yellowLabel);
-            this.yellowTextPanel.Location = new System.Drawing.Point(396, 491);
+            this.yellowTextPanel.Location = new System.Drawing.Point(395, 512);
             this.yellowTextPanel.Name = "yellowTextPanel";
             this.yellowTextPanel.Size = new System.Drawing.Size(214, 159);
             this.yellowTextPanel.TabIndex = 35;
+            // 
+            // yellowSelector
+            // 
+            this.yellowSelector.Image = ((System.Drawing.Image)(resources.GetObject("yellowSelector.Image")));
+            this.yellowSelector.Location = new System.Drawing.Point(7, 5);
+            this.yellowSelector.Name = "yellowSelector";
+            this.yellowSelector.Size = new System.Drawing.Size(30, 30);
+            this.yellowSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.yellowSelector.TabIndex = 17;
+            this.yellowSelector.TabStop = false;
             // 
             // redTextPanel
             // 
             this.redTextPanel.Controls.Add(this.redSelector);
             this.redTextPanel.Controls.Add(this.redLabel);
-            this.redTextPanel.Location = new System.Drawing.Point(170, 491);
+            this.redTextPanel.Location = new System.Drawing.Point(169, 512);
             this.redTextPanel.Name = "redTextPanel";
             this.redTextPanel.Size = new System.Drawing.Size(214, 159);
             this.redTextPanel.TabIndex = 36;
+            // 
+            // redSelector
+            // 
+            this.redSelector.Image = ((System.Drawing.Image)(resources.GetObject("redSelector.Image")));
+            this.redSelector.Location = new System.Drawing.Point(8, 5);
+            this.redSelector.Name = "redSelector";
+            this.redSelector.Size = new System.Drawing.Size(30, 30);
+            this.redSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.redSelector.TabIndex = 16;
+            this.redSelector.TabStop = false;
+            // 
+            // shortResponseUnder
+            // 
+            this.shortResponseUnder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.shortResponseUnder.Controls.Add(this.shortAnswerBox);
+            this.shortResponseUnder.Location = new System.Drawing.Point(574, 150);
+            this.shortResponseUnder.Name = "shortResponseUnder";
+            this.shortResponseUnder.Size = new System.Drawing.Size(492, 344);
+            this.shortResponseUnder.TabIndex = 10;
+            // 
+            // shortAnswerBox
+            // 
+            this.shortAnswerBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.shortAnswerBox.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.shortAnswerBox.Location = new System.Drawing.Point(15, 14);
+            this.shortAnswerBox.Multiline = true;
+            this.shortAnswerBox.Name = "shortAnswerBox";
+            this.shortAnswerBox.Size = new System.Drawing.Size(462, 315);
+            this.shortAnswerBox.TabIndex = 0;
+            this.shortAnswerBox.TextChanged += new System.EventHandler(this.shortAnswerBox_TextChanged);
+            // 
+            // blueSelector
+            // 
+            this.blueSelector.Image = ((System.Drawing.Image)(resources.GetObject("blueSelector.Image")));
+            this.blueSelector.Location = new System.Drawing.Point(7, 5);
+            this.blueSelector.Name = "blueSelector";
+            this.blueSelector.Size = new System.Drawing.Size(30, 30);
+            this.blueSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blueSelector.TabIndex = 19;
+            this.blueSelector.TabStop = false;
+            // 
+            // blueTextPanel
+            // 
+            this.blueTextPanel.Controls.Add(this.blueSelector);
+            this.blueTextPanel.Controls.Add(this.blueLabel);
+            this.blueTextPanel.Location = new System.Drawing.Point(851, 512);
+            this.blueTextPanel.Name = "blueTextPanel";
+            this.blueTextPanel.Size = new System.Drawing.Size(214, 159);
+            this.blueTextPanel.TabIndex = 33;
+            // 
+            // blueLabel
+            // 
+            this.blueLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(192)))), ((int)(((byte)(223)))));
+            this.blueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blueLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.blueLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blueLabel.ForeColor = System.Drawing.Color.White;
+            this.blueLabel.Location = new System.Drawing.Point(0, 0);
+            this.blueLabel.Name = "blueLabel";
+            this.blueLabel.Size = new System.Drawing.Size(214, 159);
+            this.blueLabel.TabIndex = 18;
+            this.blueLabel.Text = "test";
+            this.blueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.blueLabel.Click += new System.EventHandler(this.blueLabel_Click);
             // 
             // roundedPanel7
             // 
@@ -744,7 +808,7 @@
             this.progressBacking.BorderRadius = 30;
             this.progressBacking.Controls.Add(this.quizProgressLabel);
             this.progressBacking.ForeColor = System.Drawing.Color.Black;
-            this.progressBacking.Location = new System.Drawing.Point(163, 83);
+            this.progressBacking.Location = new System.Drawing.Point(163, 73);
             this.progressBacking.Name = "progressBacking";
             this.progressBacking.Size = new System.Drawing.Size(83, 41);
             this.progressBacking.TabIndex = 27;
@@ -800,23 +864,40 @@
             // 
             this.questionBacking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
             this.questionBacking.BorderRadius = 30;
+            this.questionBacking.Controls.Add(this.secondaryQuestionLabel);
             this.questionBacking.Controls.Add(this.questionLabel);
             this.questionBacking.ForeColor = System.Drawing.Color.Black;
             this.questionBacking.Location = new System.Drawing.Point(286, 23);
             this.questionBacking.Name = "questionBacking";
-            this.questionBacking.Size = new System.Drawing.Size(647, 41);
+            this.questionBacking.Size = new System.Drawing.Size(647, 82);
             this.questionBacking.TabIndex = 23;
+            // 
+            // secondaryQuestionLabel
+            // 
+            this.secondaryQuestionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.secondaryQuestionLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secondaryQuestionLabel.ForeColor = System.Drawing.Color.White;
+            this.secondaryQuestionLabel.Location = new System.Drawing.Point(1, 41);
+            this.secondaryQuestionLabel.Name = "secondaryQuestionLabel";
+            this.secondaryQuestionLabel.Size = new System.Drawing.Size(643, 32);
+            this.secondaryQuestionLabel.TabIndex = 27;
+            this.secondaryQuestionLabel.Text = "Lorem ipsum dolor sit amet, consectetur adipisci";
+            this.secondaryQuestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // questionLabel
             // 
-            this.questionLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.questionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.questionLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.White;
-            this.questionLabel.Location = new System.Drawing.Point(0, 0);
+            this.questionLabel.Location = new System.Drawing.Point(3, 5);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(647, 41);
+            this.questionLabel.Size = new System.Drawing.Size(643, 32);
             this.questionLabel.TabIndex = 26;
-            this.questionLabel.Text = "Question";
+            this.questionLabel.Text = "Lorem ipsum dolor sit amet, consectetur adipisci";
             this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // additionalBackPanel
@@ -826,7 +907,7 @@
             this.additionalBackPanel.Controls.Add(this.starValueLabel);
             this.additionalBackPanel.Controls.Add(this.additionalStarIcon);
             this.additionalBackPanel.ForeColor = System.Drawing.Color.Black;
-            this.additionalBackPanel.Location = new System.Drawing.Point(559, 83);
+            this.additionalBackPanel.Location = new System.Drawing.Point(955, 23);
             this.additionalBackPanel.Name = "additionalBackPanel";
             this.additionalBackPanel.Size = new System.Drawing.Size(110, 41);
             this.additionalBackPanel.TabIndex = 22;
@@ -977,51 +1058,12 @@
             this.multiplierCount.TabIndex = 13;
             this.multiplierCount.Text = "1";
             // 
-            // redSelector
-            // 
-            this.redSelector.Image = ((System.Drawing.Image)(resources.GetObject("redSelector.Image")));
-            this.redSelector.Location = new System.Drawing.Point(8, 5);
-            this.redSelector.Name = "redSelector";
-            this.redSelector.Size = new System.Drawing.Size(30, 30);
-            this.redSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.redSelector.TabIndex = 16;
-            this.redSelector.TabStop = false;
-            // 
-            // yellowSelector
-            // 
-            this.yellowSelector.Image = ((System.Drawing.Image)(resources.GetObject("yellowSelector.Image")));
-            this.yellowSelector.Location = new System.Drawing.Point(7, 5);
-            this.yellowSelector.Name = "yellowSelector";
-            this.yellowSelector.Size = new System.Drawing.Size(30, 30);
-            this.yellowSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.yellowSelector.TabIndex = 17;
-            this.yellowSelector.TabStop = false;
-            // 
-            // greenSelector
-            // 
-            this.greenSelector.Image = ((System.Drawing.Image)(resources.GetObject("greenSelector.Image")));
-            this.greenSelector.Location = new System.Drawing.Point(7, 5);
-            this.greenSelector.Name = "greenSelector";
-            this.greenSelector.Size = new System.Drawing.Size(30, 30);
-            this.greenSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.greenSelector.TabIndex = 18;
-            this.greenSelector.TabStop = false;
-            // 
-            // blueSelector
-            // 
-            this.blueSelector.Image = ((System.Drawing.Image)(resources.GetObject("blueSelector.Image")));
-            this.blueSelector.Location = new System.Drawing.Point(7, 5);
-            this.blueSelector.Name = "blueSelector";
-            this.blueSelector.Size = new System.Drawing.Size(30, 30);
-            this.blueSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.blueSelector.TabIndex = 19;
-            this.blueSelector.TabStop = false;
-            // 
             // QuizTakingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 719);
+            this.Controls.Add(this.shortResponseUnder);
             this.Controls.Add(this.returnHomeButton);
             this.Controls.Add(this.redTextPanel);
             this.Controls.Add(this.yellowTextPanel);
@@ -1074,10 +1116,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.selectedIndicator)).EndInit();
             this.performancePanel.ResumeLayout(false);
             this.performancePanel.PerformLayout();
-            this.blueTextPanel.ResumeLayout(false);
             this.greenTextPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.greenSelector)).EndInit();
             this.yellowTextPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.yellowSelector)).EndInit();
             this.redTextPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.redSelector)).EndInit();
+            this.shortResponseUnder.ResumeLayout(false);
+            this.shortResponseUnder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.blueSelector)).EndInit();
+            this.blueTextPanel.ResumeLayout(false);
             this.roundedPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.progressBacking.ResumeLayout(false);
@@ -1097,10 +1145,6 @@
             this.roundedPanel2.PerformLayout();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.redSelector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yellowSelector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.greenSelector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueSelector)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1146,7 +1190,6 @@
         private System.Windows.Forms.Label falseLabel;
         private System.Windows.Forms.Label yellowLabel;
         private System.Windows.Forms.Label greenLabel;
-        private System.Windows.Forms.Label blueLabel;
         private System.Windows.Forms.Label nextLabel;
         private System.Windows.Forms.PictureBox selectedIndicator;
         private System.Windows.Forms.Label feedbackPane;
@@ -1176,13 +1219,17 @@
         private System.Windows.Forms.Label questionsCorrectLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label redLabel;
-        private System.Windows.Forms.Panel blueTextPanel;
         private System.Windows.Forms.Panel greenTextPanel;
         private System.Windows.Forms.Panel yellowTextPanel;
         private System.Windows.Forms.Panel redTextPanel;
         private System.Windows.Forms.PictureBox redSelector;
         private System.Windows.Forms.PictureBox greenSelector;
         private System.Windows.Forms.PictureBox yellowSelector;
+        private System.Windows.Forms.Panel shortResponseUnder;
+        private System.Windows.Forms.TextBox shortAnswerBox;
         private System.Windows.Forms.PictureBox blueSelector;
+        private System.Windows.Forms.Panel blueTextPanel;
+        private System.Windows.Forms.Label blueLabel;
+        private System.Windows.Forms.Label secondaryQuestionLabel;
     }
 }
