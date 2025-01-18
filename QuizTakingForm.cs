@@ -89,6 +89,10 @@ namespace defaultwinform
             nextButton.Location = new Point(929, 413);
             nextLabel.Location = new Point(953, 435);
 
+            nextButton.Image = Resources.unavailableNext;
+            nextLabel.BackColor = Color.FromArgb(146, 147, 148);
+            nextLabel.ForeColor = Color.FromArgb(205, 205, 205);
+
             if (currentQuiz.getQuestion(currentQuestion) is MultipleChoice) {
 
                 enableMultipleChoiceButtons();
@@ -111,13 +115,15 @@ namespace defaultwinform
                 enableShortAnswerButtons();
             }
 
+            longQuestionTip.SetToolTip(questionLabel, currentQuestion.getQuestion());
+            longQuestionTip.SetToolTip(secondaryQuestionLabel, currentQuestion.getQuestion());
+            longQuestionTip.SetToolTip(questionBacking, currentQuestion.getQuestion());
+
             questionLabel.Text = currentQuestion.getQuestion();
 
             questionBacking.Size = new Size(647, 82);
 
             String question = questionLabel.Text;
-
-            
 
             questionLabel.Text = splitQuestion(question, true);
             secondaryQuestionLabel.Text = splitQuestion(question, false);
@@ -640,7 +646,9 @@ namespace defaultwinform
             TrueFalseQuestion clone = (TrueFalseQuestion) currentQuestion;
 
             currentQuestionAnswered = true;
-
+            nextButton.Image = Resources.next;
+            nextLabel.BackColor = Color.FromArgb(182, 189, 202);
+            nextLabel.ForeColor = Color.White;
             selectedIndicator.Visible = true;
 
             if (questionTrue)
@@ -658,6 +666,10 @@ namespace defaultwinform
         {
 
             currentQuestionAnswered = true;
+
+            nextButton.Image = Resources.next;
+            nextLabel.BackColor = Color.FromArgb(182, 189, 202);
+            nextLabel.ForeColor = Color.White;
 
             if (color.Equals("red"))
             {
@@ -725,6 +737,10 @@ namespace defaultwinform
             MultipleChoice clone = (MultipleChoice) currentQuestion;
 
             currentQuestionAnswered = true;
+
+            nextButton.Image = Resources.next;
+            nextLabel.BackColor = Color.FromArgb(182, 189, 202);
+            nextLabel.ForeColor = Color.White;
 
             selectedIndicator.Visible = true;
 
@@ -894,12 +910,14 @@ namespace defaultwinform
         private void shortAnswerBox_TextChanged(object sender, EventArgs e)
         {
             currentQuestionAnswered = true;
+
+            nextButton.Image = Resources.next;
+            nextLabel.BackColor = Color.FromArgb(182, 189, 202);
+            nextLabel.ForeColor = Color.White;
         }
 
         private void questionLabel_MouseHover(object sender, EventArgs e)
         {
-            longQuestionHelp.Visible = true;
-            longQuestionHelp.Text = "(" + currentQuestion.getQuestion() + ")";
         }
 
         private void longQuestionHelp_MouseLeave(object sender, EventArgs e)
@@ -909,18 +927,14 @@ namespace defaultwinform
 
         private void questionLabel_MouseLeave(object sender, EventArgs e)
         {
-            longQuestionHelp.Visible = false;
         }
 
         private void secondaryQuestionLabel_MouseHover(object sender, EventArgs e)
         {
-            longQuestionHelp.Visible = true;
-            longQuestionHelp.Text = "(" + currentQuestion.getQuestion() + ")";
         }
 
         private void secondaryQuestionLabel_MouseLeave(object sender, EventArgs e)
         {
-            longQuestionHelp.Visible = false;
         }
     }
 }

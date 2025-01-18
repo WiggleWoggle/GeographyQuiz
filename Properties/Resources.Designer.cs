@@ -103,6 +103,16 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap next {
+            get {
+                object obj = ResourceManager.GetObject("next", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap profileOverlay {
             get {
                 object obj = ResourceManager.GetObject("profileOverlay", resourceCulture);
@@ -146,6 +156,16 @@ namespace defaultwinform.Properties {
         internal static System.Drawing.Bitmap selectedYellow {
             get {
                 object obj = ResourceManager.GetObject("selectedYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unavailableNext {
+            get {
+                object obj = ResourceManager.GetObject("unavailableNext", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

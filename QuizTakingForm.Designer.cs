@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuizTakingForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.eliminateCount = new System.Windows.Forms.Label();
@@ -82,7 +83,7 @@
             this.blueSelector = new System.Windows.Forms.PictureBox();
             this.blueTextPanel = new System.Windows.Forms.Panel();
             this.blueLabel = new System.Windows.Forms.Label();
-            this.longQuestionHelp = new System.Windows.Forms.Label();
+            this.longQuestionTip = new System.Windows.Forms.ToolTip(this.components);
             this.roundedPanel7 = new defaultwinform.RoundedPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -765,23 +766,6 @@
             this.blueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.blueLabel.Click += new System.EventHandler(this.blueLabel_Click);
             // 
-            // longQuestionHelp
-            // 
-            this.longQuestionHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.longQuestionHelp.BackColor = System.Drawing.Color.Transparent;
-            this.longQuestionHelp.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.longQuestionHelp.ForeColor = System.Drawing.Color.Black;
-            this.longQuestionHelp.Location = new System.Drawing.Point(287, 107);
-            this.longQuestionHelp.Name = "longQuestionHelp";
-            this.longQuestionHelp.Size = new System.Drawing.Size(643, 32);
-            this.longQuestionHelp.TabIndex = 28;
-            this.longQuestionHelp.Text = "Lorem ipsum dolor sit amet, consectetur adipisci";
-            this.longQuestionHelp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.longQuestionHelp.Visible = false;
-            this.longQuestionHelp.MouseLeave += new System.EventHandler(this.longQuestionHelp_MouseLeave);
-            // 
             // roundedPanel7
             // 
             this.roundedPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
@@ -919,6 +903,7 @@
             this.questionLabel.TabIndex = 26;
             this.questionLabel.Text = "Lorem ipsum dolor sit amet, consectetur adipisci";
             this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.longQuestionTip.SetToolTip(this.questionLabel, "Test");
             this.questionLabel.MouseLeave += new System.EventHandler(this.questionLabel_MouseLeave);
             this.questionLabel.MouseHover += new System.EventHandler(this.questionLabel_MouseHover);
             // 
@@ -1085,7 +1070,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 719);
-            this.Controls.Add(this.longQuestionHelp);
             this.Controls.Add(this.shortResponseUnder);
             this.Controls.Add(this.returnHomeButton);
             this.Controls.Add(this.redTextPanel);
@@ -1254,6 +1238,6 @@
         private System.Windows.Forms.Panel blueTextPanel;
         private System.Windows.Forms.Label blueLabel;
         private System.Windows.Forms.Label secondaryQuestionLabel;
-        private System.Windows.Forms.Label longQuestionHelp;
+        private System.Windows.Forms.ToolTip longQuestionTip;
     }
 }
