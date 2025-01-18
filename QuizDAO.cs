@@ -31,7 +31,8 @@ namespace defaultwinform
             quiz.setTopic("State Geography");
             quiz.setImage("https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop");
 
-            quiz.addQuestion(new MultipleChoice("Which of these counrties is landlocked?", 1, "https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop", new List<String> {"Vietnam", "Laos", "Philippines", "Indonesia" }, "Laos"));
+            quiz.addQuestion(new MultipleChoice("Which of these countries is landlocked?", 1, "https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop", new List<String> {"Vietnam", "Laos", "Philippines", "Indonesia" }, "Laos"));
+           quiz.addQuestion(new MultipleChoice("Lorem ipsum dolor sit amet, consectetur adipisciLorem ipsum dolor sit amet, consectetur", 1, "https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop", new List<String> {"Vietnam", "Laos", "Philippines", "Indonesia" }, "Laos"));
             quiz.addQuestion(new MultipleChoice("The Great Barrier Reef is located off the coast of which country?", 2, "https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop", new List<String> { "New Zealand", "Indonesia", "Australia", "Japan" }, "Australia"));
             quiz.addQuestion(new MultipleChoice("Which mountain range separates Europe from Asia?", 3, "https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop", new List<String> { "Alps", "Himalayas", "Andes", "Ural Mountains" }, "Ural Mountains"));
 

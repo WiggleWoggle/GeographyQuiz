@@ -115,20 +115,12 @@ namespace defaultwinform
 
             questionBacking.Size = new Size(647, 82);
 
-            if (currentQuestion.getQuestion().Length > 48)
-            {
-  
-                String firstHalf = questionLabel.Text.Substring(0, 48);
-                String secondHalf = questionLabel.Text.Substring(48);
+            String question = questionLabel.Text;
 
-                questionLabel.Text = firstHalf;
-                secondaryQuestionLabel.Text = secondHalf;
+            
 
-            } else
-            {
-
-                secondaryQuestionLabel.Text = "";
-            }
+            questionLabel.Text = splitQuestion(question, true);
+            secondaryQuestionLabel.Text = splitQuestion(question, false);
 
             questionImage.ImageLocation = currentQuestion.getURLString();
 
@@ -139,6 +131,56 @@ namespace defaultwinform
             quizProgressLabel.Text = questionNumber + 1 + "/" + questionCount;
         }
 
+        private String splitQuestion(String question, Boolean getFirstHalf)
+        {
+            int middleIndex = question.Length / 2;
+
+            // find the nearest space to the left or right of the middle index
+            int splitIndex = middleIndex;
+
+            while (splitIndex > 0 && question[splitIndex] != ' ')
+            {
+                splitIndex--;
+            }
+
+            // if no space was found to the left try finding one to the right
+            if (splitIndex == 0)
+            {
+                splitIndex = middleIndex;
+                while (splitIndex < question.Length && question[splitIndex] != ' ')
+                {
+                    splitIndex++;
+                }
+            }
+
+            // split the string at the identified index
+            string firstHalf = question.Substring(0, splitIndex).Trim();
+            string secondHalf = question.Substring(splitIndex).Trim();
+
+            if (question.Length > 60)
+            {
+
+                if (secondHalf.Length > 60)
+                {
+                    secondHalf = secondHalf.Substring(0, 60);
+                }
+
+                if (secondHalf.Length > 3)
+                {
+                    secondHalf = secondHalf.Substring(0, secondHalf.Length - 3);
+                }
+
+                secondHalf += "...";
+            }
+
+            if (getFirstHalf)
+            {
+                return firstHalf;
+            }
+
+            return secondHalf;
+        }
+ 
         private void resetQuestionData()
         {
             multipleChoiceAnswer = "";
@@ -250,7 +292,9 @@ namespace defaultwinform
             returnHomeButton.Visible = true;
             returnHomeButton.Location = new Point(returnHomeButton.Location.X, returnHomeButton.Location.Y + (missedQuestions.Count * 110));
 
-            //performanceOverlay.Width = (amountRight/questionCount) * 500;
+            int newWidth = (int)((amountRight / (double)questionCount) * 316);
+
+            performanceOverlay.Width = newWidth;
 
             int currentTrackedQuestion = 0;
 
@@ -850,6 +894,33 @@ namespace defaultwinform
         private void shortAnswerBox_TextChanged(object sender, EventArgs e)
         {
             currentQuestionAnswered = true;
+        }
+
+        private void questionLabel_MouseHover(object sender, EventArgs e)
+        {
+            longQuestionHelp.Visible = true;
+            longQuestionHelp.Text = "(" + currentQuestion.getQuestion() + ")";
+        }
+
+        private void longQuestionHelp_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void questionLabel_MouseLeave(object sender, EventArgs e)
+        {
+            longQuestionHelp.Visible = false;
+        }
+
+        private void secondaryQuestionLabel_MouseHover(object sender, EventArgs e)
+        {
+            longQuestionHelp.Visible = true;
+            longQuestionHelp.Text = "(" + currentQuestion.getQuestion() + ")";
+        }
+
+        private void secondaryQuestionLabel_MouseLeave(object sender, EventArgs e)
+        {
+            longQuestionHelp.Visible = false;
         }
     }
 }

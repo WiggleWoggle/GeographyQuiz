@@ -91,3 +91,4 @@ C:\Users\s195870\source\repos\GeographyQuiz\bin\Debug\System.Runtime.CompilerSer
 C:\Users\s195870\source\repos\GeographyQuiz\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\defaultw.AE0D3E60.Up2Date
 C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\defaultwinform.QuizTakingForm.resources
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.QuizTakingForm.resources
