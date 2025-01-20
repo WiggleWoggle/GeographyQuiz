@@ -11,6 +11,7 @@ namespace defaultwinform
         private String name = "";
         private String username = "";
         private String encryptedPassword = "";
+        private String email = "";
 
         private int starCount = 0;
 
@@ -22,6 +23,7 @@ namespace defaultwinform
         private int powerupSkip = 0;
 
         private System.Drawing.Color profileColor;
+        private String profilePicPath = "";
 
         public UserAccount() {
 
@@ -43,6 +45,26 @@ namespace defaultwinform
         public String getName()
         {
             return this.name;
+        }
+
+        public void setEmail(String email)
+        {
+            this.email = email;
+        }
+
+        public String getEmail()
+        {
+            return this.email;
+        }
+
+        public void setProfilePicPath(String profilePicPath)
+        {
+            this.profilePicPath = profilePicPath;
+        }
+
+        public String getProfilePicPath()
+        {
+            return this.profilePicPath;
         }
 
         public void setUserName(String username)

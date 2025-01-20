@@ -33,6 +33,11 @@ namespace defaultwinform
             QuizDAO.retrieveQuizzes();
 
             buildQuizPanels();
+
+            if (Program.profilePicPath != null)
+            {
+                profilePicture.Image = new Bitmap(Program.profilePicPath);
+            }          
         }
 
         private void buildQuizPanels()
@@ -104,12 +109,7 @@ namespace defaultwinform
 
         private void profileOverlay_Click(object sender, EventArgs e)
         {
-            ColorDialog colorPicker = new ColorDialog();
 
-            if (colorPicker.ShowDialog() == DialogResult.OK)
-            {
-                profileUnderlay.BackColor = colorPicker.Color;
-            }
         }
 
         private void openQuiz(object sender, EventArgs e)
@@ -159,6 +159,12 @@ namespace defaultwinform
             Shop form = new Shop();
             form.Show();
             this.Close();
+        }
+
+        private void profilePicture_Click(object sender, EventArgs e)
+        {
+            ProfileEditingForm form = new ProfileEditingForm();
+            form.Show();
         }
     }
 }

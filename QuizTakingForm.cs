@@ -59,6 +59,11 @@ namespace defaultwinform
 
             currentQuiz = QuizDAO.getCurrentQuiz();
 
+            if (currentQuiz.shouldShuffle())
+            {
+                currentQuiz.shuffleQuestions();
+            }
+
             questionCount = currentQuiz.getQuestions().Count;
             questionNumber = 0;
             sessionStarCount = 0;
@@ -85,13 +90,13 @@ namespace defaultwinform
             resetQuestionData();
             disableAllButtons();
 
+            questionImageUnder.Location = new Point(419, 150);
+
             shortResponseUnder.Location = new Point(574, 130);
             nextButton.Location = new Point(929, 413);
             nextLabel.Location = new Point(953, 435);
 
-            nextButton.Image = Resources.unavailableNext;
-            nextLabel.BackColor = Color.FromArgb(146, 147, 148);
-            nextLabel.ForeColor = Color.FromArgb(205, 205, 205);
+            disableNextButton();
 
             if (currentQuiz.getQuestion(currentQuestion) is MultipleChoice) {
 
@@ -135,6 +140,20 @@ namespace defaultwinform
             sessionStarLabel.Text = "" + sessionStarCount;
 
             quizProgressLabel.Text = questionNumber + 1 + "/" + questionCount;
+        }
+
+        private void disableNextButton()
+        {
+            nextButton.Image = Resources.unavailableNext;
+            nextLabel.BackColor = Color.FromArgb(146, 147, 148);
+            nextLabel.ForeColor = Color.FromArgb(205, 205, 205);
+        }
+
+        private void enableNextButton()
+        {
+            nextButton.Image = Resources.next;
+            nextLabel.BackColor = Color.FromArgb(182, 189, 202);
+            nextLabel.ForeColor = Color.White;
         }
 
         private String splitQuestion(String question, Boolean getFirstHalf)
@@ -646,9 +665,7 @@ namespace defaultwinform
             TrueFalseQuestion clone = (TrueFalseQuestion) currentQuestion;
 
             currentQuestionAnswered = true;
-            nextButton.Image = Resources.next;
-            nextLabel.BackColor = Color.FromArgb(182, 189, 202);
-            nextLabel.ForeColor = Color.White;
+            enableNextButton();
             selectedIndicator.Visible = true;
 
             if (questionTrue)
@@ -664,12 +681,6 @@ namespace defaultwinform
 
         private void selectMultipleAnswer(String color)
         {
-
-            currentQuestionAnswered = true;
-
-            nextButton.Image = Resources.next;
-            nextLabel.BackColor = Color.FromArgb(182, 189, 202);
-            nextLabel.ForeColor = Color.White;
 
             if (color.Equals("red"))
             {
@@ -729,6 +740,28 @@ namespace defaultwinform
                     blueSelected = true;
                 }
             }
+
+            if (atLeastOneSelected())
+            {
+                currentQuestionAnswered = true;
+
+                enableNextButton();
+            } else
+            {
+                currentQuestionAnswered = false;
+
+                disableNextButton();
+            }
+        }
+
+        private Boolean atLeastOneSelected()
+        {
+            if (redSelected || yellowSelected || greenSelected || blueSelected)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void selectMultipleChoiceAnswer(String color)
@@ -738,9 +771,7 @@ namespace defaultwinform
 
             currentQuestionAnswered = true;
 
-            nextButton.Image = Resources.next;
-            nextLabel.BackColor = Color.FromArgb(182, 189, 202);
-            nextLabel.ForeColor = Color.White;
+            enableNextButton();
 
             selectedIndicator.Visible = true;
 
@@ -909,11 +940,23 @@ namespace defaultwinform
 
         private void shortAnswerBox_TextChanged(object sender, EventArgs e)
         {
-            currentQuestionAnswered = true;
 
-            nextButton.Image = Resources.next;
-            nextLabel.BackColor = Color.FromArgb(182, 189, 202);
-            nextLabel.ForeColor = Color.White;
+            currentQuestionAnswered = false;
+
+            disableNextButton();
+
+            if (shortAnswerBox.Text != null)
+            {
+                if (shortAnswerBox.Text.Length > 0)
+                {
+                    if (!shortAnswerBox.Text.Equals(""))
+                    {
+                        currentQuestionAnswered = true;
+
+                        enableNextButton();
+                    }
+                }
+            }
         }
 
         private void questionLabel_MouseHover(object sender, EventArgs e)

@@ -22,6 +22,11 @@ namespace defaultwinform
         Boolean showCorrect;
         Boolean randomize;
 
+        public Quiz(Boolean shuffle)
+        {
+            randomize = shuffle;
+        }
+
         public Quiz()
         {
 
@@ -88,7 +93,7 @@ namespace defaultwinform
         public void shuffleQuestions()
         {
             Random random = new Random();
-            questions.OrderBy(x => random.Next()).ToList();
+            questions = questions.OrderBy(x => random.Next()).ToList();
         }
 
         public int getQuestionPosition(Question question)
@@ -103,6 +108,11 @@ namespace defaultwinform
             }
 
             return -1;
+        }
+
+        public Boolean shouldShuffle()
+        {
+            return randomize;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace defaultwinform
 
         public static Boolean successfulConnection = true;
         public static UserAccount currentAccount = null;
+        public static String profilePicPath = null;
 
         /// <summary>
         /// The main entry point for the application.

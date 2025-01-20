@@ -63,7 +63,26 @@ namespace defaultwinform
             return false;
         }
 
-        public static Boolean validUsername(String username)
+        public static Boolean validName(String name)
+        {
+            if (minCharacters(name, 2))
+            {
+                if (maxCharacters(name, 20))
+                {
+                    if (containsLetters(name))
+                    {
+                        if (noSpaces(name))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+
+            public static Boolean validUsername(String username)
         {
             if (minCharacters(username, 5))
             {
@@ -74,9 +93,60 @@ namespace defaultwinform
                         if (noSpaces(username))
                         {
                             return true;
+                        } else
+                        {
+                            usernameIssue = "Your username cannot contain spaces!";
                         }
                     }
+                    else
+                    {
+                        usernameIssue = "Your username must contain letters!";
+                    }
                 }
+                else
+                {
+                    usernameIssue = "Your username can't be over 20 characters!";
+                }
+            }
+            else
+            {
+                usernameIssue = "Your username must be at least 8 characters!";
+            }
+
+            return false;
+        }
+
+        public static Boolean validEmail(String email)
+        {
+            if (containsA(email))
+            {
+                if (containsDomain(email))
+                {
+                    if (noSpaces(email))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public static Boolean containsA(String field)
+        {
+            if (field.Contains("@"))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static Boolean containsDomain(String field)
+        {
+            if (field.Contains("."))
+            {
+                return true;
             }
 
             return false;

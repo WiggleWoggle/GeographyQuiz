@@ -41,9 +41,11 @@
             this.usernameField = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.emailField = new System.Windows.Forms.TextBox();
             this.incorrectLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -82,6 +84,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
+            this.panel1.Controls.Add(this.emailField);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.passwordField);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.login);
@@ -93,7 +97,7 @@
             this.panel1.Controls.Add(this.nameField);
             this.panel1.Location = new System.Drawing.Point(109, 214);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 301);
+            this.panel1.Size = new System.Drawing.Size(369, 323);
             this.panel1.TabIndex = 5;
             // 
             // passwordField
@@ -101,7 +105,7 @@
             this.passwordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
             this.passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordField.Location = new System.Drawing.Point(147, 160);
+            this.passwordField.Location = new System.Drawing.Point(147, 198);
             this.passwordField.Name = "passwordField";
             this.passwordField.Size = new System.Drawing.Size(182, 24);
             this.passwordField.TabIndex = 9;
@@ -110,7 +114,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(33, 159);
+            this.label7.Location = new System.Drawing.Point(33, 199);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 23);
             this.label7.TabIndex = 8;
@@ -121,7 +125,7 @@
             this.login.AutoSize = true;
             this.login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline);
             this.login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(132)))), ((int)(((byte)(217)))));
-            this.login.Location = new System.Drawing.Point(239, 255);
+            this.login.Location = new System.Drawing.Point(239, 288);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(43, 17);
             this.login.TabIndex = 7;
@@ -132,7 +136,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.label3.Location = new System.Drawing.Point(75, 255);
+            this.label3.Location = new System.Drawing.Point(75, 288);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 17);
             this.label3.TabIndex = 6;
@@ -145,7 +149,7 @@
             this.signupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signupButton.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.signupButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.signupButton.Location = new System.Drawing.Point(37, 208);
+            this.signupButton.Location = new System.Drawing.Point(37, 241);
             this.signupButton.Name = "signupButton";
             this.signupButton.Size = new System.Drawing.Size(292, 34);
             this.signupButton.TabIndex = 5;
@@ -183,16 +187,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Name:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(119, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -213,19 +207,46 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "GeoMind";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(119, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(35, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 23);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Email:";
+            // 
+            // emailField
+            // 
+            this.emailField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.emailField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailField.Location = new System.Drawing.Point(147, 155);
+            this.emailField.Name = "emailField";
+            this.emailField.Size = new System.Drawing.Size(182, 24);
+            this.emailField.TabIndex = 11;
+            // 
             // incorrectLabel
             // 
             this.incorrectLabel.AutoSize = true;
-            this.incorrectLabel.Enabled = false;
             this.incorrectLabel.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.incorrectLabel.ForeColor = System.Drawing.Color.Red;
-            this.incorrectLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.incorrectLabel.Location = new System.Drawing.Point(106, 518);
+            this.incorrectLabel.Location = new System.Drawing.Point(106, 540);
             this.incorrectLabel.Name = "incorrectLabel";
             this.incorrectLabel.Size = new System.Drawing.Size(71, 17);
-            this.incorrectLabel.TabIndex = 10;
+            this.incorrectLabel.TabIndex = 13;
             this.incorrectLabel.Text = "VisibleText";
-            this.incorrectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // SignupForm
             // 
@@ -268,6 +289,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox emailField;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label incorrectLabel;
     }
 }

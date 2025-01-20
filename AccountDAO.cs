@@ -47,6 +47,8 @@ namespace defaultwinform
                         account.setName(reader.GetString(1));
                         account.setUserName(reader.GetString(2));
                         account.setEncryptedPassword(reader.GetString(3));
+                        account.setEmail(reader.GetString(9));
+                        account.setProfilePicPath(reader.GetString(10));
 
                         userAccounts.Add(account);
                     }
@@ -62,6 +64,8 @@ namespace defaultwinform
             String name = importedAccount.getName();
             String username = importedAccount.getUsername();
             String encryptedPassword = importedAccount.getEncryptedPassword();
+            String email = importedAccount.getEmail();
+            String profilePicture = importedAccount.getProfilePicPath();
 
             int stars = importedAccount.getStarsCount();
             int skips = importedAccount.getSkipCount();
@@ -73,7 +77,7 @@ namespace defaultwinform
 
             connection.Open();
 
-            MySqlCommand command = new MySqlCommand("INSERT INTO `useraccount`(`FirstName`, `Username`, `EncryptedPassword`, `Stars`, `Skips`, `Eliminates`, `Doubles`, `Multipliers`) VALUES (@firstname, @username, @encryptedpassword, @stars, @skips, @eliminates, @doubles, @multipliers)", connection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `useraccount`(`FirstName`, `Username`, `EncryptedPassword`, `Stars`, `Skips`, `Eliminates`, `Doubles`, `Multipliers`, `Email`, `ProfilePicture`) VALUES (@firstname, @username, @encryptedpassword, @stars, @skips, @eliminates, @doubles, @multipliers, @email, @profilepicture)", connection);
             command.Parameters.AddWithValue("@firstname", name);
             command.Parameters.AddWithValue("@username", username);
             command.Parameters.AddWithValue("@encryptedpassword", encryptedPassword);
@@ -82,6 +86,8 @@ namespace defaultwinform
             command.Parameters.AddWithValue("@eliminates", eliminates);
             command.Parameters.AddWithValue("@doubles", doubles);
             command.Parameters.AddWithValue("@multipliers", multipliers);
+            command.Parameters.AddWithValue("@email", email);
+            command.Parameters.AddWithValue("@profilepicture", profilePicture);
 
             command.ExecuteNonQuery();
 

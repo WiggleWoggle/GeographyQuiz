@@ -64,7 +64,14 @@ namespace defaultwinform
             if (inputtedPassword.Equals("MASTER"))
             {
 
-                Program.currentAccount = new UserAccount();
+                UserAccount account = new UserAccount();
+
+                account.setUserName("MASTER");
+                account.setName("MASTER");
+                account.setEncryptedPassword(PasswordHandler.encryptPassword("password"));
+                account.setEmail("master@master.com");
+
+                Program.currentAccount = account;
 
                 Form1 form = new Form1();
 
@@ -81,9 +88,8 @@ namespace defaultwinform
                     if (account.getEncryptedPassword().Equals(encryptedPassword))
                     {
 
-                        Form1 form = new Form1();
-
                         Program.currentAccount = account;
+                        Form1 form = new Form1();
                         form.Show();
                         this.Close();
                     } else

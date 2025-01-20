@@ -37,31 +37,38 @@ namespace defaultwinform
 
             String preCheckPassword = passwordField.Text;
             String preCheckUsername = usernameField.Text;
+            String preCheckEmail = emailField.Text;
             String preCheckName = nameField.Text;
 
             if (PasswordHandler.validPassword(preCheckPassword))
             {
-
                 if (PasswordHandler.validUsername(preCheckUsername))
                 {
-                    if (PasswordHandler.validUsername(preCheckName))
+                    if (PasswordHandler.validEmail(preCheckEmail))
                     {
+                        if (PasswordHandler.validName(preCheckName))
+                        {
+                            AccountDAO accountDAO = new AccountDAO();
 
-                        AccountDAO accountDAO = new AccountDAO();
+                            //make the other constructor
+                            UserAccount newAccount = new UserAccount();
+                            newAccount.setName(preCheckName);
+                            newAccount.setUserName(preCheckUsername);
+                            newAccount.setEncryptedPassword(PasswordHandler.encryptPassword(preCheckPassword));
+                            newAccount.setEmail(preCheckEmail);
 
-                        //make the other constructor
-                        UserAccount newAccount = new UserAccount();
-                        newAccount.setName(preCheckName);
-                        newAccount.setUserName(preCheckUsername);
-                        newAccount.setEncryptedPassword(PasswordHandler.encryptPassword(preCheckPassword));
+                            accountDAO.addAccount(newAccount);
 
-                        accountDAO.addAccount(newAccount);
+                            Program.currentAccount = newAccount;
 
-                        form.Show();
-                        this.Close();
+                            AccountAuth.sendRegistrationEmail();
+
+                            form.Show();
+                            this.Close();
+                        }
+                        }
                     }
-                }
-            } else
+                } else
             {
                 incorrectLabel.Text = PasswordHandler.passwordIssue;
             }
