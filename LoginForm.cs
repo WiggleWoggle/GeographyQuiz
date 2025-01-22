@@ -70,6 +70,13 @@ namespace defaultwinform
                 account.setName("MASTER");
                 account.setEncryptedPassword(PasswordHandler.encryptPassword("password"));
                 account.setEmail("master@master.com");
+                account.setSkipCount(99);
+                account.setImmunityCount(99);
+                account.setStakesCount(99);
+                account.setMultiplyCount(99);
+                account.setDoubleCount(99);
+                account.setEliminateCount(99);
+
 
                 Program.currentAccount = account;
 

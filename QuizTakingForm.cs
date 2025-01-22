@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Numerics;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -18,6 +19,8 @@ namespace defaultwinform
 
         private int questionNumber;
         private Boolean currentQuestionAnswered;
+        private int currentQuestionValue;
+        private Boolean usedPowerUpOnQuestion;
 
         private String multipleChoiceAnswer;
         private Boolean trueOrFalseAnswer;
@@ -57,6 +60,7 @@ namespace defaultwinform
             skipCount.Text = Program.currentAccount.getSkipCount() + "";
             eliminateCount.Text = Program.currentAccount.getEliminateCount() + "";
 
+
             currentQuiz = QuizDAO.getCurrentQuiz();
 
             if (currentQuiz.shouldShuffle())
@@ -78,6 +82,7 @@ namespace defaultwinform
             redSelected = false;
             yellowSelected = false;
             greenSelected = false;
+            currentQuestionValue = 0;
 
 
             shortAnswerBox.ScrollBars = ScrollBars.Vertical;
@@ -85,6 +90,8 @@ namespace defaultwinform
 
         private void buildToQuestion()
         {
+
+            usedPowerUpOnQuestion = false;
             currentQuestion = currentQuiz.getQuestion(questionNumber);
 
             resetQuestionData();
@@ -98,7 +105,8 @@ namespace defaultwinform
 
             disableNextButton();
 
-            if (currentQuiz.getQuestion(currentQuestion) is MultipleChoice) {
+            if (currentQuiz.getQuestion(currentQuestion) is MultipleChoice)
+            {
 
                 enableMultipleChoiceButtons();
             }
@@ -135,11 +143,15 @@ namespace defaultwinform
 
             questionImage.ImageLocation = currentQuestion.getURLString();
 
-            starValueLabel.Text = "+ " + currentQuestion.getStarValue();
+            currentQuestionValue = currentQuestion.getStarValue();
+
+            starValueLabel.Text = "+ " + currentQuestionValue;
 
             sessionStarLabel.Text = "" + sessionStarCount;
 
             quizProgressLabel.Text = questionNumber + 1 + "/" + questionCount;
+
+
         }
 
         private void disableNextButton()
@@ -205,7 +217,7 @@ namespace defaultwinform
 
             return secondHalf;
         }
- 
+
         private void resetQuestionData()
         {
             multipleChoiceAnswer = "";
@@ -259,12 +271,12 @@ namespace defaultwinform
             quizProgressLabel.Visible = false;
             progressBacking.Visible = false;
 
-            homeButton.Visible = false;
-            leaderboardButton.Visible = false;
-            shopButton.Visible = false;
-            gradesButton.Visible = false;
-            skipButton.Visible = false;
-            teachersButton.Visible = false;
+            immunityPowerup.Visible = false;
+            highStakesPowerup.Visible = false;
+            doubleStarsPowerup.Visible = false;
+            multiplierPowerup.Visible = false;
+            skipPowerup.Visible = false;
+            eliminatePowerup.Visible = false;
             panel1.Visible = false;
             progressBacking.Visible = false;
             additionalBackPanel.Visible = false;
@@ -395,6 +407,16 @@ namespace defaultwinform
             yellowLabel.Text = question.getSecondChoice();
             greenLabel.Text = question.getThirdChoice();
             blueLabel.Text = question.getFourthChoice();
+
+            redLabel.BackColor = Color.FromArgb(255, 87, 87);
+            yellowLabel.BackColor = Color.FromArgb(255, 177, 85);
+            greenLabel.BackColor = Color.FromArgb(97, 182, 97);
+            blueLabel.BackColor = Color.FromArgb(12, 192, 223);
+
+            redButton.Image = Resources.redButton;
+            yellowButton.Image = Resources.yellowButton;
+            greenButton.Image = Resources.greenButton;
+            blueButton.Image = Resources.blueButton;
         }
 
         private void enableMultipleAnswerButtons()
@@ -422,7 +444,7 @@ namespace defaultwinform
             greenSelector.Visible = true;
             blueSelector.Visible = true;
 
-            MultipleAnswer question = (MultipleAnswer) currentQuestion;
+            MultipleAnswer question = (MultipleAnswer)currentQuestion;
 
             redLabel.Text = question.getFirstChoice();
             yellowLabel.Text = question.getSecondChoice();
@@ -467,7 +489,8 @@ namespace defaultwinform
                     buildToQuestion();
 
                     currentQuestionAnswered = false;
-                } else
+                }
+                else
                 {
                     disableAllButtons();
                     disableAllPanels();
@@ -480,13 +503,14 @@ namespace defaultwinform
         {
             if (currentQuestion is MultipleChoice)
             {
-                MultipleChoice clone = (MultipleChoice) currentQuestion;
+                MultipleChoice clone = (MultipleChoice)currentQuestion;
 
                 if (clone.getAnswer().Equals(multipleChoiceAnswer))
                 {
-                    sessionStarCount += clone.getStarValue();
+                    sessionStarCount += currentQuestionValue;
                     amountRight++;
-                } else
+                }
+                else
                 {
                     missedQuestions.Add(clone);
 
@@ -495,13 +519,14 @@ namespace defaultwinform
             }
             else if (currentQuestion is TrueFalseQuestion)
             {
-                TrueFalseQuestion clone = (TrueFalseQuestion) currentQuestion;
+                TrueFalseQuestion clone = (TrueFalseQuestion)currentQuestion;
 
                 if (clone.IsTrue() == trueOrFalseAnswer)
                 {
-                    sessionStarCount += clone.getStarValue();
+                    sessionStarCount += currentQuestionValue;
                     amountRight++;
-                } else
+                }
+                else
                 {
                     missedQuestions.Add(clone);
 
@@ -514,13 +539,14 @@ namespace defaultwinform
 
                     incorrectAnswersTracked.Add(returnValue);
                 }
-            } else if (currentQuestion is MultipleAnswer)
+            }
+            else if (currentQuestion is MultipleAnswer)
             {
-                MultipleAnswer clone = (MultipleAnswer) currentQuestion;
+                MultipleAnswer clone = (MultipleAnswer)currentQuestion;
 
                 if (multipleAnswerCorrect(clone))
                 {
-                    sessionStarCount += clone.getStarValue();
+                    sessionStarCount += currentQuestionValue;
                     amountRight++;
                 }
                 else
@@ -559,13 +585,14 @@ namespace defaultwinform
 
                     incorrectAnswersTracked.Add(compiled);
                 }
-            } else if (currentQuestion is ShortResponse)
+            }
+            else if (currentQuestion is ShortResponse)
             {
-                ShortResponse clone = (ShortResponse) currentQuestion;
+                ShortResponse clone = (ShortResponse)currentQuestion;
 
                 if (shortResponseCorrect(clone))
                 {
-                    sessionStarCount += clone.getStarValue();
+                    sessionStarCount += currentQuestionValue;
                     amountRight++;
                 }
                 else
@@ -604,7 +631,8 @@ namespace defaultwinform
                 {
                     return false;
                 }
-            } else
+            }
+            else
             {
                 if (question.getAnswers().Contains(redLabel.Text))
                 {
@@ -662,7 +690,7 @@ namespace defaultwinform
 
         private void selectTrueOrFalseAnswer(Boolean questionTrue)
         {
-            TrueFalseQuestion clone = (TrueFalseQuestion) currentQuestion;
+            TrueFalseQuestion clone = (TrueFalseQuestion)currentQuestion;
 
             currentQuestionAnswered = true;
             enableNextButton();
@@ -672,7 +700,8 @@ namespace defaultwinform
             {
                 selectedIndicator.Location = new Point(371, 698);
                 trueOrFalseAnswer = true;
-            } else
+            }
+            else
             {
                 selectedIndicator.Location = new Point(825, 698);
                 trueOrFalseAnswer = false;
@@ -689,13 +718,15 @@ namespace defaultwinform
                     redSelector.Image = Resources.emptyRed;
                     redSelector.Refresh();
                     redSelected = false;
-                } else
+                }
+                else
                 {
                     redSelector.Image = Resources.selectedRed;
                     redSelector.Refresh();
                     redSelected = true;
                 }
-            } else if (color.Equals("yellow"))
+            }
+            else if (color.Equals("yellow"))
             {
                 if (yellowSelected)
                 {
@@ -746,7 +777,8 @@ namespace defaultwinform
                 currentQuestionAnswered = true;
 
                 enableNextButton();
-            } else
+            }
+            else
             {
                 currentQuestionAnswered = false;
 
@@ -767,7 +799,7 @@ namespace defaultwinform
         private void selectMultipleChoiceAnswer(String color)
         {
 
-            MultipleChoice clone = (MultipleChoice) currentQuestion;
+            MultipleChoice clone = (MultipleChoice)currentQuestion;
 
             currentQuestionAnswered = true;
 
@@ -779,15 +811,18 @@ namespace defaultwinform
             {
                 selectedIndicator.Location = new Point(256, 698);
                 multipleChoiceAnswer = redLabel.Text;
-            } else if (color.Equals("yellow"))
+            }
+            else if (color.Equals("yellow"))
             {
                 selectedIndicator.Location = new Point(479, 698);
                 multipleChoiceAnswer = yellowLabel.Text;
-            } else if (color.Equals("green"))
+            }
+            else if (color.Equals("green"))
             {
                 selectedIndicator.Location = new Point(709, 698);
                 multipleChoiceAnswer = greenLabel.Text;
-            } else if (color.Equals("blue"))
+            }
+            else if (color.Equals("blue"))
             {
                 selectedIndicator.Location = new Point(946, 698);
                 multipleChoiceAnswer = blueLabel.Text;
@@ -800,7 +835,8 @@ namespace defaultwinform
             if (currentQuestion is MultipleChoice)
             {
                 selectMultipleChoiceAnswer("red");
-            } else
+            }
+            else
             {
                 selectMultipleAnswer("red");
             }
@@ -978,6 +1014,148 @@ namespace defaultwinform
 
         private void secondaryQuestionLabel_MouseLeave(object sender, EventArgs e)
         {
+        }
+
+        private void skipCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doubleStarsPowerup_Click(object sender, EventArgs e)
+        {
+            if (!usedPowerUpOnQuestion)
+            {
+                if (Program.currentAccount.getDoubleCount() > 0)
+                {
+
+                    usedPowerUpOnQuestion = true;
+
+                    Program.currentAccount.setDoubleCount(Program.currentAccount.getDoubleCount() - 1);
+                    doubleStarsCount.Text = "" + Program.currentAccount.getDoubleCount();
+
+                    currentQuestionValue = currentQuestion.getStarValue() * 2;
+
+                    starValueLabel.Text = "+ " + currentQuestionValue;
+
+                    powerupDisplay.Visible = true;
+                    powerupDisplayLabel.Visible = true;
+
+                    powerupDisplay.Image = Resources.doubler;
+                    powerupDisplayLabel.Text = "Doubler used!";
+
+                    powerupDisplay.Visible = true;
+                    powerupDisplayLabel.Visible = true;
+
+                    hidePowerupDisplay();
+                }
+            }
+        }
+
+        private void eliminatePowerup_Click(object sender, EventArgs e)
+        {
+            if (!usedPowerUpOnQuestion)
+            {
+                if (Program.currentAccount.getEliminateCount() > 0)
+                {
+
+                    usedPowerUpOnQuestion = true;
+
+                    Program.currentAccount.setEliminateCount(Program.currentAccount.getEliminateCount() - 1);
+                    eliminateCount.Text = "" + Program.currentAccount.getEliminateCount();
+
+                    if (currentQuestion is MultipleChoice clone)
+                    {
+
+                        int correct = 4;
+
+                        if (clone.getFirstChoice().Equals(clone.getAnswer()))
+                        {
+                            correct = 1;
+                        }
+
+                        if (clone.getSecondChoice().Equals(clone.getAnswer()))
+                        {
+                            correct = 2;
+                        }
+
+                        if (clone.getThirdChoice().Equals(clone.getAnswer()))
+                        {
+                            correct = 3;
+                        }
+
+                        Console.WriteLine("Correct: " + correct);
+
+                        int eliminate = randomizeEliminateChoice(correct);
+
+                        if (eliminate == 1)
+                        {
+                            redLabel.BackColor = Color.FromArgb(84, 84, 84);
+                            redButton.Image = Resources.eliminatedButton;
+                            redLabel.Text = "";
+                        }
+                        else if (eliminate == 2)
+                        {
+                            yellowLabel.BackColor = Color.FromArgb(84, 84, 84);
+                            yellowButton.Image = Resources.eliminatedButton;
+                            yellowLabel.Text = "";
+                        }
+                        else if (eliminate == 3)
+                        {
+                            greenLabel.BackColor = Color.FromArgb(84, 84, 84);
+                            greenButton.Image = Resources.eliminatedButton;
+                            greenLabel.Text = "";
+                        }
+                        else
+                        {
+                            blueLabel.BackColor = Color.FromArgb(84, 84, 84);
+                            blueButton.Image = Resources.eliminatedButton;
+                            blueLabel.Text = "";
+                        }
+                    }
+                    else if (currentQuestion is TrueFalseQuestion trueFalse)
+                    {
+                        if (trueFalse.IsTrue())
+                        {
+                            falsePanel.Image = Resources.eliminatedButton;
+                            falseLabel.Text = "";
+                        } else
+                        {
+                            truePanel.Image = Resources.eliminatedButton;
+                            trueLabel.Text = "";
+                        }
+                    }
+
+                    powerupDisplay.Visible = true;
+                    powerupDisplayLabel.Visible = true;
+
+                    powerupDisplay.Image = Resources.eliminate;
+                    powerupDisplayLabel.Text = "Eliminate used!";
+
+                    hidePowerupDisplay();
+                }
+            }
+        }
+
+        private int randomizeEliminateChoice(int correct)
+        {
+
+            Random random = new Random();
+
+            int result;
+            do
+            {
+                result = random.Next(4) + 1;
+            } while (result == correct);
+
+            return result;
+        }
+
+        public async void hidePowerupDisplay()
+        {
+            await Task.Delay(1000);
+
+            powerupDisplay.Visible = false;
+            powerupDisplayLabel.Visible = false;
         }
     }
 }

@@ -152,7 +152,7 @@ namespace defaultwinform
         //
         public int getSkipCount()
         {
-            return this.starCount;
+            return this.powerupSkip;
         }
 
         public void setSkipCount(int powerupSkip)
