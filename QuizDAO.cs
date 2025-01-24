@@ -27,7 +27,7 @@ namespace defaultwinform
 
         public static void tempQuiz()
         {
-            Quiz quiz = new Quiz();
+            Quiz quiz = new Quiz(true);
             quiz.setTopic("State Geography");
             quiz.setImage("https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop");
 

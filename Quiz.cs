@@ -90,10 +90,17 @@ namespace defaultwinform
             return questions;
         }
 
-        public void shuffleQuestions()
+        public List<Question> shuffleQuestions()
         {
             Random random = new Random();
             questions = questions.OrderBy(x => random.Next()).ToList();
+
+            return questions.OrderBy(x => random.Next()).ToList();
+        }
+
+        public void setQuestions(List<Question> questions)
+        {
+            this.questions = questions;
         }
 
         public int getQuestionPosition(Question question)

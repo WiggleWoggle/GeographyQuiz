@@ -241,5 +241,11 @@
   <ItemGroup>
     <None Include="Resources\profileEdit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\immunity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highstakes.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

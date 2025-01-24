@@ -65,7 +65,7 @@ namespace defaultwinform
 
             if (currentQuiz.shouldShuffle())
             {
-                currentQuiz.shuffleQuestions();
+                currentQuiz.setQuestions(currentQuiz.shuffleQuestions());
             }
 
             questionCount = currentQuiz.getQuestions().Count;
@@ -90,7 +90,7 @@ namespace defaultwinform
 
         private void buildToQuestion()
         {
-
+            immunityActivated = false;
             usedPowerUpOnQuestion = false;
             currentQuestion = currentQuiz.getQuestion(questionNumber);
 
@@ -501,107 +501,130 @@ namespace defaultwinform
 
         private void checkAnswer()
         {
-            if (currentQuestion is MultipleChoice)
+
+            if (immunityActivated)
             {
-                MultipleChoice clone = (MultipleChoice)currentQuestion;
-
-                if (clone.getAnswer().Equals(multipleChoiceAnswer))
+                sessionStarCount += currentQuestionValue;
+                amountRight++;
+            } else
+            {
+                if (currentQuestion is MultipleChoice)
                 {
-                    sessionStarCount += currentQuestionValue;
-                    amountRight++;
+                    MultipleChoice clone = (MultipleChoice)currentQuestion;
+
+                    if (clone.getAnswer().Equals(multipleChoiceAnswer))
+                    {
+                        sessionStarCount += currentQuestionValue;
+                        amountRight++;
+                    }
+                    else
+                    {
+                        missedQuestions.Add(clone);
+
+                        if (highStakesActivated)
+                        {
+                            sessionStarCount = 0;
+                        }
+
+                        incorrectAnswersTracked.Add(multipleChoiceAnswer);
+                    }
                 }
-                else
+                else if (currentQuestion is TrueFalseQuestion)
                 {
-                    missedQuestions.Add(clone);
+                    TrueFalseQuestion clone = (TrueFalseQuestion)currentQuestion;
 
-                    incorrectAnswersTracked.Add(multipleChoiceAnswer);
+                    if (clone.IsTrue() == trueOrFalseAnswer)
+                    {
+                        sessionStarCount += currentQuestionValue;
+                        amountRight++;
+                    }
+                    else
+                    {
+
+                        sessionStarCount = 0;
+
+                        missedQuestions.Add(clone);
+
+                        String returnValue = "True";
+
+                        if (!trueOrFalseAnswer)
+                        {
+                            returnValue = "False";
+                        }
+
+                        incorrectAnswersTracked.Add(returnValue);
+                    }
+                }
+                else if (currentQuestion is MultipleAnswer)
+                {
+                    MultipleAnswer clone = (MultipleAnswer)currentQuestion;
+
+                    if (multipleAnswerCorrect(clone))
+                    {
+                        sessionStarCount += currentQuestionValue;
+                        amountRight++;
+                    }
+                    else
+                    {
+
+                        sessionStarCount = 0;
+
+                        missedQuestions.Add(clone);
+
+                        String compiled = "";
+
+                        if (redSelected)
+                        {
+                            compiled = compiled + redLabel.Text + " ";
+                        }
+
+                        if (yellowSelected)
+                        {
+                            compiled = compiled + yellowLabel.Text + " ";
+                        }
+
+                        if (greenSelected)
+                        {
+                            compiled = compiled + greenLabel.Text + " ";
+                        }
+
+                        if (blueSelected)
+                        {
+                            compiled = compiled + blueLabel.Text + " ";
+                        }
+
+                        if (compiled.Equals(""))
+                        {
+                            compiled = "Nothing. ";
+                        }
+
+                        compiled = compiled.Substring(0, compiled.Length - 1);
+                        compiled = string.Join(", ", compiled.Split(' '));
+
+                        incorrectAnswersTracked.Add(compiled);
+                    }
+                }
+                else if (currentQuestion is ShortResponse)
+                {
+                    ShortResponse clone = (ShortResponse)currentQuestion;
+
+                    if (shortResponseCorrect(clone))
+                    {
+                        sessionStarCount += currentQuestionValue;
+                        amountRight++;
+                    }
+                    else
+                    {
+
+                        sessionStarCount = 0;
+
+                        missedQuestions.Add(clone);
+
+                        incorrectAnswersTracked.Add("Your response was incorrect.");
+                    }
                 }
             }
-            else if (currentQuestion is TrueFalseQuestion)
-            {
-                TrueFalseQuestion clone = (TrueFalseQuestion)currentQuestion;
 
-                if (clone.IsTrue() == trueOrFalseAnswer)
-                {
-                    sessionStarCount += currentQuestionValue;
-                    amountRight++;
-                }
-                else
-                {
-                    missedQuestions.Add(clone);
-
-                    String returnValue = "True";
-
-                    if (!trueOrFalseAnswer)
-                    {
-                        returnValue = "False";
-                    }
-
-                    incorrectAnswersTracked.Add(returnValue);
-                }
-            }
-            else if (currentQuestion is MultipleAnswer)
-            {
-                MultipleAnswer clone = (MultipleAnswer)currentQuestion;
-
-                if (multipleAnswerCorrect(clone))
-                {
-                    sessionStarCount += currentQuestionValue;
-                    amountRight++;
-                }
-                else
-                {
-                    missedQuestions.Add(clone);
-
-                    String compiled = "";
-
-                    if (redSelected)
-                    {
-                        compiled = compiled + redLabel.Text + " ";
-                    }
-
-                    if (yellowSelected)
-                    {
-                        compiled = compiled + yellowLabel.Text + " ";
-                    }
-
-                    if (greenSelected)
-                    {
-                        compiled = compiled + greenLabel.Text + " ";
-                    }
-
-                    if (blueSelected)
-                    {
-                        compiled = compiled + blueLabel.Text + " ";
-                    }
-
-                    if (compiled.Equals(""))
-                    {
-                        compiled = "Nothing. ";
-                    }
-
-                    compiled = compiled.Substring(0, compiled.Length - 1);
-                    compiled = string.Join(", ", compiled.Split(' '));
-
-                    incorrectAnswersTracked.Add(compiled);
-                }
-            }
-            else if (currentQuestion is ShortResponse)
-            {
-                ShortResponse clone = (ShortResponse)currentQuestion;
-
-                if (shortResponseCorrect(clone))
-                {
-                    sessionStarCount += currentQuestionValue;
-                    amountRight++;
-                }
-                else
-                {
-                    missedQuestions.Add(clone);
-
-                    incorrectAnswersTracked.Add("Your response was incorrect.");
-                }
-            }
 
             sessionStarLabel.Text = "" + sessionStarCount;
         }
@@ -1058,80 +1081,116 @@ namespace defaultwinform
                 if (Program.currentAccount.getEliminateCount() > 0)
                 {
 
-                    usedPowerUpOnQuestion = true;
-
-                    Program.currentAccount.setEliminateCount(Program.currentAccount.getEliminateCount() - 1);
-                    eliminateCount.Text = "" + Program.currentAccount.getEliminateCount();
-
-                    if (currentQuestion is MultipleChoice clone)
+                    if (!(currentQuestion is ShortResponse))
                     {
 
-                        int correct = 4;
+                        usedPowerUpOnQuestion = true;
 
-                        if (clone.getFirstChoice().Equals(clone.getAnswer()))
+                        Program.currentAccount.setEliminateCount(Program.currentAccount.getEliminateCount() - 1);
+                        eliminateCount.Text = "" + Program.currentAccount.getEliminateCount();
+
+                        if (currentQuestion is MultipleChoice clone)
                         {
-                            correct = 1;
+
+                            int correct = 4;
+
+                            if (clone.getFirstChoice().Equals(clone.getAnswer()))
+                            {
+                                correct = 1;
+                            }
+
+                            if (clone.getSecondChoice().Equals(clone.getAnswer()))
+                            {
+                                correct = 2;
+                            }
+
+                            if (clone.getThirdChoice().Equals(clone.getAnswer()))
+                            {
+                                correct = 3;
+                            }
+
+                            Console.WriteLine("Correct: " + correct);
+
+                            int eliminate = randomizeEliminateChoice(correct);
+
+                            if (eliminate == 1)
+                            {
+                                redLabel.BackColor = Color.FromArgb(84, 84, 84);
+                                redButton.Image = Resources.eliminatedButton;
+                                redLabel.Text = "";
+                            }
+                            else if (eliminate == 2)
+                            {
+                                yellowLabel.BackColor = Color.FromArgb(84, 84, 84);
+                                yellowButton.Image = Resources.eliminatedButton;
+                                yellowLabel.Text = "";
+                            }
+                            else if (eliminate == 3)
+                            {
+                                greenLabel.BackColor = Color.FromArgb(84, 84, 84);
+                                greenButton.Image = Resources.eliminatedButton;
+                                greenLabel.Text = "";
+                            }
+                            else
+                            {
+                                blueLabel.BackColor = Color.FromArgb(84, 84, 84);
+                                blueButton.Image = Resources.eliminatedButton;
+                                blueLabel.Text = "";
+                            }
+                        }
+                        else if (currentQuestion is TrueFalseQuestion trueFalse)
+                        {
+                            if (trueFalse.IsTrue())
+                            {
+                                falsePanel.Image = Resources.eliminatedButton;
+                                falseLabel.Text = "";
+                            }
+                            else
+                            {
+                                truePanel.Image = Resources.eliminatedButton;
+                                trueLabel.Text = "";
+                            }
+                        }
+                        else if (currentQuestion is MultipleAnswer multipleAnswer)
+                        {
+                            if (!multipleAnswer.getAnswers().Contains(multipleAnswer.getFirstChoice()))
+                            {
+                                redSelector.Visible = false;
+                                redLabel.BackColor = Color.FromArgb(84, 84, 84);
+                                redButton.Image = Resources.eliminatedButton;
+                                redLabel.Text = "";
+                            }
+                            else if (!multipleAnswer.getAnswers().Contains(multipleAnswer.getSecondChoice()))
+                            {
+                                yellowSelector.Visible = false;
+                                yellowLabel.BackColor = Color.FromArgb(84, 84, 84);
+                                yellowButton.Image = Resources.eliminatedButton;
+                                yellowLabel.Text = "";
+                            }
+                            else if (!multipleAnswer.getAnswers().Contains(multipleAnswer.getThirdChoice()))
+                            {
+                                greenSelector.Visible = false;
+                                greenLabel.BackColor = Color.FromArgb(84, 84, 84);
+                                greenButton.Image = Resources.eliminatedButton;
+                                greenLabel.Text = "";
+                            }
+                            else
+                            {
+                                blueSelector.Visible = false;
+                                blueLabel.BackColor = Color.FromArgb(84, 84, 84);
+                                blueButton.Image = Resources.eliminatedButton;
+                                blueLabel.Text = "";
+                            }
                         }
 
-                        if (clone.getSecondChoice().Equals(clone.getAnswer()))
-                        {
-                            correct = 2;
-                        }
+                        powerupDisplay.Visible = true;
+                        powerupDisplayLabel.Visible = true;
 
-                        if (clone.getThirdChoice().Equals(clone.getAnswer()))
-                        {
-                            correct = 3;
-                        }
+                        powerupDisplay.Image = Resources.eliminate;
+                        powerupDisplayLabel.Text = "Eliminate used!";
 
-                        Console.WriteLine("Correct: " + correct);
-
-                        int eliminate = randomizeEliminateChoice(correct);
-
-                        if (eliminate == 1)
-                        {
-                            redLabel.BackColor = Color.FromArgb(84, 84, 84);
-                            redButton.Image = Resources.eliminatedButton;
-                            redLabel.Text = "";
-                        }
-                        else if (eliminate == 2)
-                        {
-                            yellowLabel.BackColor = Color.FromArgb(84, 84, 84);
-                            yellowButton.Image = Resources.eliminatedButton;
-                            yellowLabel.Text = "";
-                        }
-                        else if (eliminate == 3)
-                        {
-                            greenLabel.BackColor = Color.FromArgb(84, 84, 84);
-                            greenButton.Image = Resources.eliminatedButton;
-                            greenLabel.Text = "";
-                        }
-                        else
-                        {
-                            blueLabel.BackColor = Color.FromArgb(84, 84, 84);
-                            blueButton.Image = Resources.eliminatedButton;
-                            blueLabel.Text = "";
-                        }
+                        hidePowerupDisplay();
                     }
-                    else if (currentQuestion is TrueFalseQuestion trueFalse)
-                    {
-                        if (trueFalse.IsTrue())
-                        {
-                            falsePanel.Image = Resources.eliminatedButton;
-                            falseLabel.Text = "";
-                        } else
-                        {
-                            truePanel.Image = Resources.eliminatedButton;
-                            trueLabel.Text = "";
-                        }
-                    }
-
-                    powerupDisplay.Visible = true;
-                    powerupDisplayLabel.Visible = true;
-
-                    powerupDisplay.Image = Resources.eliminate;
-                    powerupDisplayLabel.Text = "Eliminate used!";
-
-                    hidePowerupDisplay();
                 }
             }
         }
@@ -1156,6 +1215,59 @@ namespace defaultwinform
 
             powerupDisplay.Visible = false;
             powerupDisplayLabel.Visible = false;
+        }
+
+        private void immunityPowerup_Click(object sender, EventArgs e)
+        {
+            if (!usedPowerUpOnQuestion)
+            {
+                if (Program.currentAccount.getImmunityCount() > 0)
+                {
+
+                    usedPowerUpOnQuestion = true;
+
+                    immunityActivated = true;
+
+                    Program.currentAccount.setImmunityCount(Program.currentAccount.getImmunityCount() - 1);
+                    immunityCount.Text = "" + Program.currentAccount.getImmunityCount();
+
+                    powerupDisplay.Visible = true;
+                    powerupDisplayLabel.Visible = true;
+
+                    powerupDisplay.Image = Resources.immunity;
+                    powerupDisplayLabel.Text = "Immunity used!";
+
+                    hidePowerupDisplay();
+                }
+            }
+        }
+
+        private void highStakesPowerup_Click(object sender, EventArgs e)
+        {
+            if (!usedPowerUpOnQuestion)
+            {
+                if (Program.currentAccount.getStakesCount() > 0)
+                {
+                    usedPowerUpOnQuestion = true;
+
+                    highStakesActivated = true;
+
+                    Program.currentAccount.setStakesCount(Program.currentAccount.getStakesCount() - 1);
+                    highStakesCount.Text = "" + Program.currentAccount.getStakesCount();
+
+                    powerupDisplay.Visible = true;
+                    powerupDisplayLabel.Visible = true;
+
+                    powerupDisplay.Image = Resources.highstakes;
+                    powerupDisplayLabel.Text = "High Stakes used!";
+
+                    currentQuestionValue = currentQuestionValue * 4;
+
+                    starValueLabel.Text = "x " + currentQuestionValue;
+
+                    hidePowerupDisplay();
+                }
+            }
         }
     }
 }
