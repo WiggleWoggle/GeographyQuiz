@@ -19,7 +19,7 @@ namespace defaultwinform
 
         private int questionNumber;
         private Boolean currentQuestionAnswered;
-        private int currentQuestionValue;
+        private int currentQuestionValue = 0;
         private Boolean usedPowerUpOnQuestion;
 
         private String multipleChoiceAnswer;
@@ -82,14 +82,15 @@ namespace defaultwinform
             redSelected = false;
             yellowSelected = false;
             greenSelected = false;
-            currentQuestionValue = 0;
-
 
             shortAnswerBox.ScrollBars = ScrollBars.Vertical;
         }
 
         private void buildToQuestion()
         {
+
+            highStakesActivated = false;
+
             immunityActivated = false;
             usedPowerUpOnQuestion = false;
             currentQuestion = currentQuiz.getQuestion(questionNumber);
@@ -102,6 +103,22 @@ namespace defaultwinform
             shortResponseUnder.Location = new Point(574, 130);
             nextButton.Location = new Point(929, 413);
             nextLabel.Location = new Point(953, 435);
+
+            redSelector.Image = Resources.emptyRed;
+            redSelector.Refresh();
+            redSelected = false;
+
+            yellowSelector.Image = Resources.emptyYellow;
+            yellowSelector.Refresh();
+            yellowSelected = false;
+
+            greenSelector.Image = Resources.emptyGreen;
+            greenSelector.Refresh();
+            greenSelected = false;
+
+            blueSelector.Image = Resources.emptyBlue;
+            blueSelector.Refresh();
+            blueSelected = false;
 
             disableNextButton();
 
@@ -443,6 +460,12 @@ namespace defaultwinform
             yellowSelector.Visible = true;
             greenSelector.Visible = true;
             blueSelector.Visible = true;
+
+            redButton.Image = Resources.redButton;
+            yellowButton.Image = Resources.yellowButton;
+            greenButton.Image = Resources.greenButton;
+            blueButton.Image = Resources.blueButton;
+
 
             MultipleAnswer question = (MultipleAnswer)currentQuestion;
 
@@ -1264,6 +1287,79 @@ namespace defaultwinform
                     currentQuestionValue = currentQuestionValue * 4;
 
                     starValueLabel.Text = "x " + currentQuestionValue;
+
+                    hidePowerupDisplay();
+                }
+            }
+        }
+
+        private void multiplierPowerup_Click(object sender, EventArgs e)
+        {
+            if (!usedPowerUpOnQuestion)
+            {
+                if (Program.currentAccount.getMultiplyCount() > 0)
+                {
+
+                    usedPowerUpOnQuestion = true;
+
+                    Program.currentAccount.setMultiplyCount(Program.currentAccount.getMultiplyCount() - 1);
+                    multiplierCount.Text = "" + Program.currentAccount.getMultiplyCount();
+
+                    currentQuestionValue = currentQuestion.getStarValue() * 3;
+
+                    starValueLabel.Text = "+ " + currentQuestionValue;
+
+                    powerupDisplay.Visible = true;
+                    powerupDisplayLabel.Visible = true;
+
+                    powerupDisplay.Image = Resources.multiplier;
+                    powerupDisplayLabel.Text = "Multiplier used!";
+
+                    powerupDisplay.Visible = true;
+                    powerupDisplayLabel.Visible = true;
+
+                    hidePowerupDisplay();
+                }
+            }
+        }
+
+        private void skipPowerup_Click(object sender, EventArgs e)
+        {
+            if (!usedPowerUpOnQuestion)
+            {
+                if (Program.currentAccount.getSkipCount() > 0)
+                {
+
+                    usedPowerUpOnQuestion = true;
+
+                    Program.currentAccount.setSkipCount(Program.currentAccount.getSkipCount() - 1);
+                    skipCount.Text = "" + Program.currentAccount.getSkipCount();
+
+                    sessionStarCount++;
+
+                    if ((questionNumber + 1) < questionCount)
+                    {
+                        questionNumber++;
+
+                        buildToQuestion();
+
+                        currentQuestionAnswered = false;
+                    }
+                    else
+                    {
+                        disableAllButtons();
+                        disableAllPanels();
+                        enableSummaryPanel();
+                    }
+
+                    powerupDisplay.Visible = true;
+                    powerupDisplayLabel.Visible = true;
+
+                    powerupDisplay.Image = Resources.skip;
+                    powerupDisplayLabel.Text = "Skip used!";
+
+                    powerupDisplay.Visible = true;
+                    powerupDisplayLabel.Visible = true;
 
                     hidePowerupDisplay();
                 }
