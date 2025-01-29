@@ -1,13 +1,34 @@
-﻿using System;
+﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Drive.v3;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static Mysqlx.Notice.Frame.Types;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace defaultwinform
 {
     internal class QuizDAO
     {
+
+        public static int expectedQueuedQuizzes = 0;
+        private static int queueProgress = 0;
+
+        private static List<Task> totalTasks = new List<Task>();
+
+        public static Boolean hasCompletedQueue = false;
 
         private static List<QuizPanel> quizPanels = new List<QuizPanel>();
 
@@ -15,20 +36,42 @@ namespace defaultwinform
 
         private static Quiz currentQuiz = null;
 
-        
+        private static string ServiceAccountJsonPath = "copper-aloe-354117-83ecfd64d319.json"; 
+        private static string folderId = "1CAEl8_9X2kugGUYdAkd088jXmpPMVDhp";
+
+
+
         string connectionString = "datasource=localhost;port=3306;username=root;password=root;database=geography;";
 
-        public static void retrieveQuizzes()
+        public async static void retrieveQuizzes()
         {
             //database call
 
-            
+            //createQuizObjectsFromFile();
+
+            totalTasks.Add(createQuizObjectsFromFile());
+
+
+            await Task.WhenAll(totalTasks);
+
+
+            while (!hasCompletedQueue)
+            {
+                if (queueProgress >= expectedQueuedQuizzes)
+                {
+                    hasCompletedQueue = true;
+                    break;
+                }
+            }
+
+            Console.WriteLine("COMPLETED QUEUE");
         }
 
         public static void tempQuiz()
         {
             Quiz quiz = new Quiz(true);
             quiz.setTopic("State Geography");
+            quiz.setTitle("TESTQUIZ");
             quiz.setImage("https://cdn.britannica.com/13/197813-138-3CF1CCFA/state-more-president-Washington-economy-geography-history.jpg?w=800&h=450&c=crop");
 
             quiz.addQuestion(new MultipleChoice("Which state is known as the \"Grand Canyon State\"?", 1, "https://www.americanrivers.org/wp-content/uploads/2022/12/AmyMartin_GC_from_above.jpg", new List<String> { "Nevada", "Arizona", "New Mexico", "Utah" }, "Arizona"));
@@ -86,6 +129,340 @@ namespace defaultwinform
         public static Quiz getCurrentQuiz()
         {
             return currentQuiz;
+        }
+
+        public static DriveService authenticateDriveService()
+        {
+            GoogleCredential credential;
+            using (var stream = new FileStream(ServiceAccountJsonPath, FileMode.Open, FileAccess.Read))
+            {
+                credential = GoogleCredential.FromStream(stream)
+                    .CreateScoped(DriveService.ScopeConstants.Drive);
+            }
+
+            return new DriveService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential,
+                ApplicationName = "GeomindClient",
+            });
+        }
+
+        public static async Task<List<Google.Apis.Drive.v3.Data.File>> retrieveDriveFiles()
+        {
+            var service = authenticateDriveService();
+            var request = service.Files.List();
+            request.Q = $"'{folderId}' in parents and mimeType='text/plain'";
+
+            request.Fields = "files(id, name)";
+
+            var result = request.Execute();
+
+            return result.Files.ToList();
+        }
+
+        public async static Task createQuizObjectsFromFile()
+        {
+            List<Google.Apis.Drive.v3.Data.File> files = await retrieveDriveFiles(); 
+
+            List<Task> tasks = new List<Task>();
+
+            foreach (var file in files)
+            {
+                tasks.Add(processFile(file.Id));
+                expectedQueuedQuizzes++;
+            }
+
+            await Task.WhenAll(tasks);  
+        }
+
+        private static async Task processFile(string fileId)
+        {
+            string content = await readQuizFileAsync(fileId);
+            await Task.Run(() => buildQuizObject(content));
+        }
+
+        public static async Task<string> readQuizFileAsync(String fileID)
+        {
+            var service = authenticateDriveService();
+            var request = service.Files.Get(fileID);
+
+            using (var stream = new MemoryStream())
+            {
+                await request.DownloadAsync(stream);
+                stream.Position = 0; 
+                using (var reader = new StreamReader(stream))
+                {
+                    return await reader.ReadToEndAsync(); 
+                }
+            }
+        }
+
+        public static async Task buildQuizObject(String content)
+        {
+            Quiz quiz = new Quiz();
+
+
+            await Task.Run(() => readLines(quiz, content));
+
+        }
+
+        public static async Task readLines(Quiz quiz, String content)
+        {
+            using (StringReader reader = new StringReader(content))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    if (line.Contains("TITLE"))
+                    {
+                        quiz.setTitle(formatTitle(line));
+                    }
+
+                    if (line.Contains("TOPIC"))
+                    {
+                        quiz.setTopic(formatTopic(line));
+                    }
+
+                    if (line.Contains("SHUFFLE"))
+                    {
+                        quiz.setShuffle(formatShuffle(line));
+                    }
+
+                    if (line.Contains("URL"))
+                    {
+                        quiz.setImage(formatURL(line));
+                    }
+
+                    if (line.Contains("MCQ"))
+                    {
+                        quiz.addQuestion(generateMultipleChoiceQuestion(line, reader));
+                    }
+
+                    if (line.Contains("TFQ"))
+                    {
+                        quiz.addQuestion(generateTrueFalseQuestion(line, reader));
+                    }
+
+                    if (line.Contains("MAQ"))
+                    {
+                        quiz.addQuestion(generateMultipleAnswerQuestion(line, reader));
+                    }
+
+                    if (line.Contains("SRQ"))
+                    {
+                        //quiz.addQuestion(generateMultipleAnswerQuestion(line, reader));
+                    }
+                }
+            }
+            
+            Console.ReadLine();
+
+            assignedQuizzes.Add(quiz);
+
+            queueProgress++;
+        }
+
+        public static String formatTitle(String line)
+        {
+            line = line.Replace("TITLE: ", "");
+
+            return line;
+        }
+
+        public static String formatURL(String line)
+        {
+            line = line.Replace("URL: ", "");
+
+            return line;
+        }
+
+        public static String formatTopic(String line)
+        {
+            line = line.Replace("TOPIC: ", "").Replace("  ", " ");
+
+            return line;
+        }
+
+        public static Boolean formatShuffle(String line)
+        {
+            if (line.Contains("true"))
+            {
+                return true;
+            } 
+
+            return false;
+        }
+
+        public static MultipleChoice generateMultipleChoiceQuestion(String line, StringReader reader)
+        {
+
+            String question = line.Remove(0, 8);
+            question = question.Replace("(", "");
+            question = question.Replace(")", "");
+
+
+            String answerChoiceOne = reader.ReadLine();
+            answerChoiceOne = answerChoiceOne.Replace("a. ", "");
+
+            String answerChoiceTwo = reader.ReadLine();
+            answerChoiceTwo = answerChoiceTwo.Replace("b. ", "");
+
+            String answerChoiceThree = reader.ReadLine();
+            answerChoiceThree = answerChoiceThree.Replace("c. ", "");
+
+            String answerChoiceFour = reader.ReadLine();
+            answerChoiceFour = answerChoiceFour.Replace("d. ", "");
+
+            //
+            String correctAnswer = reader.ReadLine();
+            correctAnswer = correctAnswer.Replace("ANSWER: ", "");
+
+            if (correctAnswer.Equals("a"))
+            {
+                correctAnswer = answerChoiceOne;
+            } else if (correctAnswer.Equals("b"))
+            {
+                correctAnswer = answerChoiceTwo;
+            } else if (correctAnswer.Equals("c"))
+            {
+                correctAnswer = answerChoiceThree;
+            } else
+            {
+                correctAnswer = answerChoiceFour;
+            }
+
+            String value = reader.ReadLine();
+            value = value.Replace("VALUE: ", "");
+            value = value.Replace(" ", "");
+
+            int numValue  = Int32.Parse(value);
+
+            String questionImageURL = reader.ReadLine();
+            questionImageURL = questionImageURL.Replace("URL: ", "");
+
+
+            MultipleChoice multipleChoice = new MultipleChoice(question, numValue, questionImageURL, new List<String> { answerChoiceOne, answerChoiceTwo, answerChoiceThree, answerChoiceFour }, correctAnswer);
+
+            return multipleChoice;
+        }
+
+        public static TrueFalseQuestion generateTrueFalseQuestion(String line, StringReader reader)
+        {
+
+            String question = line.Remove(0, 8);
+            question = question.Replace("(", "");
+            question = question.Replace(")", "");
+
+            //
+            String correctAnswer = reader.ReadLine();
+            correctAnswer = correctAnswer.Replace("ANSWER: ", "");
+
+            Boolean correctBoolean = false;
+
+            if (correctAnswer.Contains("true"))
+            {
+                correctBoolean = true;
+            }
+
+            String value = reader.ReadLine();
+            value = value.Replace("VALUE: ", "");
+            value = value.Replace(" ", "");
+
+            int numValue = Int32.Parse(value);
+
+            String questionImageURL = reader.ReadLine();
+            questionImageURL = questionImageURL.Replace("URL: ", "");
+
+
+            TrueFalseQuestion trueFalseQuestion = new TrueFalseQuestion(question, numValue, correctBoolean, questionImageURL);
+
+            return trueFalseQuestion;
+        }
+
+        public static MultipleAnswer generateMultipleAnswerQuestion(String line, StringReader reader)
+        {
+
+            String question = line.Remove(0, 8);
+            question = question.Replace("(", "");
+            question = question.Replace(")", "");
+
+
+            String answerChoiceOne = reader.ReadLine();
+            answerChoiceOne = answerChoiceOne.Replace("a. ", "");
+
+            String answerChoiceTwo = reader.ReadLine();
+            answerChoiceTwo = answerChoiceTwo.Replace("b. ", "");
+
+            String answerChoiceThree = reader.ReadLine();
+            answerChoiceThree = answerChoiceThree.Replace("c. ", "");
+
+            String answerChoiceFour = reader.ReadLine();
+            answerChoiceFour = answerChoiceFour.Replace("d. ", "");
+
+            //
+            String correctAnswers = reader.ReadLine();
+            correctAnswers = correctAnswers.Replace("ANSWER: ", "");
+
+            List<String> correctAnsweredParsed = new List<String>();
+            
+            if (correctAnswers.Contains("a"))
+            {
+                correctAnsweredParsed.Add(answerChoiceOne);
+            }
+
+            if (correctAnswers.Contains("b"))
+            {
+                correctAnsweredParsed.Add(answerChoiceTwo);
+            }
+
+            if (correctAnswers.Contains("c"))
+            {
+                correctAnsweredParsed.Add(answerChoiceThree);
+            }
+
+            if (correctAnswers.Contains("d"))
+            {
+                correctAnsweredParsed.Add(answerChoiceFour);
+            }
+
+            String value = reader.ReadLine();
+            value = value.Replace("VALUE: ", "");
+            value = value.Replace(" ", "");
+
+            int numValue = Int32.Parse(value);
+
+            String questionImageURL = reader.ReadLine();
+            questionImageURL = questionImageURL.Replace("URL: ", "");
+
+
+            MultipleAnswer multipleAnswer = new MultipleAnswer(question, numValue, questionImageURL, new List<String> { answerChoiceOne, answerChoiceTwo, answerChoiceThree, answerChoiceFour }, correctAnsweredParsed);
+
+            return multipleAnswer;
+        }
+
+        public static ShortResponse generateShortResponseQuestion(String line, StringReader reader)
+        {
+
+            String question = line.Remove(0, 8);
+            question = question.Replace("(", "");
+            question = question.Replace(")", "");
+
+
+            
+
+            String value = reader.ReadLine();
+            value = value.Replace("VALUE: ", "");
+            value = value.Replace(" ", "");
+
+            int numValue = Int32.Parse(value);
+
+            String questionImageURL = reader.ReadLine();
+            questionImageURL = questionImageURL.Replace("URL: ", "");
+
+
+            ShortResponse multipleAnswer = new ShortResponse(question, numValue, new List<String> { "" }, questionImageURL);
+
+            return multipleAnswer;
         }
     }
 }

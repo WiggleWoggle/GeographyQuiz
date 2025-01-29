@@ -80,8 +80,21 @@ namespace defaultwinform
 
                 Program.currentAccount = account;
 
-                Form1 form = new Form1();
+                QuizDAO.retrieveQuizzes();
 
+                Boolean readyToProgress = false;
+
+                while (!readyToProgress)
+                {
+                    if (QuizDAO.expectedQueuedQuizzes == QuizDAO.getQuizzes().Count)
+                    {
+                        readyToProgress = true;
+                        Console.WriteLine("DAO MATCHES QUEUE");
+                        break;
+                    }
+                }
+
+                Form1 form = new Form1();
                 form.Show();
                 this.Close();
             }

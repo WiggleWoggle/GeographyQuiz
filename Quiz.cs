@@ -12,6 +12,7 @@ namespace defaultwinform
         List<Question> questions = new List<Question>();
         String imageURL;
         String topic;
+        String title;
 
         String quizID;
 
@@ -40,6 +41,16 @@ namespace defaultwinform
         public String getTopic()
         {
             return topic;
+        }
+
+        public void setTitle(String title)
+        {
+            this.title = title;
+        }
+
+        public String getTitle()
+        {
+            return title;
         }
 
         public void setImage(String imageURL)
@@ -120,6 +131,11 @@ namespace defaultwinform
         public Boolean shouldShuffle()
         {
             return randomize;
+        }
+
+        public void setShuffle(Boolean shuffle)
+        {
+            randomize = shuffle;
         }
     }
 }

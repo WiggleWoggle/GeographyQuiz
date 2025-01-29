@@ -14,6 +14,9 @@ namespace defaultwinform
     public partial class Form1 : Form
     {
 
+        private Timer refreshingForm;
+        private List<Quiz> builtQuizzes = new List<Quiz>();
+
         public Form1()
         {
             InitializeComponent();
@@ -30,80 +33,99 @@ namespace defaultwinform
                 studentNameDisplay.Text = "MASTER";
             }
 
-            QuizDAO.retrieveQuizzes();
-
             buildQuizPanels();
 
             if (Program.profilePicPath != null)
             {
                 profilePicture.Image = new Bitmap(Program.profilePicPath);
-            }          
+            }
+
+            initTicker();
         }
 
-        private void buildQuizPanels()
+        public void initTicker()
+        {
+            refreshingForm = new Timer();
+            refreshingForm.Tick += new EventHandler(tickRefresh);
+            refreshingForm.Interval = 2000; 
+            refreshingForm.Start();
+        }
+
+        private void tickRefresh(object sender, EventArgs e)
+        {
+            //todoFlowLayout.Refresh();
+            buildQuizPanels();
+        }
+
+        public void buildQuizPanels()
         {
             foreach (Quiz quiz in QuizDAO.getQuizzes())
             {
-
-                Panel panel = new Panel();
-                panel.Size = new Size(236, 207);
-                panel.BackColor = Color.FromArgb(228, 234, 239);
-
-                PictureBox pictureBox = new PictureBox();
-                pictureBox.ImageLocation = quiz.getImage();
-                pictureBox.Size = new Size(236, 125);
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                Label quizName = new Label();
-                quizName.Text = "Quiz " + "24";
-                quizName.Font = new Font("Century Gothic", 14, FontStyle.Bold);
-                quizName.Location = new Point(2, 127);
-
-                Label quizTopic = new Label();
-                quizTopic.Text = "Topic: " + quiz.getTopic();
-                quizTopic.Font = new Font("Century Gothic", 10);
-                quizTopic.Size = new Size(quizTopic.Size.Width + 100, quizTopic.Size.Height);
-                quizTopic.Location = new Point(2, 155);
-
-                Label questionCount = new Label();
-                questionCount.Text = quiz.getQuestions().Count + "";
-
-                if (quiz.getQuestions().Count != 1)
+                if (!builtQuizzes.Contains(quiz))
                 {
-                    questionCount.Text += " Questions";
-                } else
-                {
-                    questionCount.Text += " Question";
+                    Panel panel = new Panel();
+                    panel.Size = new Size(236, 207);
+                    panel.BackColor = Color.FromArgb(228, 234, 239);
+
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.ImageLocation = quiz.getImage();
+                    pictureBox.Size = new Size(236, 125);
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    Label quizName = new Label();
+                    quizName.Text = quiz.getTitle();
+                    quizName.Font = new Font("Century Gothic", 14, FontStyle.Bold);
+                    quizName.Location = new Point(2, 127);
+
+                    Label quizTopic = new Label();
+                    quizTopic.Text = "Topic: " + quiz.getTopic();
+                    quizTopic.Font = new Font("Century Gothic", 10);
+                    quizTopic.Size = new Size(quizTopic.Size.Width + 100, quizTopic.Size.Height);
+                    quizTopic.Location = new Point(2, 155);
+
+                    Label questionCount = new Label();
+                    questionCount.Text = quiz.getQuestions().Count + "";
+
+                    if (quiz.getQuestions().Count != 1)
+                    {
+                        questionCount.Text += " Questions";
+                    }
+                    else
+                    {
+                        questionCount.Text += " Question";
+                    }
+
+                    questionCount.Font = new Font("Century Gothic", 10);
+                    questionCount.Location = new Point(2, 178);
+
+                    Label attemptedStatus = new Label();
+                    attemptedStatus.Text = "Unattempted";
+                    attemptedStatus.Font = new Font("Century Gothic", 10);
+                    attemptedStatus.TextAlign = ContentAlignment.MiddleRight;
+                    attemptedStatus.Size = new Size(attemptedStatus.Size.Width + 40, attemptedStatus.Size.Height);
+                    attemptedStatus.Location = new Point(90, 127);
+
+                    panel.Controls.Add(pictureBox);
+                    panel.Controls.Add(quizName);
+                    panel.Controls.Add(quizTopic);
+                    panel.Controls.Add(questionCount);
+                    panel.Controls.Add(attemptedStatus);
+
+                    todoFlowLayout.Controls.Add(panel);
+
+                    QuizPanel quizPanel = new QuizPanel(quiz, panel, quizName, questionCount, quizTopic, attemptedStatus, pictureBox);
+
+                    QuizDAO.addQuizPanel(quizPanel);
+
+                    panel.Click += openQuiz;
+                    questionCount.Click += openQuiz;
+                    quizName.Click += openQuiz;
+                    quizTopic.Click += openQuiz;
+                    attemptedStatus.Click += openQuiz;
+                    pictureBox.Click += openQuiz;
+
+                    builtQuizzes.Add(quiz);
                 }
-
-                questionCount.Font = new Font("Century Gothic", 10);
-                questionCount.Location = new Point(2, 178);
-
-                Label attemptedStatus = new Label();
-                attemptedStatus.Text = "Unattempted";
-                attemptedStatus.Font = new Font("Century Gothic", 10);
-                attemptedStatus.TextAlign = ContentAlignment.MiddleRight;
-                attemptedStatus.Size = new Size(attemptedStatus.Size.Width + 40, attemptedStatus.Size.Height);
-                attemptedStatus.Location = new Point(90, 127);
-
-                panel.Controls.Add(pictureBox);
-                panel.Controls.Add(quizName);
-                panel.Controls.Add(quizTopic);
-                panel.Controls.Add(questionCount);
-                panel.Controls.Add(attemptedStatus);
-
-                todoFlowLayout.Controls.Add(panel);
-
-                QuizPanel quizPanel = new QuizPanel(quiz, panel, quizName, questionCount, quizTopic, attemptedStatus, pictureBox);
-
-                QuizDAO.addQuizPanel(quizPanel);
-
-                panel.Click += openQuiz;
-                questionCount.Click += openQuiz;
-                quizName.Click += openQuiz;
-                quizTopic.Click += openQuiz;
-                attemptedStatus.Click += openQuiz;
-                pictureBox.Click += openQuiz;
             }
         }
 
@@ -121,18 +143,24 @@ namespace defaultwinform
                 foreach (QuizPanel panel in QuizDAO.getQuizPanels())
                 {
 
-                    if (panel.getTopic().Text.Contains(quiz.getTopic()))
+                    if (panel.getTitle().Equals(sender) || panel.Equals(sender) || panel.getTopic().Equals(sender))
                     {
-                        QuizDAO.setCurrentQuiz(quiz);
+                        if (panel.getTitle().Text.Equals(quiz.getTitle()))
+                        {
 
-                        //Console.Write("FOUND QUIZ");
+                            QuizDAO.setCurrentQuiz(quiz);
+
+                            //Console.Write("FOUND QUIZ");
 
 
-                        QuizTakingForm form = new QuizTakingForm();
+                            QuizTakingForm form = new QuizTakingForm();
 
-                        form.Show();
-                        this.Close();
+                            form.Show();
+                            this.Close();
+                        }
                     }
+
+                    
                 }
             }
         }

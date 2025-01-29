@@ -89,11 +89,15 @@ namespace defaultwinform
         private void buildToQuestion()
         {
 
+            shortAnswerBox.Text = "";
+
             highStakesActivated = false;
 
             immunityActivated = false;
             usedPowerUpOnQuestion = false;
             currentQuestion = currentQuiz.getQuestion(questionNumber);
+
+            questionImage.ImageLocation = currentQuestion.getURLString();
 
             resetQuestionData();
             disableAllButtons();
@@ -157,9 +161,6 @@ namespace defaultwinform
 
             questionLabel.Text = splitQuestion(question, true);
             secondaryQuestionLabel.Text = splitQuestion(question, false);
-
-            questionImage.ImageLocation = currentQuestion.getURLString();
-
             currentQuestionValue = currentQuestion.getStarValue();
 
             starValueLabel.Text = "+ " + currentQuestionValue;
@@ -564,8 +565,6 @@ namespace defaultwinform
                     else
                     {
 
-                        sessionStarCount = 0;
-
                         missedQuestions.Add(clone);
 
                         String returnValue = "True";
@@ -589,8 +588,6 @@ namespace defaultwinform
                     }
                     else
                     {
-
-                        sessionStarCount = 0;
 
                         missedQuestions.Add(clone);
 
@@ -638,8 +635,6 @@ namespace defaultwinform
                     }
                     else
                     {
-
-                        sessionStarCount = 0;
 
                         missedQuestions.Add(clone);
 

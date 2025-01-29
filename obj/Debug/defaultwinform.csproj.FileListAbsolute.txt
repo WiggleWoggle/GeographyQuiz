@@ -94,3 +94,17 @@ C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\defaultwinform.QuizTakingF
 D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.QuizTakingForm.resources
 D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.ProfileEditingForm.resources
 C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\defaultwinform.ProfileEditingForm.resources
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Auth.dll
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Core.dll
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.dll
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Drive.v3.dll
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Newtonsoft.Json.dll
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.pdb
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.xml
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Auth.pdb
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Auth.xml
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Core.pdb
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Core.xml
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Drive.v3.pdb
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Drive.v3.xml
+D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Newtonsoft.Json.xml
