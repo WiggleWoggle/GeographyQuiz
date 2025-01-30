@@ -53,4 +53,4 @@ D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\net8.0-windows\defaultwi
 D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\net8.0-windows\ref\defaultwinform.dll
 D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\net8.0-windows\defaultwinform.QuizEditorForm.resources
 D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\net8.0-windows\defaultwinform.TeacherPortal.resources
-D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\net8.0-windows\defaultwinform.Resources.IndicatorRes.resources
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\net8.0-windows\defaultwinform.QuestionEditingPrompt.resources

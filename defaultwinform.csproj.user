@@ -11,6 +11,9 @@
     <Compile Update="ProfileEditingForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="QuestionEditingPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="QuizEditorForm.cs">
       <SubType>Form</SubType>
     </Compile>

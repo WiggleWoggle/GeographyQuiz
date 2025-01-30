@@ -35,7 +35,6 @@
             questionLayoutPane = new System.Windows.Forms.FlowLayoutPanel();
             addQuestionPanel = new System.Windows.Forms.Panel();
             addQuestionIcon = new System.Windows.Forms.PictureBox();
-            addQuestionLabel = new System.Windows.Forms.Label();
             settingsLabel = new System.Windows.Forms.Label();
             panel1 = new System.Windows.Forms.Panel();
             quizTopicField = new System.Windows.Forms.TextBox();
@@ -75,7 +74,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(36, 83);
+            label1.Location = new System.Drawing.Point(36, 78);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(104, 23);
             label1.TabIndex = 1;
@@ -86,40 +85,28 @@
             questionLayoutPane.Controls.Add(addQuestionPanel);
             questionLayoutPane.Location = new System.Drawing.Point(40, 109);
             questionLayoutPane.Name = "questionLayoutPane";
-            questionLayoutPane.Size = new System.Drawing.Size(773, 211);
+            questionLayoutPane.Size = new System.Drawing.Size(790, 211);
             questionLayoutPane.TabIndex = 2;
             // 
             // addQuestionPanel
             // 
             addQuestionPanel.Controls.Add(addQuestionIcon);
-            addQuestionPanel.Controls.Add(addQuestionLabel);
             addQuestionPanel.Location = new System.Drawing.Point(3, 3);
             addQuestionPanel.Name = "addQuestionPanel";
-            addQuestionPanel.Size = new System.Drawing.Size(200, 56);
+            addQuestionPanel.Size = new System.Drawing.Size(40, 81);
             addQuestionPanel.TabIndex = 0;
             addQuestionPanel.Click += addQuestionPanel_Click;
             // 
             // addQuestionIcon
             // 
             addQuestionIcon.Image = (System.Drawing.Image)resources.GetObject("addQuestionIcon.Image");
-            addQuestionIcon.Location = new System.Drawing.Point(9, 9);
+            addQuestionIcon.Location = new System.Drawing.Point(0, 26);
             addQuestionIcon.Name = "addQuestionIcon";
             addQuestionIcon.Size = new System.Drawing.Size(37, 37);
             addQuestionIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             addQuestionIcon.TabIndex = 7;
             addQuestionIcon.TabStop = false;
             addQuestionIcon.Click += addQuestionIcon_Click;
-            // 
-            // addQuestionLabel
-            // 
-            addQuestionLabel.AutoSize = true;
-            addQuestionLabel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            addQuestionLabel.Location = new System.Drawing.Point(54, 15);
-            addQuestionLabel.Name = "addQuestionLabel";
-            addQuestionLabel.Size = new System.Drawing.Size(136, 23);
-            addQuestionLabel.TabIndex = 6;
-            addQuestionLabel.Text = "Add Question";
-            addQuestionLabel.Click += addQuestionLabel_Click;
             // 
             // settingsLabel
             // 
@@ -344,7 +331,6 @@
             Click += QuizEditorForm_Click;
             questionLayoutPane.ResumeLayout(false);
             addQuestionPanel.ResumeLayout(false);
-            addQuestionPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)addQuestionIcon).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -366,7 +352,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox imageURLField;
         private System.Windows.Forms.Panel addQuestionPanel;
-        private System.Windows.Forms.Label addQuestionLabel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.PictureBox addQuestionIcon;
         private System.Windows.Forms.RadioButton radioButton3;

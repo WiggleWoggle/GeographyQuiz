@@ -1,0 +1,4 @@
+# Ignore secrets
+.env
+appsettings.json
+key.json

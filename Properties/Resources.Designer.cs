@@ -22,7 +22,7 @@ namespace defaultwinform.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace defaultwinform.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("defaultwinform.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace defaultwinform.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap blueButton {
+        public static System.Drawing.Bitmap blueButton {
             get {
                 object obj = ResourceManager.GetObject("blueButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap defaultProfile {
+        public static System.Drawing.Bitmap defaultProfile {
             get {
                 object obj = ResourceManager.GetObject("defaultProfile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap doubler {
+        public static System.Drawing.Bitmap doubler {
             get {
                 object obj = ResourceManager.GetObject("doubler", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,17 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap editProfile {
+        public static System.Drawing.Bitmap editIcon {
+            get {
+                object obj = ResourceManager.GetObject("editIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap editProfile {
             get {
                 object obj = ResourceManager.GetObject("editProfile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +113,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap editProfile1 {
+        public static System.Drawing.Bitmap editProfile1 {
             get {
                 object obj = ResourceManager.GetObject("editProfile1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +123,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap editProfileIcon {
+        public static System.Drawing.Bitmap editProfileIcon {
             get {
                 object obj = ResourceManager.GetObject("editProfileIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +133,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap eliminate {
+        public static System.Drawing.Bitmap eliminate {
             get {
                 object obj = ResourceManager.GetObject("eliminate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +143,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap eliminatedButton {
+        public static System.Drawing.Bitmap eliminatedButton {
             get {
                 object obj = ResourceManager.GetObject("eliminatedButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +153,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap emptyBlue {
+        public static System.Drawing.Bitmap emptyBlue {
             get {
                 object obj = ResourceManager.GetObject("emptyBlue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +163,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap emptyGreen {
+        public static System.Drawing.Bitmap emptyGreen {
             get {
                 object obj = ResourceManager.GetObject("emptyGreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +173,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap emptyRed {
+        public static System.Drawing.Bitmap emptyRed {
             get {
                 object obj = ResourceManager.GetObject("emptyRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +183,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap emptyYellow {
+        public static System.Drawing.Bitmap emptyYellow {
             get {
                 object obj = ResourceManager.GetObject("emptyYellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +193,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap greenButton {
+        public static System.Drawing.Bitmap greenButton {
             get {
                 object obj = ResourceManager.GetObject("greenButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +203,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap highstakes {
+        public static System.Drawing.Bitmap highstakes {
             get {
                 object obj = ResourceManager.GetObject("highstakes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +213,27 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap immunity {
+        public static System.Drawing.Bitmap homepage {
+            get {
+                object obj = ResourceManager.GetObject("homepage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap homepage1 {
+            get {
+                object obj = ResourceManager.GetObject("homepage1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap immunity {
             get {
                 object obj = ResourceManager.GetObject("immunity", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +243,87 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap multiplier {
+        public static System.Drawing.Bitmap indicatorMA {
+            get {
+                object obj = ResourceManager.GetObject("indicatorMA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap indicatorMA1 {
+            get {
+                object obj = ResourceManager.GetObject("indicatorMA1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap indicatorMC {
+            get {
+                object obj = ResourceManager.GetObject("indicatorMC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap indicatorMC1 {
+            get {
+                object obj = ResourceManager.GetObject("indicatorMC1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap indicatorSR {
+            get {
+                object obj = ResourceManager.GetObject("indicatorSR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap indicatorSR1 {
+            get {
+                object obj = ResourceManager.GetObject("indicatorSR1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap indicatorTF {
+            get {
+                object obj = ResourceManager.GetObject("indicatorTF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap indicatorTF1 {
+            get {
+                object obj = ResourceManager.GetObject("indicatorTF1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap multiplier {
             get {
                 object obj = ResourceManager.GetObject("multiplier", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,7 +333,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap next {
+        public static System.Drawing.Bitmap next {
             get {
                 object obj = ResourceManager.GetObject("next", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -233,7 +343,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap profileEdit {
+        public static System.Drawing.Bitmap profileEdit {
             get {
                 object obj = ResourceManager.GetObject("profileEdit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -243,7 +353,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap profileOverlay {
+        public static System.Drawing.Bitmap profileOverlay {
             get {
                 object obj = ResourceManager.GetObject("profileOverlay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -253,7 +363,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap redButton {
+        public static System.Drawing.Bitmap redButton {
             get {
                 object obj = ResourceManager.GetObject("redButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -263,7 +373,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap selectedBlue {
+        public static System.Drawing.Bitmap selectedBlue {
             get {
                 object obj = ResourceManager.GetObject("selectedBlue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -273,7 +383,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap selectedGreen {
+        public static System.Drawing.Bitmap selectedGreen {
             get {
                 object obj = ResourceManager.GetObject("selectedGreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -283,7 +393,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap selectedRed {
+        public static System.Drawing.Bitmap selectedRed {
             get {
                 object obj = ResourceManager.GetObject("selectedRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -293,7 +403,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap selectedYellow {
+        public static System.Drawing.Bitmap selectedYellow {
             get {
                 object obj = ResourceManager.GetObject("selectedYellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -303,7 +413,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap skip {
+        public static System.Drawing.Bitmap skip {
             get {
                 object obj = ResourceManager.GetObject("skip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -313,7 +423,17 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap unavailableNext {
+        public static System.Drawing.Bitmap trashIcon {
+            get {
+                object obj = ResourceManager.GetObject("trashIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap unavailableNext {
             get {
                 object obj = ResourceManager.GetObject("unavailableNext", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -323,7 +443,7 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap yellowButton {
+        public static System.Drawing.Bitmap yellowButton {
             get {
                 object obj = ResourceManager.GetObject("yellowButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

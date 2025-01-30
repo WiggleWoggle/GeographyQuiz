@@ -35,7 +35,7 @@ namespace defaultwinform
 
         private static Quiz currentQuiz = null;
 
-        private static string ServiceAccountJsonPath = "copper-aloe-354117-f1d32cb20455.json"; 
+        private static string ServiceAccountJsonPath = "key.json"; 
         private static string folderId = "1CAEl8_9X2kugGUYdAkd088jXmpPMVDhp";
 
 

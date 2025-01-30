@@ -1,20 +1,27 @@
 ﻿using defaultwinform.Properties;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Mysqlx.Expect.Open.Types.Condition.Types;
 
 namespace defaultwinform
 {
     public partial class QuizEditorForm : Form
     {
 
+        public Question editingQuestion;
+
         private List<Question> quizBuilderQuestions = new List<Question>();
+
+        private Dictionary<Question, PictureBox> editLinked = new Dictionary<Question, PictureBox>();
 
         public QuizEditorForm()
         {
@@ -28,6 +35,17 @@ namespace defaultwinform
         private void addQuestion()
         {
 
+            
+
+            MultipleChoice question = new MultipleChoice("Question", 1, "", new List<String> { "Answer 1", "Answer 2", "Answer 3", "Answer 4" }, "Answer 1");
+
+            QuestionEditingPrompt questionEditingPrompt = new QuestionEditingPrompt(this);
+            questionEditingPrompt.Show();
+        }
+
+        private void addQuestion(Question question)
+        {
+
             Panel panel = new Panel();
             panel.BackColor = Color.FromArgb(228, 234, 239);
             panel.Size = new Size(114, 101);
@@ -35,7 +53,7 @@ namespace defaultwinform
             questionNumber.Text = "Question " + (questionLayoutPane.Controls.Count);
             questionNumber.Font = new System.Drawing.Font("Century Gothic", 12F, FontStyle.Bold);
             panel.Controls.Add(questionNumber);
-            questionNumber.Location = new Point(15, 30);
+            questionNumber.Location = new Point(15, 35);
 
             Panel header = new Panel();
             header.BackColor = Color.FromArgb(209, 216, 221);
@@ -44,11 +62,29 @@ namespace defaultwinform
             header.Size = new Size(114, 20);
 
             PictureBox indicator = new PictureBox();
-            indicator.Image = (System.Drawing.Image) Resources.blueButton;
+            indicator.SizeMode = PictureBoxSizeMode.StretchImage;
+            indicator.Image = (System.Drawing.Image)Resources.indicatorMC;
             panel.Controls.Add(indicator);
             indicator.Size = new Size(114, 30);
             indicator.Location = new Point(0, 70);
 
+            PictureBox editIcon = new PictureBox();
+            editIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+            editIcon.Image = (System.Drawing.Image)Resources.editIcon;
+            editIcon.Size = new Size(20, 20);
+            editIcon.Location = new Point(70, 0);
+
+            editIcon.Click += openQuestionEditor;
+
+            header.Controls.Add(editIcon);
+
+            PictureBox trashIcon = new PictureBox();
+            trashIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+            trashIcon.Image = (System.Drawing.Image)Resources.trashIcon;
+            trashIcon.Size = new Size(20, 20);
+            trashIcon.Location = new Point(90, 0);
+
+            header.Controls.Add(trashIcon);
 
             Control addQuestionButton = null;
 
@@ -61,7 +97,7 @@ namespace defaultwinform
                 }
             }
 
-            MultipleChoice question = new MultipleChoice("Question", 1, "", new List<String> { "Answer 1", "Answer 2", "Answer 3", "Answer 4" }, "Answer 1");
+            editLinked.Add(question, editIcon);
 
             quizBuilderQuestions.Add(question);
 
@@ -70,7 +106,6 @@ namespace defaultwinform
             questionLayoutPane.Controls.Add(panel);
 
             questionLayoutPane.Controls.Add(addQuestionButton);
-
         }
 
         private void buildQuiz()
@@ -92,6 +127,36 @@ namespace defaultwinform
                     this.Close();
                 }
             }
+        }
+
+        private void openQuestionEditor(object sender, EventArgs e) {
+
+            if (editLinked.ContainsValue((PictureBox) sender))
+            {
+                foreach (Question key in editLinked.Keys)
+                {
+                    if (editLinked[key].Equals((PictureBox)sender))
+                    {
+
+                        int i = 1;
+                        foreach (Question question in quizBuilderQuestions)
+                        {
+                            if (key.Equals(question))
+                            {
+                                break;
+                            }
+
+                            i++;
+                        }
+                    }
+                        
+                }
+            }
+        }
+
+        public void updateEditingQuestion(Question updated)
+        {
+            addQuestion(updated);
         }
 
         private void QuizEditorForm_Click(object sender, EventArgs e)

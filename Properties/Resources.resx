@@ -124,12 +124,6 @@
   <data name="emptyBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emptyBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="indicatorTF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indicatorTF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="indicatorMA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indicatorMA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="selectedYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\selectedYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,9 +139,6 @@
   <data name="redButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="indicatorSR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indicatorSR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="doubler" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doubler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,9 +150,6 @@
   </data>
   <data name="selectedBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\selectedBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="indicatorTF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indicatorTF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blueButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blueButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,12 +184,6 @@
   <data name="highstakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\highstakes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="indicatorSR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indicatorSR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="indicatorMC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indicatorMC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="eliminate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eliminate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -210,12 +192,6 @@
   </data>
   <data name="defaultProfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\defaultProfile2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="indicatorMC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indicatorMC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="indicatorMA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indicatorMA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="immunity" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\immunity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -228,5 +204,35 @@
   </data>
   <data name="homepage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homepage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorMA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorMA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorMA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorMA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorMC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorMC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorMC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorMC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorSR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorSR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorSR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorSR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorTF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorTF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorTF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorTF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trashIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trashIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
