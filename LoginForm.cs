@@ -16,9 +16,9 @@ namespace defaultwinform
         {
             InitializeComponent();
             this.CenterToScreen();
-            this.Size = new Size(594, 692);
-            this.MinimumSize = new Size(594, 692);
-            this.MaximumSize = new Size(594, 692);
+            this.Size = new Size(690, 792);
+            this.MinimumSize = new Size(690, 792);
+            this.MaximumSize = new Size(690, 792);
 
             AccountDAO accountDAO = new AccountDAO();
             accountDAO.getAccounts();
@@ -81,18 +81,6 @@ namespace defaultwinform
                 Program.currentAccount = account;
 
                 QuizDAO.retrieveQuizzes();
-
-                Boolean readyToProgress = false;
-
-                while (!readyToProgress)
-                {
-                    if (QuizDAO.expectedQueuedQuizzes == QuizDAO.getQuizzes().Count)
-                    {
-                        readyToProgress = true;
-                        Console.WriteLine("DAO MATCHES QUEUE");
-                        break;
-                    }
-                }
 
                 Form1 form = new Form1();
                 form.Show();

@@ -29,256 +29,256 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.teachersButton = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.gradesButton = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.shopButton = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.leaderboardButton = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.homeButton = new System.Windows.Forms.PictureBox();
-            this.todoFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.todoLabel = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.completedFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.profilePicture = new System.Windows.Forms.PictureBox();
-            this.studentNameDisplay = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teachersButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradesButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leaderboardButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new System.Windows.Forms.Panel();
+            label5 = new System.Windows.Forms.Label();
+            teachersButton = new System.Windows.Forms.PictureBox();
+            label4 = new System.Windows.Forms.Label();
+            gradesButton = new System.Windows.Forms.PictureBox();
+            label3 = new System.Windows.Forms.Label();
+            shopButton = new System.Windows.Forms.PictureBox();
+            label1 = new System.Windows.Forms.Label();
+            leaderboardButton = new System.Windows.Forms.PictureBox();
+            label2 = new System.Windows.Forms.Label();
+            homeButton = new System.Windows.Forms.PictureBox();
+            todoFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            todoLabel = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            completedFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            profilePicture = new System.Windows.Forms.PictureBox();
+            studentNameDisplay = new System.Windows.Forms.Label();
+            panel2 = new System.Windows.Forms.Panel();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)teachersButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gradesButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)shopButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)leaderboardButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)homeButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)profilePicture).BeginInit();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.teachersButton);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.gradesButton);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.shopButton);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.leaderboardButton);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.homeButton);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(122, 682);
-            this.panel1.TabIndex = 2;
+            panel1.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(teachersButton);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(gradesButton);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(shopButton);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(leaderboardButton);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(homeButton);
+            panel1.Location = new System.Drawing.Point(-1, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(122, 682);
+            panel1.TabIndex = 2;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(20, 633);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 19);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Teachers";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            label5.Location = new System.Drawing.Point(20, 633);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(78, 19);
+            label5.TabIndex = 11;
+            label5.Text = "Teachers";
+            label5.Click += label5_Click;
             // 
             // teachersButton
             // 
-            this.teachersButton.Image = ((System.Drawing.Image)(resources.GetObject("teachersButton.Image")));
-            this.teachersButton.Location = new System.Drawing.Point(17, 550);
-            this.teachersButton.Name = "teachersButton";
-            this.teachersButton.Size = new System.Drawing.Size(80, 80);
-            this.teachersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.teachersButton.TabIndex = 7;
-            this.teachersButton.TabStop = false;
+            teachersButton.Image = (System.Drawing.Image)resources.GetObject("teachersButton.Image");
+            teachersButton.Location = new System.Drawing.Point(17, 550);
+            teachersButton.Name = "teachersButton";
+            teachersButton.Size = new System.Drawing.Size(80, 80);
+            teachersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            teachersButton.TabIndex = 7;
+            teachersButton.TabStop = false;
+            teachersButton.Click += teachersButton_Click;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(26, 504);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 19);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Grades";
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            label4.Location = new System.Drawing.Point(26, 504);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(65, 19);
+            label4.TabIndex = 10;
+            label4.Text = "Grades";
             // 
             // gradesButton
             // 
-            this.gradesButton.Image = ((System.Drawing.Image)(resources.GetObject("gradesButton.Image")));
-            this.gradesButton.Location = new System.Drawing.Point(17, 418);
-            this.gradesButton.Name = "gradesButton";
-            this.gradesButton.Size = new System.Drawing.Size(80, 80);
-            this.gradesButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gradesButton.TabIndex = 6;
-            this.gradesButton.TabStop = false;
+            gradesButton.Image = (System.Drawing.Image)resources.GetObject("gradesButton.Image");
+            gradesButton.Location = new System.Drawing.Point(17, 418);
+            gradesButton.Name = "gradesButton";
+            gradesButton.Size = new System.Drawing.Size(80, 80);
+            gradesButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            gradesButton.TabIndex = 6;
+            gradesButton.TabStop = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(34, 373);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 19);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Shop";
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            label3.Location = new System.Drawing.Point(34, 373);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(48, 19);
+            label3.TabIndex = 9;
+            label3.Text = "Shop";
             // 
             // shopButton
             // 
-            this.shopButton.Image = ((System.Drawing.Image)(resources.GetObject("shopButton.Image")));
-            this.shopButton.Location = new System.Drawing.Point(17, 288);
-            this.shopButton.Name = "shopButton";
-            this.shopButton.Size = new System.Drawing.Size(80, 80);
-            this.shopButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.shopButton.TabIndex = 5;
-            this.shopButton.TabStop = false;
-            this.shopButton.Click += new System.EventHandler(this.shopButton_Click);
+            shopButton.Image = (System.Drawing.Image)resources.GetObject("shopButton.Image");
+            shopButton.Location = new System.Drawing.Point(17, 288);
+            shopButton.Name = "shopButton";
+            shopButton.Size = new System.Drawing.Size(80, 80);
+            shopButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            shopButton.TabIndex = 5;
+            shopButton.TabStop = false;
+            shopButton.Click += shopButton_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(19, 233);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Ranking";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            label1.Location = new System.Drawing.Point(19, 233);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(73, 19);
+            label1.TabIndex = 8;
+            label1.Text = "Ranking";
             // 
             // leaderboardButton
             // 
-            this.leaderboardButton.Image = ((System.Drawing.Image)(resources.GetObject("leaderboardButton.Image")));
-            this.leaderboardButton.Location = new System.Drawing.Point(17, 147);
-            this.leaderboardButton.Name = "leaderboardButton";
-            this.leaderboardButton.Size = new System.Drawing.Size(80, 80);
-            this.leaderboardButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.leaderboardButton.TabIndex = 4;
-            this.leaderboardButton.TabStop = false;
-            this.leaderboardButton.Click += new System.EventHandler(this.leaderboardButton_Click);
-            this.leaderboardButton.MouseHover += new System.EventHandler(this.leaderboardButton_MouseHover);
+            leaderboardButton.Image = (System.Drawing.Image)resources.GetObject("leaderboardButton.Image");
+            leaderboardButton.Location = new System.Drawing.Point(17, 147);
+            leaderboardButton.Name = "leaderboardButton";
+            leaderboardButton.Size = new System.Drawing.Size(80, 80);
+            leaderboardButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            leaderboardButton.TabIndex = 4;
+            leaderboardButton.TabStop = false;
+            leaderboardButton.Click += leaderboardButton_Click;
+            leaderboardButton.MouseHover += leaderboardButton_MouseHover;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(28, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Home";
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            label2.Location = new System.Drawing.Point(28, 98);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(56, 19);
+            label2.TabIndex = 3;
+            label2.Text = "Home";
             // 
             // homeButton
             // 
-            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
-            this.homeButton.Location = new System.Drawing.Point(17, 12);
-            this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(80, 80);
-            this.homeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.homeButton.TabIndex = 3;
-            this.homeButton.TabStop = false;
-            this.homeButton.MouseHover += new System.EventHandler(this.homeButton_MouseHover);
+            homeButton.Image = (System.Drawing.Image)resources.GetObject("homeButton.Image");
+            homeButton.Location = new System.Drawing.Point(17, 12);
+            homeButton.Name = "homeButton";
+            homeButton.Size = new System.Drawing.Size(80, 80);
+            homeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            homeButton.TabIndex = 3;
+            homeButton.TabStop = false;
+            homeButton.MouseHover += homeButton_MouseHover;
             // 
             // todoFlowLayout
             // 
-            this.todoFlowLayout.AutoScroll = true;
-            this.todoFlowLayout.Location = new System.Drawing.Point(143, 111);
-            this.todoFlowLayout.Name = "todoFlowLayout";
-            this.todoFlowLayout.Size = new System.Drawing.Size(940, 220);
-            this.todoFlowLayout.TabIndex = 3;
+            todoFlowLayout.AutoScroll = true;
+            todoFlowLayout.Location = new System.Drawing.Point(143, 111);
+            todoFlowLayout.Name = "todoFlowLayout";
+            todoFlowLayout.Size = new System.Drawing.Size(940, 220);
+            todoFlowLayout.TabIndex = 3;
             // 
             // todoLabel
             // 
-            this.todoLabel.AutoSize = true;
-            this.todoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.todoLabel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.todoLabel.Location = new System.Drawing.Point(141, 85);
-            this.todoLabel.Name = "todoLabel";
-            this.todoLabel.Size = new System.Drawing.Size(65, 23);
-            this.todoLabel.TabIndex = 13;
-            this.todoLabel.Text = "To Do:";
+            todoLabel.AutoSize = true;
+            todoLabel.BackColor = System.Drawing.Color.Transparent;
+            todoLabel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            todoLabel.Location = new System.Drawing.Point(141, 85);
+            todoLabel.Name = "todoLabel";
+            todoLabel.Size = new System.Drawing.Size(65, 23);
+            todoLabel.TabIndex = 13;
+            todoLabel.Text = "To Do:";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(139, 345);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 23);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Completed:";
+            label6.AutoSize = true;
+            label6.BackColor = System.Drawing.Color.Transparent;
+            label6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            label6.Location = new System.Drawing.Point(139, 345);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(121, 23);
+            label6.TabIndex = 14;
+            label6.Text = "Completed:";
             // 
             // completedFlowLayout
             // 
-            this.completedFlowLayout.AutoScroll = true;
-            this.completedFlowLayout.Location = new System.Drawing.Point(143, 373);
-            this.completedFlowLayout.Name = "completedFlowLayout";
-            this.completedFlowLayout.Size = new System.Drawing.Size(940, 220);
-            this.completedFlowLayout.TabIndex = 4;
+            completedFlowLayout.AutoScroll = true;
+            completedFlowLayout.Location = new System.Drawing.Point(143, 373);
+            completedFlowLayout.Name = "completedFlowLayout";
+            completedFlowLayout.Size = new System.Drawing.Size(940, 220);
+            completedFlowLayout.TabIndex = 4;
             // 
             // profilePicture
             // 
-            this.profilePicture.Image = global::defaultwinform.Properties.Resources.defaultProfile;
-            this.profilePicture.Location = new System.Drawing.Point(1013, 12);
-            this.profilePicture.Name = "profilePicture";
-            this.profilePicture.Size = new System.Drawing.Size(70, 70);
-            this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.profilePicture.TabIndex = 15;
-            this.profilePicture.TabStop = false;
-            this.profilePicture.Click += new System.EventHandler(this.profilePicture_Click);
+            profilePicture.Image = Properties.Resources.defaultProfile;
+            profilePicture.Location = new System.Drawing.Point(1013, 12);
+            profilePicture.Name = "profilePicture";
+            profilePicture.Size = new System.Drawing.Size(70, 70);
+            profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            profilePicture.TabIndex = 15;
+            profilePicture.TabStop = false;
+            profilePicture.Click += profilePicture_Click;
             // 
             // studentNameDisplay
             // 
-            this.studentNameDisplay.AutoSize = true;
-            this.studentNameDisplay.BackColor = System.Drawing.Color.Transparent;
-            this.studentNameDisplay.Dock = System.Windows.Forms.DockStyle.Right;
-            this.studentNameDisplay.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.studentNameDisplay.Location = new System.Drawing.Point(301, 0);
-            this.studentNameDisplay.Name = "studentNameDisplay";
-            this.studentNameDisplay.Size = new System.Drawing.Size(90, 23);
-            this.studentNameDisplay.TabIndex = 12;
-            this.studentNameDisplay.Text = "Student1";
-            this.studentNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            studentNameDisplay.AutoSize = true;
+            studentNameDisplay.BackColor = System.Drawing.Color.Transparent;
+            studentNameDisplay.Dock = System.Windows.Forms.DockStyle.Right;
+            studentNameDisplay.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            studentNameDisplay.Location = new System.Drawing.Point(301, 0);
+            studentNameDisplay.Name = "studentNameDisplay";
+            studentNameDisplay.Size = new System.Drawing.Size(90, 23);
+            studentNameDisplay.TabIndex = 12;
+            studentNameDisplay.Text = "Student1";
+            studentNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.studentNameDisplay);
-            this.panel2.Location = new System.Drawing.Point(623, 34);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(391, 29);
-            this.panel2.TabIndex = 16;
+            panel2.BackColor = System.Drawing.Color.White;
+            panel2.Controls.Add(studentNameDisplay);
+            panel2.Location = new System.Drawing.Point(623, 34);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(391, 29);
+            panel2.TabIndex = 16;
             // 
             // Form1
             // 
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1095, 680);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.profilePicture);
-            this.Controls.Add(this.completedFlowLayout);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.todoLabel);
-            this.Controls.Add(this.todoFlowLayout);
-            this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = " GeoMind";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teachersButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradesButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leaderboardButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(1095, 680);
+            Controls.Add(panel2);
+            Controls.Add(profilePicture);
+            Controls.Add(completedFlowLayout);
+            Controls.Add(label6);
+            Controls.Add(todoLabel);
+            Controls.Add(todoFlowLayout);
+            Controls.Add(panel1);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Name = "Form1";
+            Text = " GeoMind";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)teachersButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gradesButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)shopButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)leaderboardButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)homeButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)profilePicture).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

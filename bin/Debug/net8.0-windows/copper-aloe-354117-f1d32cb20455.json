@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "copper-aloe-354117",
+  "private_key_id": "f1d32cb20455d6ea93726f3b4cb93c5e0079a4e8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCidD54Bi4jxnfK\nW10tGiOJaFvrd1gjAF+TuPXR8qi7OiV+Ea6gqrfV/qwwk3yQzpiYYXXgNadZbT3S\neDXStMxCm4HnGcLRtOt2CppYA+Q42dQLKI53FozlEF0KCyqutXBuCZ+xt9bqzheo\nngoQOh1g77nvZE5xGthTyUXQZL2MhEPRdH46HSZM1bYgdWKh7VXLK9Yn4IEVuj2m\nL3xoNsh9bJ3V4JW7IYnxLQi3gl4zwaSnKPiNJdJq186cym7tzwYBQ8w7FUj3hVj2\nzvaFnr4U0hg8ybgN62Z08qWbcw06V2CUc+VApCzegpJxuS8F4hXGxTNwM1fQNQGk\nOOfH9a4fAgMBAAECggEASdAagCuCtGOdkza/F9qcEfd2aH8h70lgo/yyyLGChAtv\n9J+xIjRfch6Uez/QJfWQ9Q+3YOfQAXx2zhYrknDurEb/F5OnZuRW5hv8NAiUnlYv\nF+DWFnsLCptMQt9/BcHP81dxFW1L/AUnT8h7FxNovN4/s+t2DsMdTriRfZYAYAMR\nSZ9NGtdCXXd4kT0jbxNcmYnXJna5Z7gAUsMTELCTbe7lVo1/ELdOqsRm7yd7IU0V\nOTwV/w1+psiALqCYntwaoi8ZkiOJXEmkpXmkdffcNgIshLGBDmbDRH8Yw9VRmMOw\nCTfyDhcUce2ercAnNmJ+b87u6Jd/0yeW5E3Rtt6jDQKBgQDWD5DjGp6irNjzPB+h\nwO3TQ2HMeiQODnNI9MmD6KhJeWxa0EBPovjPAsQIIgUpsDnd3yZl/9xJTe2TIGLH\n5FcEdRUISpTK3eA1Z89T6QSDsnq/bHxmtkMmJz7gja0DLJxPgC6+dBGK6qIaIYsE\nUECIp+YWvv1j2a3tGAlMG6V7pQKBgQDCSEp/komSkseBnMVfUTWJbRiCrh6p5l5I\nn8eKZbVPnqjzoNSyqBsMhpLoNwmu+zVt0wzkK+mOTZ7ZWnLB/3ODnWeq2Mb+OWTk\ntEcDXMvdvABUyX4wqU9IXqKnrIBEDrm9fHMrYYz5tjNiPKqXyOmeMRtqHysbxCdZ\n6O37ZVUncwKBgA67F39pb41GU8+5TXv2KOem9W364cxN1kUpA00ej6YuwvQk7KgO\nUQz95buhi7VouTK5jozqZKBuynCbg/C5l/toiz/80ex8BFfogu4FVRgzChtuPclb\ntZdEkCEn3sYfJcqayZy1pBdpOiqOMGDlnOtKkpzyG8HpUvzD8K/aHzM5AoGAN9/S\njR33ss/D0OLlYKRaYUue4PZymypFs11AZe0aV+upa2e1xCvUm6WYWnB5uHlGxG8O\nJhD6+pIYPSpmFqUA87kxN1Fg6XxYJ+4w/iaR+xM2hSvtvtDynD2bSd2yheA2Suif\ntro3cRmVbYtFBKIjjftRhxOvsiyXpKP4zXQ3KUECgYEA0dOvFlK0w6kJiWBoRiq+\nQ/HLI0vFusxg8hmntHxjyG94eWw9Q7k17nXOrJ/EQNYnADC6wS8/aFxTmHSxF00P\nb/GsGVAh0F+Rw4xLP3JziVrG3yedya05qk1zto71m2iexxKMPz+wEz2P5NfVd3pu\naxDhBVuRG2JKHAblTUPZP7A=\n-----END PRIVATE KEY-----\n",
+  "client_email": "geomindclient@copper-aloe-354117.iam.gserviceaccount.com",
+  "client_id": "102281379299787782130",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/geomindclient%40copper-aloe-354117.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

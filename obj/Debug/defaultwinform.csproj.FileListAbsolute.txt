@@ -108,3 +108,5 @@ D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Core.xml
 D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Drive.v3.pdb
 D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Google.Apis.Drive.v3.xml
 D:\Users\sulvi\Documents\Github\GeographyQuiz\bin\Debug\Newtonsoft.Json.xml
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.csproj.SuggestedBindingRedirects.cache
+D:\Users\sulvi\Documents\Github\GeographyQuiz\obj\Debug\defaultwinform.exe.config

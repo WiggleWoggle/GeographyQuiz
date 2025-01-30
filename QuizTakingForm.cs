@@ -6,6 +6,7 @@ using System.Numerics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using Font = System.Drawing.Font;
 
 namespace defaultwinform
 {
@@ -46,11 +47,11 @@ namespace defaultwinform
         public QuizTakingForm()
         {
             InitializeComponent();
-            this.Size = new Size(1111, 758);
-            this.MinimumSize = new Size(1111, 758);
-            this.MaximumSize = new Size(1111, 758);
-            nextButton.Location = new Point(929, 413);
-            nextLabel.Location = new Point(953, 435);
+            this.Size = new Size(1294, 869);
+            this.MinimumSize = new Size(1294, 869);
+            this.MaximumSize = new Size(1294, 869);
+            nextButton.Location = new Point(1084, 453);
+            nextLabel.Location = new Point(1120, 475);
             this.CenterToScreen();
 
             immunityCount.Text = Program.currentAccount.getImmunityCount() + "";
@@ -104,9 +105,9 @@ namespace defaultwinform
 
             questionImageUnder.Location = new Point(419, 150);
 
-            shortResponseUnder.Location = new Point(574, 130);
-            nextButton.Location = new Point(929, 413);
-            nextLabel.Location = new Point(953, 435);
+            shortResponseUnder.Location = new Point(670, 173);
+            nextButton.Location = new Point(1084, 453);
+            nextLabel.Location = new Point(1120, 475);
 
             redSelector.Image = Resources.emptyRed;
             redSelector.Refresh();
@@ -311,11 +312,11 @@ namespace defaultwinform
 
         private void enableShortAnswerButtons()
         {
-            questionImageUnder.Location = new Point(170, 150);
-            shortResponseUnder.Location = new Point(574, 150);
+            questionImageUnder.Location = new Point(197, 173);
+            shortResponseUnder.Location = new Point(670, 173);
 
-            nextButton.Location = new Point(929, 511);
-            nextLabel.Location = new Point(953, 527);
+            nextButton.Location = new Point(1084, 453);
+            nextLabel.Location = new Point(1120, 475);
 
             shortResponseUnder.Visible = true;
             shortAnswerBox.Visible = true;
@@ -530,7 +531,8 @@ namespace defaultwinform
             {
                 sessionStarCount += currentQuestionValue;
                 amountRight++;
-            } else
+            }
+            else
             {
                 if (currentQuestion is MultipleChoice)
                 {
@@ -1359,6 +1361,11 @@ namespace defaultwinform
                     hidePowerupDisplay();
                 }
             }
+        }
+
+        private void QuizTakingForm_SizeChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

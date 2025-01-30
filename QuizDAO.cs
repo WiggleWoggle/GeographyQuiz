@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -36,7 +35,7 @@ namespace defaultwinform
 
         private static Quiz currentQuiz = null;
 
-        private static string ServiceAccountJsonPath = "copper-aloe-354117-83ecfd64d319.json"; 
+        private static string ServiceAccountJsonPath = "copper-aloe-354117-f1d32cb20455.json"; 
         private static string folderId = "1CAEl8_9X2kugGUYdAkd088jXmpPMVDhp";
 
 
@@ -49,22 +48,15 @@ namespace defaultwinform
 
             //createQuizObjectsFromFile();
 
-            totalTasks.Add(createQuizObjectsFromFile());
+            createQuizObjectsFromFile();
 
-
-            await Task.WhenAll(totalTasks);
-
-
-            while (!hasCompletedQueue)
-            {
-                if (queueProgress >= expectedQueuedQuizzes)
-                {
-                    hasCompletedQueue = true;
-                    break;
-                }
-            }
 
             Console.WriteLine("COMPLETED QUEUE");
+        }
+
+        public static void addQuiz(Quiz quiz)
+        {
+            assignedQuizzes.Add(quiz);
         }
 
         public static void tempQuiz()
@@ -228,7 +220,7 @@ namespace defaultwinform
                         quiz.setShuffle(formatShuffle(line));
                     }
 
-                    if (line.Contains("URL"))
+                    if (line.Contains("DISPLAYURL"))
                     {
                         quiz.setImage(formatURL(line));
                     }
@@ -250,7 +242,8 @@ namespace defaultwinform
 
                     if (line.Contains("SRQ"))
                     {
-                        //quiz.addQuestion(generateMultipleAnswerQuestion(line, reader));
+
+                        quiz.addQuestion(generateShortResponseQuestion(line, reader));
                     }
                 }
             }
@@ -447,8 +440,10 @@ namespace defaultwinform
             question = question.Replace("(", "");
             question = question.Replace(")", "");
 
+            String answer = reader.ReadLine();
+            answer = answer.Replace("ANSWER: ", "");
 
-            
+            String[] keywords = answer.Split(' ');
 
             String value = reader.ReadLine();
             value = value.Replace("VALUE: ", "");
@@ -459,10 +454,9 @@ namespace defaultwinform
             String questionImageURL = reader.ReadLine();
             questionImageURL = questionImageURL.Replace("URL: ", "");
 
+            ShortResponse shortResponse = new ShortResponse(question, numValue, keywords.ToList(), questionImageURL);
 
-            ShortResponse multipleAnswer = new ShortResponse(question, numValue, new List<String> { "" }, questionImageURL);
-
-            return multipleAnswer;
+            return shortResponse;
         }
     }
 }

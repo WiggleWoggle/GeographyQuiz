@@ -28,7 +28,8 @@ namespace defaultwinform
             if (Program.currentAccount != null)
             {
                 studentNameDisplay.Text = Program.currentAccount.getName();
-            } else
+            }
+            else
             {
                 studentNameDisplay.Text = "MASTER";
             }
@@ -47,7 +48,7 @@ namespace defaultwinform
         {
             refreshingForm = new Timer();
             refreshingForm.Tick += new EventHandler(tickRefresh);
-            refreshingForm.Interval = 2000; 
+            refreshingForm.Interval = 2000;
             refreshingForm.Start();
         }
 
@@ -160,7 +161,7 @@ namespace defaultwinform
                         }
                     }
 
-                    
+
                 }
             }
         }
@@ -193,6 +194,13 @@ namespace defaultwinform
         {
             ProfileEditingForm form = new ProfileEditingForm();
             form.Show();
+        }
+
+        private void teachersButton_Click(object sender, EventArgs e)
+        {
+            TeacherPortal form = new TeacherPortal();
+            form.Show();
+            this.Close();
         }
     }
 }

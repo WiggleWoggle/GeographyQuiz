@@ -118,85 +118,115 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="emptyYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emptyYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="greenButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greenButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="emptyBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emptyBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="profileOverlay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profileOverlay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="indicatorTF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorTF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="emptyRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emptyRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="selectedBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\selectedBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="indicatorMA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorMA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="selectedYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\selectedYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="editProfileIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\editProfileIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="defaultProfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\defaultProfile2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unavailableNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unavailableNext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="editProfile1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\editProfile1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="editProfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\editProfile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="selectedRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\selectedRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="multiplier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\multiplier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="selectedGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\selectedGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="emptyGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emptyGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="profileEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profileEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blueButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blueButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="doubler" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doubler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eliminate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eliminatedButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminatedButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="greenButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\greenButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unavailableNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unavailableNext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="redButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="indicatorSR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorSR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doubler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doubler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profileOverlay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profileOverlay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="emptyYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emptyYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="selectedBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\selectedBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorTF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorTF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blueButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blueButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="selectedRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\selectedRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editProfileIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editProfileIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profileEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profileEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="yellowButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellowButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="emptyGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emptyGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editProfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editProfile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="emptyRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emptyRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eliminatedButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminatedButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="highstakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\highstakes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="indicatorSR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorSR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorMC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorMC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eliminate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editProfile1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editProfile1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="defaultProfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\defaultProfile2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorMC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorMC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indicatorMA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicatorMA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="immunity" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\immunity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="multiplier" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\multiplier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homepage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homepage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homepage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
