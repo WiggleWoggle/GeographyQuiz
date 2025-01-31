@@ -48,9 +48,6 @@
             questionField = new System.Windows.Forms.TextBox();
             label7 = new System.Windows.Forms.Label();
             mcPanel = new System.Windows.Forms.Panel();
-            tfPanel = new System.Windows.Forms.Panel();
-            label14 = new System.Windows.Forms.Label();
-            textBox5 = new System.Windows.Forms.TextBox();
             answerField = new System.Windows.Forms.TextBox();
             label12 = new System.Windows.Forms.Label();
             choiceFourField = new System.Windows.Forms.TextBox();
@@ -61,11 +58,18 @@
             label9 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             choiceOneField = new System.Windows.Forms.TextBox();
+            tfPanel = new System.Windows.Forms.Panel();
+            label14 = new System.Windows.Forms.Label();
+            truefalseField = new System.Windows.Forms.TextBox();
+            srPanel = new System.Windows.Forms.Panel();
+            label15 = new System.Windows.Forms.Label();
+            keywordsField = new System.Windows.Forms.TextBox();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             mcPanel.SuspendLayout();
             tfPanel.SuspendLayout();
+            srPanel.SuspendLayout();
             SuspendLayout();
             // 
             // multipleChoiceOption
@@ -293,36 +297,6 @@
             mcPanel.Size = new System.Drawing.Size(715, 222);
             mcPanel.TabIndex = 20;
             // 
-            // tfPanel
-            // 
-            tfPanel.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
-            tfPanel.Controls.Add(label14);
-            tfPanel.Controls.Add(textBox5);
-            tfPanel.Location = new System.Drawing.Point(319, 318);
-            tfPanel.Name = "tfPanel";
-            tfPanel.Size = new System.Drawing.Size(716, 58);
-            tfPanel.TabIndex = 30;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label14.Location = new System.Drawing.Point(41, 21);
-            label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(83, 22);
-            label14.TabIndex = 28;
-            label14.Text = "Answer:";
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = System.Drawing.Color.FromArgb(209, 216, 221);
-            textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox5.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            textBox5.Location = new System.Drawing.Point(130, 19);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new System.Drawing.Size(565, 24);
-            textBox5.TabIndex = 21;
-            // 
             // answerField
             // 
             answerField.BackColor = System.Drawing.Color.FromArgb(209, 216, 221);
@@ -423,11 +397,72 @@
             choiceOneField.Size = new System.Drawing.Size(565, 24);
             choiceOneField.TabIndex = 21;
             // 
+            // tfPanel
+            // 
+            tfPanel.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
+            tfPanel.Controls.Add(label14);
+            tfPanel.Controls.Add(truefalseField);
+            tfPanel.Location = new System.Drawing.Point(319, 318);
+            tfPanel.Name = "tfPanel";
+            tfPanel.Size = new System.Drawing.Size(716, 58);
+            tfPanel.TabIndex = 30;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label14.Location = new System.Drawing.Point(41, 21);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(83, 22);
+            label14.TabIndex = 28;
+            label14.Text = "Answer:";
+            // 
+            // truefalseField
+            // 
+            truefalseField.BackColor = System.Drawing.Color.FromArgb(209, 216, 221);
+            truefalseField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            truefalseField.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            truefalseField.Location = new System.Drawing.Point(130, 19);
+            truefalseField.Name = "truefalseField";
+            truefalseField.Size = new System.Drawing.Size(565, 24);
+            truefalseField.TabIndex = 21;
+            // 
+            // srPanel
+            // 
+            srPanel.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
+            srPanel.Controls.Add(label15);
+            srPanel.Controls.Add(keywordsField);
+            srPanel.Location = new System.Drawing.Point(319, 316);
+            srPanel.Name = "srPanel";
+            srPanel.Size = new System.Drawing.Size(716, 58);
+            srPanel.TabIndex = 31;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label15.Location = new System.Drawing.Point(21, 19);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(103, 22);
+            label15.TabIndex = 28;
+            label15.Text = "Keywords:";
+            // 
+            // keywordsField
+            // 
+            keywordsField.BackColor = System.Drawing.Color.FromArgb(209, 216, 221);
+            keywordsField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            keywordsField.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            keywordsField.Location = new System.Drawing.Point(130, 19);
+            keywordsField.Name = "keywordsField";
+            keywordsField.Size = new System.Drawing.Size(565, 24);
+            keywordsField.TabIndex = 21;
+            // 
             // QuestionEditingPrompt
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1062, 641);
+            Controls.Add(srPanel);
             Controls.Add(tfPanel);
             Controls.Add(mcPanel);
             Controls.Add(label7);
@@ -451,6 +486,8 @@
             mcPanel.PerformLayout();
             tfPanel.ResumeLayout(false);
             tfPanel.PerformLayout();
+            srPanel.ResumeLayout(false);
+            srPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -489,6 +526,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel tfPanel;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox truefalseField;
+        private System.Windows.Forms.Panel srPanel;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox keywordsField;
     }
 }

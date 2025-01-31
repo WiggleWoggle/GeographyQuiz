@@ -63,7 +63,24 @@ namespace defaultwinform
 
             PictureBox indicator = new PictureBox();
             indicator.SizeMode = PictureBoxSizeMode.StretchImage;
+
             indicator.Image = (System.Drawing.Image)Resources.indicatorMC;
+
+            if (question is MultipleAnswer)
+            {
+                indicator.Image = (System.Drawing.Image)Resources.indicatorMA;
+            }
+
+            if (question is TrueFalseQuestion)
+            {
+                indicator.Image = (System.Drawing.Image)Resources.indicatorTF;
+            }
+
+            if (question is ShortResponse)
+            {
+                indicator.Image = (System.Drawing.Image)Resources.indicatorSR;
+            }
+
             panel.Controls.Add(indicator);
             indicator.Size = new Size(114, 30);
             indicator.Location = new Point(0, 70);

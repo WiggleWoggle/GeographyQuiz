@@ -471,7 +471,7 @@
             // 
             questionImageUnder.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
             questionImageUnder.Controls.Add(questionImage);
-            questionImageUnder.Location = new System.Drawing.Point(489, 173);
+            questionImageUnder.Location = new System.Drawing.Point(496, 173);
             questionImageUnder.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             questionImageUnder.Name = "questionImageUnder";
             questionImageUnder.Size = new System.Drawing.Size(448, 397);
@@ -910,10 +910,10 @@
             questionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             questionLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             questionLabel.ForeColor = System.Drawing.Color.White;
-            questionLabel.Location = new System.Drawing.Point(4, 6);
+            questionLabel.Location = new System.Drawing.Point(4, 0);
             questionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             questionLabel.Name = "questionLabel";
-            questionLabel.Size = new System.Drawing.Size(750, 37);
+            questionLabel.Size = new System.Drawing.Size(750, 56);
             questionLabel.TabIndex = 26;
             questionLabel.Text = "Lorem ipsum dolor sit amet, consectetur adipisci";
             questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -939,13 +939,14 @@
             selectedIndicator.ErrorImage = (System.Drawing.Image)resources.GetObject("selectedIndicator.ErrorImage");
             selectedIndicator.Image = (System.Drawing.Image)resources.GetObject("selectedIndicator.Image");
             selectedIndicator.InitialImage = (System.Drawing.Image)resources.GetObject("selectedIndicator.InitialImage");
-            selectedIndicator.Location = new System.Drawing.Point(1102, 805);
+            selectedIndicator.Location = new System.Drawing.Point(1095, 805);
             selectedIndicator.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             selectedIndicator.Name = "selectedIndicator";
             selectedIndicator.Size = new System.Drawing.Size(42, 35);
             selectedIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             selectedIndicator.TabIndex = 20;
             selectedIndicator.TabStop = false;
+            selectedIndicator.Click += selectedIndicator_Click;
             // 
             // nextButton
             // 
@@ -1126,10 +1127,10 @@
             secondaryQuestionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             secondaryQuestionLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             secondaryQuestionLabel.ForeColor = System.Drawing.Color.White;
-            secondaryQuestionLabel.Location = new System.Drawing.Point(1, 47);
+            secondaryQuestionLabel.Location = new System.Drawing.Point(1, 39);
             secondaryQuestionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             secondaryQuestionLabel.Name = "secondaryQuestionLabel";
-            secondaryQuestionLabel.Size = new System.Drawing.Size(750, 37);
+            secondaryQuestionLabel.Size = new System.Drawing.Size(750, 48);
             secondaryQuestionLabel.TabIndex = 27;
             secondaryQuestionLabel.Text = "Lorem ipsum dolor sit amet, consectetur adipisci";
             secondaryQuestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

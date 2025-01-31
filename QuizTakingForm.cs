@@ -90,6 +90,14 @@ namespace defaultwinform
         private void buildToQuestion()
         {
 
+            falsePanel.Image = Resources.redButton;
+            falseLabel.Text = "False";
+            falseLabel.BackColor = Color.FromArgb(255, 87, 87);
+
+            truePanel.Image = Resources.blueButton;
+            trueLabel.Text = "True";
+            trueLabel.BackColor = Color.FromArgb(12, 192, 223);
+
             shortAnswerBox.Text = "";
 
             highStakesActivated = false;
@@ -103,7 +111,7 @@ namespace defaultwinform
             resetQuestionData();
             disableAllButtons();
 
-            questionImageUnder.Location = new Point(419, 150);
+            questionImageUnder.Location = new Point(496, 150);
 
             shortResponseUnder.Location = new Point(670, 173);
             nextButton.Location = new Point(1084, 453);
@@ -124,6 +132,18 @@ namespace defaultwinform
             blueSelector.Image = Resources.emptyBlue;
             blueSelector.Refresh();
             blueSelected = false;
+
+            redLabel.BackColor = Color.FromArgb(255, 87, 87);
+            redButton.Image = Resources.redButton;
+
+            yellowLabel.BackColor = Color.FromArgb(255, 177, 85);
+            yellowButton.Image = Resources.yellowButton;
+
+            greenLabel.BackColor = Color.FromArgb(97, 182, 97);
+            greenButton.Image = Resources.greenButton;
+
+            blueLabel.BackColor = Color.FromArgb(12, 192, 223);
+            blueButton.Image = Resources.blueButton;
 
             disableNextButton();
 
@@ -156,7 +176,7 @@ namespace defaultwinform
 
             questionLabel.Text = currentQuestion.getQuestion();
 
-            questionBacking.Size = new Size(647, 82);
+            questionBacking.Size = new Size(755, 82);
 
             String question = questionLabel.Text;
 
@@ -315,8 +335,8 @@ namespace defaultwinform
             questionImageUnder.Location = new Point(197, 173);
             shortResponseUnder.Location = new Point(670, 173);
 
-            nextButton.Location = new Point(1084, 453);
-            nextLabel.Location = new Point(1120, 475);
+            nextButton.Location = new Point(1084, 593);
+            nextLabel.Location = new Point(1120, 615);
 
             shortResponseUnder.Visible = true;
             shortAnswerBox.Visible = true;
@@ -741,12 +761,12 @@ namespace defaultwinform
 
             if (questionTrue)
             {
-                selectedIndicator.Location = new Point(371, 698);
+                selectedIndicator.Location = new Point(432, 805);
                 trueOrFalseAnswer = true;
             }
             else
             {
-                selectedIndicator.Location = new Point(825, 698);
+                selectedIndicator.Location = new Point(964, 805);
                 trueOrFalseAnswer = false;
             }
         }
@@ -852,22 +872,22 @@ namespace defaultwinform
 
             if (color.Equals("red"))
             {
-                selectedIndicator.Location = new Point(256, 698);
+                selectedIndicator.Location = new Point(297, 805);
                 multipleChoiceAnswer = redLabel.Text;
             }
             else if (color.Equals("yellow"))
             {
-                selectedIndicator.Location = new Point(479, 698);
+                selectedIndicator.Location = new Point(566, 805);
                 multipleChoiceAnswer = yellowLabel.Text;
             }
             else if (color.Equals("green"))
             {
-                selectedIndicator.Location = new Point(709, 698);
+                selectedIndicator.Location = new Point(830, 805);
                 multipleChoiceAnswer = greenLabel.Text;
             }
             else if (color.Equals("blue"))
             {
-                selectedIndicator.Location = new Point(946, 698);
+                selectedIndicator.Location = new Point(1095, 805);
                 multipleChoiceAnswer = blueLabel.Text;
             }
         }
@@ -1162,12 +1182,12 @@ namespace defaultwinform
                         {
                             if (trueFalse.IsTrue())
                             {
-                                falsePanel.Image = Resources.eliminatedButton;
+                                falsePanel.Image = Resources.eliminatedPane;
                                 falseLabel.Text = "";
                             }
                             else
                             {
-                                truePanel.Image = Resources.eliminatedButton;
+                                truePanel.Image = Resources.eliminatedPane;
                                 trueLabel.Text = "";
                             }
                         }
@@ -1364,6 +1384,11 @@ namespace defaultwinform
         }
 
         private void QuizTakingForm_SizeChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectedIndicator_Click(object sender, EventArgs e)
         {
 
         }

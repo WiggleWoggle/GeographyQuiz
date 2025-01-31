@@ -246,6 +246,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1095, 680);
             Controls.Add(createQuizPanel);
             Controls.Add(flowLayoutPanel2);
