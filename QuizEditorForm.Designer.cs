@@ -82,6 +82,7 @@
             // 
             // questionLayoutPane
             // 
+            questionLayoutPane.AutoScroll = true;
             questionLayoutPane.Controls.Add(addQuestionPanel);
             questionLayoutPane.Location = new System.Drawing.Point(40, 109);
             questionLayoutPane.Name = "questionLayoutPane";
@@ -291,6 +292,7 @@
             panel3.Size = new System.Drawing.Size(218, 58);
             panel3.TabIndex = 5;
             panel3.Click += panel3_Click;
+            panel3.Paint += panel3_Paint;
             // 
             // label6
             // 

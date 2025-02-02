@@ -20,8 +20,19 @@ namespace defaultwinform
         {
             InitializeComponent();
             this.CenterToScreen();
+            this.Size = new Size(1078, 680);
+            this.MinimumSize = new Size(1078, 680);
+            this.MaximumSize = new Size(1078, 680);
 
             quizEditorForm = form;
+
+            mcPanel.Visible = true;
+            tfPanel.Visible = false;
+            srPanel.Visible = false;
+
+            multipleChoiceOption.Checked = true;
+
+            tipLabel.Text = "Only enter one answer for multiple choice questions!";
 
             buildEditingSettings();
         }
@@ -60,12 +71,20 @@ namespace defaultwinform
                                 {
                                     return true;
                                 }
+                                else
+                                {
+                                    MessageBox.Show("Make sure you inputted an answer!", "Error Creating Question", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
                             }
                         } else if (shortResponseOption.Checked)
                         {
                             if (!String.IsNullOrWhiteSpace(keywordsField.Text))
                             {
                                 return true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Make sure you inputted at least 1 keyword!", "Error Creating Question", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         else if (trueorFalseOption.Checked)
@@ -76,10 +95,29 @@ namespace defaultwinform
                                 {
                                     return true;
                                 }
+                                else
+                                {
+                                    MessageBox.Show("Make sure your answer is True or False!", "Error Creating Question", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Make sure your answer is True or False!", "Error Creating Question", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("Make sure you inputted an image URL!", "Error Creating Question", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Make sure your star value is a number!", "Error Creating Question", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } else
+            {
+                MessageBox.Show("Make sure your question is > 15 characters!", "Error Creating Question", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return false;
@@ -147,26 +185,29 @@ namespace defaultwinform
                 mcPanel.Visible = true;
                 tfPanel.Visible = false;
                 srPanel.Visible = false;
-
+                tipLabel.Text = "Only enter one answer for multiple choice questions!";
             }
             else if (multipleAnswerChoice.Checked)
             {
                 mcPanel.Visible = true;
                 tfPanel.Visible = false;
                 srPanel.Visible = false;
-
+                tipLabel.Text = "Separate your answers with commas! \nEx: 'Answer1, Answer2'";
             }
             else if (trueorFalseOption.Checked)
             {
                 mcPanel.Visible = false;
                 tfPanel.Visible = true;
                 srPanel.Visible = false;
+                tipLabel.Text = "Enter either 'True' or 'False' in the answer field!";
             }
             else
             {
                 mcPanel.Visible = false;
                 tfPanel.Visible = false;
                 srPanel.Visible = true;
+                tipLabel.Text = "Separate your keywords with commas! \nEx: 'Answer1, Answer2'";
+
             }
         }
 
@@ -244,9 +285,8 @@ namespace defaultwinform
 
         private List<String> multipleAnswers(String answers)
         {
-            string[] words = answers.Split(',');
 
-            return words.ToList();
+            return new List<string>(answers.Split(',')).ConvertAll(s => s.Trim());
         }
     }
 }

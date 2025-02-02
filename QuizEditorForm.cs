@@ -26,16 +26,16 @@ namespace defaultwinform
         public QuizEditorForm()
         {
             InitializeComponent();
-            this.Size = new Size(882, 724);
-            this.MinimumSize = new Size(882, 724);
-            this.MaximumSize = new Size(882, 724);
+            this.Size = new Size(882, 767);
+            this.MinimumSize = new Size(882, 767);
+            this.MaximumSize = new Size(882, 767);
             this.CenterToScreen();
         }
 
         private void addQuestion()
         {
 
-            
+
 
             MultipleChoice question = new MultipleChoice("Question", 1, "", new List<String> { "Answer 1", "Answer 2", "Answer 3", "Answer 4" }, "Answer 1");
 
@@ -64,21 +64,21 @@ namespace defaultwinform
             PictureBox indicator = new PictureBox();
             indicator.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            indicator.Image = (System.Drawing.Image)Resources.indicatorMC;
+            indicator.Image = (System.Drawing.Image) Resources.indicatorMC;
 
             if (question is MultipleAnswer)
             {
-                indicator.Image = (System.Drawing.Image)Resources.indicatorMA;
+                indicator.Image = (System.Drawing.Image) Resources.indicatorMA;
             }
 
             if (question is TrueFalseQuestion)
             {
-                indicator.Image = (System.Drawing.Image)Resources.indicatorTF;
+                indicator.Image = (System.Drawing.Image) Resources.indicatorTF;
             }
 
             if (question is ShortResponse)
             {
-                indicator.Image = (System.Drawing.Image)Resources.indicatorSR;
+                indicator.Image = (System.Drawing.Image) Resources.indicatorSR;
             }
 
             panel.Controls.Add(indicator);
@@ -87,7 +87,7 @@ namespace defaultwinform
 
             PictureBox editIcon = new PictureBox();
             editIcon.SizeMode = PictureBoxSizeMode.StretchImage;
-            editIcon.Image = (System.Drawing.Image)Resources.editIcon;
+            editIcon.Image = (System.Drawing.Image) Resources.editIcon;
             editIcon.Size = new Size(20, 20);
             editIcon.Location = new Point(70, 0);
 
@@ -97,7 +97,7 @@ namespace defaultwinform
 
             PictureBox trashIcon = new PictureBox();
             trashIcon.SizeMode = PictureBoxSizeMode.StretchImage;
-            trashIcon.Image = (System.Drawing.Image)Resources.trashIcon;
+            trashIcon.Image = (System.Drawing.Image) Resources.trashIcon;
             trashIcon.Size = new Size(20, 20);
             trashIcon.Location = new Point(90, 0);
 
@@ -127,28 +127,47 @@ namespace defaultwinform
 
         private void buildQuiz()
         {
-            if (!String.IsNullOrWhiteSpace(quizTitleField.Text)) {
+            if (!String.IsNullOrWhiteSpace(quizTitleField.Text))
+            {
                 if (!String.IsNullOrWhiteSpace(quizTopicField.Text))
                 {
-                    Quiz quiz = new Quiz();
+                    if (quizBuilderQuestions.Count > 0)
+                    {
+                        Quiz quiz = new Quiz();
 
-                    quiz.setQuestions(quizBuilderQuestions);
-                    quiz.setTitle(quizTitleField.Text);
-                    quiz.setTopic(quizTopicField.Text);
-                    quiz.setImage(imageURLField.Text);
+                        quiz.setQuestions(quizBuilderQuestions);
+                        quiz.setTitle(quizTitleField.Text);
+                        quiz.setTopic(quizTopicField.Text);
+                        quiz.setImage(imageURLField.Text);
 
-                    QuizDAO.addQuiz(quiz);
+                        QuizDAO.addQuiz(quiz);
+                        QuizDAO.uploadToDrive(quiz);
 
-                    Form1 form = new Form1();
-                    form.Show();
-                    this.Close();
+                        Form1 form = new Form1();
+                        form.Show();
+                        this.Close();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Make sure your has at least one question!", "Error Creating Quiz", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Make sure your quiz has a topic!", "Error Creating Quiz", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Make sure your quiz has a title!", "Error Creating Quiz", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void openQuestionEditor(object sender, EventArgs e) {
+        private void openQuestionEditor(object sender, EventArgs e)
+        {
 
-            if (editLinked.ContainsValue((PictureBox) sender))
+            if (editLinked.ContainsValue((PictureBox)sender))
             {
                 foreach (Question key in editLinked.Keys)
                 {
@@ -166,7 +185,7 @@ namespace defaultwinform
                             i++;
                         }
                     }
-                        
+
                 }
             }
         }
@@ -215,6 +234,11 @@ namespace defaultwinform
         {
 
             buildQuiz();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

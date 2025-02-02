@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -38,7 +39,7 @@ namespace defaultwinform
         private static string ServiceAccountJsonPath = "key.json"; 
         private static string folderId = "1CAEl8_9X2kugGUYdAkd088jXmpPMVDhp";
 
-
+        private static string decryptionKey = "geomind";
 
         string connectionString = "datasource=localhost;port=3306;username=root;password=root;database=geography;";
 
@@ -91,7 +92,7 @@ namespace defaultwinform
             quiz.addQuestion(new ShortResponse("Explain why Hawaii's geography makes it unique among U.S. states. List at least three specific geographical features in your response.", 2, new List<String> { "Volcanic", "Tropical", "Pacific", "Pacific Ocean", "Volcano", "Volcanoes", "Island", "Islands" }, "https://i.natgeofe.com/n/5c6b3a4b-7b1a-410b-bcb2-7a2e83afd409/22328.jpg"));
             quiz.addQuestion(new ShortResponse("Describe how the Mississippi River impacts the geography and borders of U.S. states. Name at least four states affected and explain how the river influences their boundaries.", 2, new List<String> { "Tennessee", "Arkansas", "Mississippi", "Louisiana", "Minnesota", "Wisconsin", "Iowa", "Illinois", "Missouri", "Kentucky" }, "https://www.jsonline.com/gcdn/presto/2023/09/19/PMJS/481b3316-cf67-4f2d-ab1a-0fe13270d3b8-Mississippi_Wisconsin_River_LightHawk_Flight_052523_080.jpg?crop=5958,4469,x336,y0"));
 
-            assignedQuizzes.Add(quiz);
+            //assignedQuizzes.Add(quiz);
         }
 
         public static List<Quiz> getQuizzes()
@@ -121,6 +122,140 @@ namespace defaultwinform
         public static Quiz getCurrentQuiz()
         {
             return currentQuiz;
+        }
+
+        public static void uploadToDrive(Quiz quiz)
+        {
+
+            String filePath = createQuizFile(Guid.NewGuid().ToString(), quiz);
+
+            var service = authenticateDriveService();
+
+            var fileMetadata = new Google.Apis.Drive.v3.Data.File()
+            {
+                Name = Path.GetFileName(filePath),
+                Parents = new string[] { folderId } 
+            };
+
+            FilesResource.CreateMediaUpload request;
+            using (var stream = new FileStream(filePath, FileMode.Open))
+            {
+                request = service.Files.Create(fileMetadata, stream, "text/plain");
+                request.Fields = "id";
+                request.Upload();
+            }
+
+            var file = request.ResponseBody;
+
+        }
+
+        private static String createQuizFile(String fileName, Quiz quiz)
+        {
+            string filePath = Path.Combine(Path.GetTempPath(), fileName);
+
+            String content = "TITLE: " + quiz.getTitle();
+            content = content + "\nTOPIC: " + quiz.getTopic();
+            content = content + "\nSHUFFLE: ";
+
+            if (quiz.shouldShuffle())
+            {
+                content = content + "true";
+            } else
+            {
+                content = content + "false";
+            }
+
+            content = content + "\nDISPLAYURL: " + quiz.getImage() + "\n\n";
+
+            int questionProgress = 1;
+
+            foreach (Question question in quiz.getQuestions())
+            {
+                content = content + questionProgress + ". ";
+
+                if (question is MultipleChoice mc)
+                {
+                    content = content + "MCQ " + "(" + mc.getQuestion() + ")";
+                    content = content + "\na. " + mc.getFirstChoice();
+                    content = content + "\nb. " + mc.getSecondChoice();
+                    content = content + "\nc. " + mc.getThirdChoice();
+                    content = content + "\nd. " + mc.getFourthChoice();
+
+                    if (mc.getAnswer().Equals(mc.getFirstChoice()))
+                    {
+                        content = content + "\nANSWER: " + "a";
+                    } else if (mc.getAnswer().Equals(mc.getSecondChoice()))
+                    {
+                        content = content + "\nANSWER: " + "b";
+                    } else if (mc.getAnswer().Equals(mc.getThirdChoice()))
+                    {
+                        content = content + "\nANSWER: " + "c";
+                    } else
+                    {
+                        content = content + "\nANSWER: " + "d";
+                    }
+                }
+                else if (question is MultipleAnswer ma)
+                {
+                    content = content + "MAQ " + "(" + ma.getQuestion() + ")";
+                    content = content + "\na. " + ma.getFirstChoice();
+                    content = content + "\nb. " + ma.getSecondChoice();
+                    content = content + "\nc. " + ma.getThirdChoice();
+                    content = content + "\nd. " + ma.getFourthChoice();
+
+                    content = content + "\nANSWER:";
+
+                    if (ma.getAnswers().Contains(ma.getFirstChoice()))
+                    {
+                        content = content + " a";
+                    }
+                    
+                    if (ma.getAnswers().Contains(ma.getSecondChoice()))
+                    {
+                        content = content + " b";
+                    }
+                    
+                    if (ma.getAnswers().Contains(ma.getThirdChoice()))
+                    {
+                        content = content + " c";
+                    }
+                    
+                    if (ma.getAnswers().Contains(ma.getFourthChoice()))
+                    {
+                        content = content + " d";
+                    }
+                }
+                else if (question is TrueFalseQuestion tf)
+                {
+                    content = content + "TFQ " + "(" + tf.getQuestion() + ")";
+
+                    if (tf.IsTrue())
+                    {
+                        content = content + "\nANSWER: true";
+                    } else
+                    {
+                        content = content + "\nANSWER: false";
+                    }
+                }
+                else if (question is ShortResponse sr)
+                {
+                    content = content + "SRQ " + "(" + question.getQuestion() + ")";
+                    content = content + "\nANSWER: ";
+
+                    foreach (String answer in sr.getPhrases())
+                    {
+                        content = content + " " + answer;
+                    }
+                }
+
+                content = content + "\nVALUE: " + question.getStarValue();
+                content = content + "\nURL: " + question.getURLString() + "\n\n";
+
+                questionProgress++;
+            }
+
+            File.WriteAllText(filePath, content);
+            return filePath;
         }
 
         public static DriveService authenticateDriveService()

@@ -64,17 +64,24 @@
             srPanel = new System.Windows.Forms.Panel();
             label15 = new System.Windows.Forms.Label();
             keywordsField = new System.Windows.Forms.TextBox();
+            label17 = new System.Windows.Forms.Label();
+            panel5 = new System.Windows.Forms.Panel();
+            panel6 = new System.Windows.Forms.Panel();
+            tipLabel = new System.Windows.Forms.Label();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             mcPanel.SuspendLayout();
             tfPanel.SuspendLayout();
             srPanel.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // multipleChoiceOption
             // 
             multipleChoiceOption.AutoSize = true;
+            multipleChoiceOption.Checked = true;
             multipleChoiceOption.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             multipleChoiceOption.Location = new System.Drawing.Point(19, 13);
             multipleChoiceOption.Name = "multipleChoiceOption";
@@ -93,7 +100,6 @@
             multipleAnswerChoice.Name = "multipleAnswerChoice";
             multipleAnswerChoice.Size = new System.Drawing.Size(171, 26);
             multipleAnswerChoice.TabIndex = 1;
-            multipleAnswerChoice.TabStop = true;
             multipleAnswerChoice.Text = "Multiple Answer";
             multipleAnswerChoice.UseVisualStyleBackColor = true;
             multipleAnswerChoice.CheckedChanged += multipleAnswerChoice_CheckedChanged;
@@ -106,7 +112,6 @@
             trueorFalseOption.Name = "trueorFalseOption";
             trueorFalseOption.Size = new System.Drawing.Size(138, 26);
             trueorFalseOption.TabIndex = 2;
-            trueorFalseOption.TabStop = true;
             trueorFalseOption.Text = "True or False";
             trueorFalseOption.UseVisualStyleBackColor = true;
             trueorFalseOption.CheckedChanged += trueorFalseOption_CheckedChanged;
@@ -119,7 +124,6 @@
             shortResponseOption.Name = "shortResponseOption";
             shortResponseOption.Size = new System.Drawing.Size(166, 26);
             shortResponseOption.TabIndex = 3;
-            shortResponseOption.TabStop = true;
             shortResponseOption.Text = "Short Response";
             shortResponseOption.UseVisualStyleBackColor = true;
             shortResponseOption.CheckedChanged += shortResponseOption_CheckedChanged;
@@ -457,11 +461,52 @@
             keywordsField.Size = new System.Drawing.Size(565, 24);
             keywordsField.TabIndex = 21;
             // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            label17.Location = new System.Drawing.Point(31, 351);
+            label17.Name = "label17";
+            label17.Size = new System.Drawing.Size(41, 23);
+            label17.TabIndex = 32;
+            label17.Text = "Tip:";
+            // 
+            // panel5
+            // 
+            panel5.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
+            panel5.Controls.Add(panel6);
+            panel5.Location = new System.Drawing.Point(31, 377);
+            panel5.Name = "panel5";
+            panel5.Size = new System.Drawing.Size(235, 161);
+            panel5.TabIndex = 30;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
+            panel6.Controls.Add(tipLabel);
+            panel6.Location = new System.Drawing.Point(12, 11);
+            panel6.Name = "panel6";
+            panel6.Size = new System.Drawing.Size(210, 137);
+            panel6.TabIndex = 31;
+            // 
+            // tipLabel
+            // 
+            tipLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            tipLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            tipLabel.Location = new System.Drawing.Point(0, 0);
+            tipLabel.Name = "tipLabel";
+            tipLabel.Size = new System.Drawing.Size(210, 137);
+            tipLabel.TabIndex = 22;
+            tipLabel.Text = "Tip label";
+            // 
             // QuestionEditingPrompt
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1062, 641);
+            Controls.Add(panel5);
+            Controls.Add(label17);
             Controls.Add(srPanel);
             Controls.Add(tfPanel);
             Controls.Add(mcPanel);
@@ -488,6 +533,8 @@
             tfPanel.PerformLayout();
             srPanel.ResumeLayout(false);
             srPanel.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel6.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -530,5 +577,9 @@
         private System.Windows.Forms.Panel srPanel;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox keywordsField;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label tipLabel;
     }
 }

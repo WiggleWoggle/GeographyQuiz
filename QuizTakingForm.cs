@@ -673,16 +673,25 @@ namespace defaultwinform
         {
             foreach (String phrase in question.getPhrases())
             {
-                if (!shortAnswerBox.Text.Contains(phrase))
+
+                phrase.ToLower().Trim();
+
+                String shortAnswer = shortAnswerBox.Text;
+                shortAnswer.ToLower().Trim();
+
+                if (shortAnswer.Contains(phrase))
                 {
-                    if (!shortAnswerBox.Text.Contains(phrase.ToLower()))
-                    {
-                        return false;
-                    }
+
+                    return true;
+
+                    
+                } else if (shortAnswer.Contains(phrase.ToLower()))
+                {
+                    return true;
                 }
             }
 
-            return true;
+            return false;
         }
 
         private Boolean multipleAnswerCorrect(MultipleAnswer question)
