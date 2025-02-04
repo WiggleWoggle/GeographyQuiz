@@ -76,7 +76,7 @@ namespace defaultwinform
                 account.setMultiplyCount(99);
                 account.setDoubleCount(99);
                 account.setEliminateCount(99);
-
+                //account.setStarsCount(99);
 
                 Program.currentAccount = account;
 

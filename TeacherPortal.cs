@@ -46,5 +46,12 @@ namespace defaultwinform
             form.Show();
             this.Close();
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Close();
+        }
     }
 }

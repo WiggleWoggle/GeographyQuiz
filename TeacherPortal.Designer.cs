@@ -77,6 +77,7 @@
             homeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             homeButton.TabIndex = 3;
             homeButton.TabStop = false;
+            homeButton.Click += homeButton_Click;
             // 
             // panel1
             // 

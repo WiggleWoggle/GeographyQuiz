@@ -328,8 +328,9 @@
             Controls.Add(questionLayoutPane);
             Controls.Add(label1);
             Controls.Add(quizTitle);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "QuizEditorForm";
-            Text = "QuizEditorForm";
+            Text = "GeoMind";
             Click += QuizEditorForm_Click;
             questionLayoutPane.ResumeLayout(false);
             addQuestionPanel.ResumeLayout(false);

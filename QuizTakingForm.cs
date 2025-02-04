@@ -89,7 +89,6 @@ namespace defaultwinform
 
         private void buildToQuestion()
         {
-
             falsePanel.Image = Resources.redButton;
             falseLabel.Text = "False";
             falseLabel.BackColor = Color.FromArgb(255, 87, 87);
@@ -368,6 +367,8 @@ namespace defaultwinform
             returnHomeButton.Visible = true;
             returnHomeButton.Location = new Point(returnHomeButton.Location.X, returnHomeButton.Location.Y + (missedQuestions.Count * 110));
 
+            Program.currentAccount.setStarsCount(Program.currentAccount.getStarsCount() + sessionStarCount);
+
             int newWidth = (int)((amountRight / (double)questionCount) * 316);
 
             performanceOverlay.Width = newWidth;
@@ -378,7 +379,7 @@ namespace defaultwinform
             {
 
                 Panel missedQuestion = new Panel();
-                missedQuestion.Width = 470;
+                missedQuestion.Width = 552;
                 missedQuestion.Height = 90;
                 missedQuestion.BackColor = Color.FromArgb(228, 234, 239);
 
@@ -684,8 +685,9 @@ namespace defaultwinform
 
                     return true;
 
-                    
-                } else if (shortAnswer.Contains(phrase.ToLower()))
+
+                }
+                else if (shortAnswer.Contains(phrase.ToLower()))
                 {
                     return true;
                 }
@@ -1398,6 +1400,11 @@ namespace defaultwinform
         }
 
         private void selectedIndicator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedPanel9_Click(object sender, EventArgs e)
         {
 
         }

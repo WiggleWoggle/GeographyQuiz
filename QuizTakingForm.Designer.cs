@@ -1083,6 +1083,7 @@
             roundedPanel9.Name = "roundedPanel9";
             roundedPanel9.Size = new System.Drawing.Size(106, 47);
             roundedPanel9.TabIndex = 26;
+            roundedPanel9.Click += roundedPanel9_Click;
             // 
             // sessionStarLabel
             // 
@@ -1094,6 +1095,7 @@
             sessionStarLabel.Size = new System.Drawing.Size(61, 37);
             sessionStarLabel.TabIndex = 25;
             sessionStarLabel.Text = "1";
+            sessionStarLabel.Click += roundedPanel9_Click;
             // 
             // pictureBox3
             // 
@@ -1108,6 +1110,7 @@
             pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 24;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += roundedPanel9_Click;
             // 
             // questionBacking
             // 

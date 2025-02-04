@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionEditingPrompt));
             multipleChoiceOption = new System.Windows.Forms.RadioButton();
             multipleAnswerChoice = new System.Windows.Forms.RadioButton();
             trueorFalseOption = new System.Windows.Forms.RadioButton();
@@ -518,8 +519,9 @@
             Controls.Add(panel1);
             Controls.Add(panel3);
             Controls.Add(panel4);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "QuestionEditingPrompt";
-            Text = "QuestionEditingPrompt";
+            Text = "GeoMind";
             Click += QuestionEditingPrompt_Click;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
