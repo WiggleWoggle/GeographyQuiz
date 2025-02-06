@@ -1,6 +1,6 @@
 ﻿namespace defaultwinform
 {
-    partial class TeacherPortal
+    partial class LeaderboardForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherPortal));
-            label2 = new System.Windows.Forms.Label();
-            homeButton = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeaderboardForm));
             panel1 = new System.Windows.Forms.Panel();
             label5 = new System.Windows.Forms.Label();
             teachersButton = new System.Windows.Forms.PictureBox();
@@ -40,44 +38,21 @@
             shopButton = new System.Windows.Forms.PictureBox();
             label1 = new System.Windows.Forms.Label();
             leaderboardButton = new System.Windows.Forms.PictureBox();
-            quizTitle = new System.Windows.Forms.Label();
-            label6 = new System.Windows.Forms.Label();
-            flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            createQuizPanel = new System.Windows.Forms.Panel();
-            pictureBox1 = new System.Windows.Forms.PictureBox();
-            label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)homeButton).BeginInit();
+            label2 = new System.Windows.Forms.Label();
+            homeButton = new System.Windows.Forms.PictureBox();
+            panel2 = new System.Windows.Forms.Panel();
+            studentNameDisplay = new System.Windows.Forms.Label();
+            profilePicture = new System.Windows.Forms.PictureBox();
+            userFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)teachersButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gradesButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)shopButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leaderboardButton).BeginInit();
-            createQuizPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)homeButton).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)profilePicture).BeginInit();
             SuspendLayout();
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = System.Drawing.Color.Transparent;
-            label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            label2.Location = new System.Drawing.Point(28, 98);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(56, 19);
-            label2.TabIndex = 3;
-            label2.Text = "Home";
-            // 
-            // homeButton
-            // 
-            homeButton.Image = (System.Drawing.Image)resources.GetObject("homeButton.Image");
-            homeButton.Location = new System.Drawing.Point(17, 12);
-            homeButton.Name = "homeButton";
-            homeButton.Size = new System.Drawing.Size(80, 80);
-            homeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            homeButton.TabIndex = 3;
-            homeButton.TabStop = false;
-            homeButton.Click += homeButton_Click;
             // 
             // panel1
             // 
@@ -92,9 +67,9 @@
             panel1.Controls.Add(leaderboardButton);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(homeButton);
-            panel1.Location = new System.Drawing.Point(1, 0);
+            panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(122, 682);
+            panel1.Size = new System.Drawing.Size(121, 682);
             panel1.TabIndex = 3;
             // 
             // label5
@@ -179,108 +154,98 @@
             leaderboardButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             leaderboardButton.TabIndex = 4;
             leaderboardButton.TabStop = false;
-            leaderboardButton.Click += leaderboardButton_Click;
+            leaderboardButton.Click += LeaderboardForm_Click;
             // 
-            // quizTitle
+            // label2
             // 
-            quizTitle.AutoSize = true;
-            quizTitle.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            quizTitle.Location = new System.Drawing.Point(152, 32);
-            quizTitle.Name = "quizTitle";
-            quizTitle.Size = new System.Drawing.Size(247, 32);
-            quizTitle.TabIndex = 4;
-            quizTitle.Text = "Assigned Quizzes:";
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            label2.Location = new System.Drawing.Point(28, 98);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(56, 19);
+            label2.TabIndex = 3;
+            label2.Text = "Home";
             // 
-            // label6
+            // homeButton
             // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            label6.Location = new System.Drawing.Point(152, 266);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(279, 32);
-            label6.TabIndex = 5;
-            label6.Text = "Unassigned Quizzes:";
+            homeButton.Image = (System.Drawing.Image)resources.GetObject("homeButton.Image");
+            homeButton.Location = new System.Drawing.Point(17, 12);
+            homeButton.Name = "homeButton";
+            homeButton.Size = new System.Drawing.Size(80, 80);
+            homeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            homeButton.TabIndex = 3;
+            homeButton.TabStop = false;
+            homeButton.Click += homeButton_Click;
             // 
-            // flowLayoutPanel1
+            // panel2
             // 
-            flowLayoutPanel1.Location = new System.Drawing.Point(158, 67);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new System.Drawing.Size(868, 196);
-            flowLayoutPanel1.TabIndex = 6;
+            panel2.BackColor = System.Drawing.Color.White;
+            panel2.Controls.Add(studentNameDisplay);
+            panel2.Location = new System.Drawing.Point(623, 34);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(391, 29);
+            panel2.TabIndex = 18;
             // 
-            // flowLayoutPanel2
+            // studentNameDisplay
             // 
-            flowLayoutPanel2.Location = new System.Drawing.Point(158, 302);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new System.Drawing.Size(868, 196);
-            flowLayoutPanel2.TabIndex = 7;
+            studentNameDisplay.AutoSize = true;
+            studentNameDisplay.BackColor = System.Drawing.Color.Transparent;
+            studentNameDisplay.Dock = System.Windows.Forms.DockStyle.Right;
+            studentNameDisplay.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            studentNameDisplay.Location = new System.Drawing.Point(301, 0);
+            studentNameDisplay.Name = "studentNameDisplay";
+            studentNameDisplay.Size = new System.Drawing.Size(90, 23);
+            studentNameDisplay.TabIndex = 12;
+            studentNameDisplay.Text = "Student1";
+            studentNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // createQuizPanel
+            // profilePicture
             // 
-            createQuizPanel.Controls.Add(pictureBox1);
-            createQuizPanel.Controls.Add(label7);
-            createQuizPanel.Location = new System.Drawing.Point(152, 504);
-            createQuizPanel.Name = "createQuizPanel";
-            createQuizPanel.Size = new System.Drawing.Size(200, 56);
-            createQuizPanel.TabIndex = 8;
-            createQuizPanel.Click += createQuizPanel_Click;
+            profilePicture.Image = Properties.Resources.defaultProfile;
+            profilePicture.Location = new System.Drawing.Point(1013, 12);
+            profilePicture.Name = "profilePicture";
+            profilePicture.Size = new System.Drawing.Size(70, 70);
+            profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            profilePicture.TabIndex = 17;
+            profilePicture.TabStop = false;
             // 
-            // pictureBox1
+            // userFlowLayout
             // 
-            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new System.Drawing.Point(6, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(37, 37);
-            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            userFlowLayout.Location = new System.Drawing.Point(177, 118);
+            userFlowLayout.Name = "userFlowLayout";
+            userFlowLayout.Size = new System.Drawing.Size(837, 550);
+            userFlowLayout.TabIndex = 19;
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            label7.Location = new System.Drawing.Point(50, 15);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(120, 23);
-            label7.TabIndex = 6;
-            label7.Text = "Create Quiz";
-            label7.Click += label7_Click;
-            // 
-            // TeacherPortal
+            // LeaderboardForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1095, 680);
-            Controls.Add(createQuizPanel);
-            Controls.Add(flowLayoutPanel2);
-            Controls.Add(flowLayoutPanel1);
-            Controls.Add(label6);
-            Controls.Add(quizTitle);
+            Controls.Add(userFlowLayout);
+            Controls.Add(panel2);
+            Controls.Add(profilePicture);
             Controls.Add(panel1);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
-            Name = "TeacherPortal";
+            Name = "LeaderboardForm";
             Text = "GeoMind";
-            AutoSizeChanged += TeacherPortal_AutoSizeChanged;
-            ((System.ComponentModel.ISupportInitialize)homeButton).EndInit();
+            Click += LeaderboardForm_Click;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)teachersButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)gradesButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)shopButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)leaderboardButton).EndInit();
-            createQuizPanel.ResumeLayout(false);
-            createQuizPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)homeButton).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)profilePicture).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox homeButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox teachersButton;
@@ -290,12 +255,11 @@
         private System.Windows.Forms.PictureBox shopButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox leaderboardButton;
-        private System.Windows.Forms.Label quizTitle;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel createQuizPanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox homeButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label studentNameDisplay;
+        private System.Windows.Forms.PictureBox profilePicture;
+        private System.Windows.Forms.FlowLayoutPanel userFlowLayout;
     }
 }

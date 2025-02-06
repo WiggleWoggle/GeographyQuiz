@@ -29,248 +29,266 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignupForm));
-            this.loginLabel = new System.Windows.Forms.Label();
-            this.nameField = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.passwordField = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.login = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.signupButton = new System.Windows.Forms.Button();
-            this.usernameField = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.emailField = new System.Windows.Forms.TextBox();
-            this.incorrectLabel = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            loginLabel = new System.Windows.Forms.Label();
+            nameField = new System.Windows.Forms.TextBox();
+            panel2 = new System.Windows.Forms.Panel();
+            panel1 = new System.Windows.Forms.Panel();
+            emailField = new System.Windows.Forms.TextBox();
+            label4 = new System.Windows.Forms.Label();
+            passwordField = new System.Windows.Forms.TextBox();
+            label7 = new System.Windows.Forms.Label();
+            login = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            signupButton = new System.Windows.Forms.Button();
+            usernameField = new System.Windows.Forms.TextBox();
+            label2 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            incorrectLabel = new System.Windows.Forms.Label();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // loginLabel
             // 
-            this.loginLabel.AutoSize = true;
-            this.loginLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(105, 5);
-            this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(154, 23);
-            this.loginLabel.TabIndex = 1;
-            this.loginLabel.Text = "Student Sign Up";
+            loginLabel.AutoSize = true;
+            loginLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            loginLabel.Location = new System.Drawing.Point(122, 6);
+            loginLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            loginLabel.Name = "loginLabel";
+            loginLabel.Size = new System.Drawing.Size(154, 23);
+            loginLabel.TabIndex = 1;
+            loginLabel.Text = "Student Sign Up";
             // 
             // nameField
             // 
-            this.nameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.nameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nameField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameField.Location = new System.Drawing.Point(147, 62);
-            this.nameField.Name = "nameField";
-            this.nameField.Size = new System.Drawing.Size(182, 24);
-            this.nameField.TabIndex = 0;
+            nameField.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
+            nameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            nameField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            nameField.Location = new System.Drawing.Point(172, 72);
+            nameField.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            nameField.Name = "nameField";
+            nameField.Size = new System.Drawing.Size(212, 24);
+            nameField.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.panel2.Controls.Add(this.loginLabel);
-            this.panel2.Location = new System.Drawing.Point(109, 214);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(369, 37);
-            this.panel2.TabIndex = 7;
+            panel2.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
+            panel2.Controls.Add(loginLabel);
+            panel2.Location = new System.Drawing.Point(127, 247);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(430, 43);
+            panel2.TabIndex = 7;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
-            this.panel1.Controls.Add(this.emailField);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.passwordField);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.login);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.signupButton);
-            this.panel1.Controls.Add(this.usernameField);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.nameField);
-            this.panel1.Location = new System.Drawing.Point(109, 214);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 323);
-            this.panel1.TabIndex = 5;
-            // 
-            // passwordField
-            // 
-            this.passwordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordField.Location = new System.Drawing.Point(147, 198);
-            this.passwordField.Name = "passwordField";
-            this.passwordField.Size = new System.Drawing.Size(182, 24);
-            this.passwordField.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(33, 199);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 23);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Password: ";
-            // 
-            // login
-            // 
-            this.login.AutoSize = true;
-            this.login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline);
-            this.login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(132)))), ((int)(((byte)(217)))));
-            this.login.Location = new System.Drawing.Point(239, 288);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(43, 17);
-            this.login.TabIndex = 7;
-            this.login.Text = "Log In";
-            this.login.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.label3.Location = new System.Drawing.Point(75, 288);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Already have an account?";
-            // 
-            // signupButton
-            // 
-            this.signupButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(132)))), ((int)(((byte)(217)))));
-            this.signupButton.FlatAppearance.BorderSize = 0;
-            this.signupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signupButton.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.signupButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.signupButton.Location = new System.Drawing.Point(37, 241);
-            this.signupButton.Name = "signupButton";
-            this.signupButton.Size = new System.Drawing.Size(292, 34);
-            this.signupButton.TabIndex = 5;
-            this.signupButton.Text = "Sign Up";
-            this.signupButton.UseVisualStyleBackColor = false;
-            this.signupButton.Click += new System.EventHandler(this.signupButton_Click);
-            // 
-            // usernameField
-            // 
-            this.usernameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.usernameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usernameField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameField.Location = new System.Drawing.Point(147, 110);
-            this.usernameField.Name = "usernameField";
-            this.usernameField.Size = new System.Drawing.Size(182, 24);
-            this.usernameField.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 23);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Username:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Name:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label6.Location = new System.Drawing.Point(278, 139);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 19);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Learn geography the fun way.";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(272, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 38);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "GeoMind";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(119, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 23);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Email:";
+            panel1.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
+            panel1.Controls.Add(emailField);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(passwordField);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(login);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(signupButton);
+            panel1.Controls.Add(usernameField);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(nameField);
+            panel1.Location = new System.Drawing.Point(127, 247);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(430, 373);
+            panel1.TabIndex = 5;
             // 
             // emailField
             // 
-            this.emailField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.emailField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emailField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailField.Location = new System.Drawing.Point(147, 155);
-            this.emailField.Name = "emailField";
-            this.emailField.Size = new System.Drawing.Size(182, 24);
-            this.emailField.TabIndex = 11;
+            emailField.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
+            emailField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            emailField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            emailField.Location = new System.Drawing.Point(172, 179);
+            emailField.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            emailField.Name = "emailField";
+            emailField.Size = new System.Drawing.Size(212, 24);
+            emailField.TabIndex = 11;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label4.Location = new System.Drawing.Point(41, 178);
+            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(66, 23);
+            label4.TabIndex = 10;
+            label4.Text = "Email:";
+            // 
+            // passwordField
+            // 
+            passwordField.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
+            passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            passwordField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            passwordField.Location = new System.Drawing.Point(172, 228);
+            passwordField.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            passwordField.Name = "passwordField";
+            passwordField.Size = new System.Drawing.Size(212, 24);
+            passwordField.TabIndex = 9;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label7.Location = new System.Drawing.Point(38, 230);
+            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(106, 23);
+            label7.TabIndex = 8;
+            label7.Text = "Password: ";
+            // 
+            // login
+            // 
+            login.AutoSize = true;
+            login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline);
+            login.ForeColor = System.Drawing.Color.FromArgb(134, 132, 217);
+            login.Location = new System.Drawing.Point(269, 332);
+            login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            login.Name = "login";
+            login.Size = new System.Drawing.Size(43, 17);
+            login.TabIndex = 7;
+            login.Text = "Log In";
+            login.Click += label4_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Century Gothic", 9F);
+            label3.Location = new System.Drawing.Point(102, 332);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(167, 17);
+            label3.TabIndex = 6;
+            label3.Text = "Already have an account?";
+            // 
+            // signupButton
+            // 
+            signupButton.BackColor = System.Drawing.Color.FromArgb(134, 132, 217);
+            signupButton.FlatAppearance.BorderSize = 0;
+            signupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            signupButton.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            signupButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            signupButton.Location = new System.Drawing.Point(43, 278);
+            signupButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            signupButton.Name = "signupButton";
+            signupButton.Size = new System.Drawing.Size(341, 39);
+            signupButton.TabIndex = 5;
+            signupButton.Text = "Sign Up";
+            signupButton.UseVisualStyleBackColor = false;
+            signupButton.Click += signupButton_Click;
+            // 
+            // usernameField
+            // 
+            usernameField.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
+            usernameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            usernameField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            usernameField.Location = new System.Drawing.Point(172, 127);
+            usernameField.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            usernameField.Name = "usernameField";
+            usernameField.Size = new System.Drawing.Size(212, 24);
+            usernameField.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label2.Location = new System.Drawing.Point(38, 126);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(108, 23);
+            label2.TabIndex = 3;
+            label2.Text = "Username:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label1.Location = new System.Drawing.Point(38, 70);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(72, 23);
+            label1.TabIndex = 2;
+            label1.Text = "Name:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Century Gothic", 10F);
+            label6.Location = new System.Drawing.Point(324, 160);
+            label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(219, 19);
+            label6.TabIndex = 8;
+            label6.Text = "Learn geography the fun way.";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold);
+            label5.Location = new System.Drawing.Point(317, 117);
+            label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(161, 38);
+            label5.TabIndex = 6;
+            label5.Text = "GeoMind";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(139, 67);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(175, 173);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // incorrectLabel
             // 
-            this.incorrectLabel.AutoSize = true;
-            this.incorrectLabel.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.incorrectLabel.ForeColor = System.Drawing.Color.Red;
-            this.incorrectLabel.Location = new System.Drawing.Point(106, 540);
-            this.incorrectLabel.Name = "incorrectLabel";
-            this.incorrectLabel.Size = new System.Drawing.Size(71, 17);
-            this.incorrectLabel.TabIndex = 13;
-            this.incorrectLabel.Text = "VisibleText";
+            incorrectLabel.AutoSize = true;
+            incorrectLabel.Font = new System.Drawing.Font("Century Gothic", 9F);
+            incorrectLabel.ForeColor = System.Drawing.Color.Red;
+            incorrectLabel.Location = new System.Drawing.Point(124, 623);
+            incorrectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            incorrectLabel.Name = "incorrectLabel";
+            incorrectLabel.Size = new System.Drawing.Size(71, 17);
+            incorrectLabel.TabIndex = 13;
+            incorrectLabel.Text = "VisibleText";
             // 
             // SignupForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(578, 653);
-            this.Controls.Add(this.incorrectLabel);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "SignupForm";
-            this.Text = "GeoMind";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(674, 753);
+            Controls.Add(incorrectLabel);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(pictureBox1);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "SignupForm";
+            Text = "GeoMind";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

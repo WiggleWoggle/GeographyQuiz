@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace defaultwinform
 {
-    public partial class TeacherPortal : Form
+    public partial class LeaderboardForm : Form
     {
-        public TeacherPortal()
+        public LeaderboardForm()
         {
             InitializeComponent();
             this.Size = new Size(1111, 719);
@@ -21,30 +21,9 @@ namespace defaultwinform
             this.CenterToScreen();
         }
 
-        private void TeacherPortal_AutoSizeChanged(object sender, EventArgs e)
+        private void LeaderboardForm_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void createQuizPanel_Click(object sender, EventArgs e)
-        {
-            QuizEditorForm form = new QuizEditorForm();
-            form.Show();
-            this.Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            QuizEditorForm form = new QuizEditorForm();
-            form.Show();
-            this.Close();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-            QuizEditorForm form = new QuizEditorForm();
-            form.Show();
-            this.Close();
         }
 
         private void homeButton_Click(object sender, EventArgs e)

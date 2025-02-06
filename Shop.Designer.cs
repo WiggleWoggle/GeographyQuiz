@@ -1027,6 +1027,7 @@
             teachersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             teachersButton.TabIndex = 7;
             teachersButton.TabStop = false;
+            teachersButton.Click += teachersButton_Click;
             // 
             // label4
             // 
@@ -1047,6 +1048,7 @@
             gradesButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             gradesButton.TabIndex = 6;
             gradesButton.TabStop = false;
+            gradesButton.Click += gradesButton_Click;
             // 
             // label3
             // 
@@ -1067,6 +1069,7 @@
             shopButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             shopButton.TabIndex = 5;
             shopButton.TabStop = false;
+            shopButton.Click += shopButton_Click;
             // 
             // label1
             // 
@@ -1087,6 +1090,7 @@
             leaderboardButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             leaderboardButton.TabIndex = 4;
             leaderboardButton.TabStop = false;
+            leaderboardButton.Click += leaderboardButton_Click;
             // 
             // roundedPanel7
             // 

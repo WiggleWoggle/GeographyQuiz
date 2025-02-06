@@ -111,5 +111,39 @@ namespace defaultwinform
                 Program.currentAccount.setSkipCount(Program.currentAccount.getSkipCount() + 1);
             }
         }
+
+        private void leaderboardButton_Click(object sender, EventArgs e)
+        {
+            LeaderboardForm form = new LeaderboardForm();
+            form.Show();
+            this.Close();
+        }
+
+        private void shopButton_Click(object sender, EventArgs e)
+        {
+            Shop form = new Shop();
+            form.Show();
+            this.Close();
+        }
+
+        private void profilePicture_Click(object sender, EventArgs e)
+        {
+            ProfileEditingForm form = new ProfileEditingForm();
+            form.Show();
+        }
+
+        private void teachersButton_Click(object sender, EventArgs e)
+        {
+            TeacherPortal form = new TeacherPortal();
+            form.Show();
+            this.Close();
+        }
+
+        private void gradesButton_Click(object sender, EventArgs e)
+        {
+            GradesForm form = new GradesForm();
+            form.Show();
+            this.Close();
+        }
     }
 }

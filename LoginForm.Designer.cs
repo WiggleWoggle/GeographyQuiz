@@ -29,218 +29,248 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.loginButton = new System.Windows.Forms.Button();
-            this.passwordField = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.usernameField = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.loginLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.incorrectLabel = new System.Windows.Forms.Label();
-            this.errorLabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            panel1 = new System.Windows.Forms.Panel();
+            passwordField = new System.Windows.Forms.TextBox();
+            usernameField = new System.Windows.Forms.TextBox();
+            label4 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            loginButton = new System.Windows.Forms.Button();
+            label2 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            panel2 = new System.Windows.Forms.Panel();
+            loginLabel = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            incorrectLabel = new System.Windows.Forms.Label();
+            errorLabel = new System.Windows.Forms.Label();
+            loadingSpinner = new System.Windows.Forms.PictureBox();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)loadingSpinner).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.loginButton);
-            this.panel1.Controls.Add(this.passwordField);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.usernameField);
-            this.panel1.Location = new System.Drawing.Point(107, 214);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 247);
-            this.panel1.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(132)))), ((int)(((byte)(217)))));
-            this.label4.Location = new System.Drawing.Point(225, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Sign Up";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.label3.Location = new System.Drawing.Point(76, 209);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Don\'t have an account?";
-            // 
-            // loginButton
-            // 
-            this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(132)))), ((int)(((byte)(217)))));
-            this.loginButton.FlatAppearance.BorderSize = 0;
-            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.loginButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.loginButton.Location = new System.Drawing.Point(37, 162);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(292, 34);
-            this.loginButton.TabIndex = 5;
-            this.loginButton.Text = "Log In";
-            this.loginButton.UseVisualStyleBackColor = false;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            panel1.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
+            panel1.Controls.Add(passwordField);
+            panel1.Controls.Add(usernameField);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(loginButton);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new System.Drawing.Point(125, 247);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(430, 285);
+            panel1.TabIndex = 1;
             // 
             // passwordField
             // 
-            this.passwordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordField.Location = new System.Drawing.Point(147, 110);
-            this.passwordField.Name = "passwordField";
-            this.passwordField.Size = new System.Drawing.Size(182, 24);
-            this.passwordField.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 23);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Password: ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Username:";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            passwordField.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
+            passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            passwordField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            passwordField.Location = new System.Drawing.Point(164, 127);
+            passwordField.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            passwordField.Name = "passwordField";
+            passwordField.Size = new System.Drawing.Size(212, 24);
+            passwordField.TabIndex = 4;
             // 
             // usernameField
             // 
-            this.usernameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.usernameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usernameField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameField.Location = new System.Drawing.Point(147, 62);
-            this.usernameField.Name = "usernameField";
-            this.usernameField.Size = new System.Drawing.Size(182, 24);
-            this.usernameField.TabIndex = 0;
+            usernameField.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
+            usernameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            usernameField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            usernameField.Location = new System.Drawing.Point(164, 72);
+            usernameField.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            usernameField.Name = "usernameField";
+            usernameField.Size = new System.Drawing.Size(212, 24);
+            usernameField.TabIndex = 0;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline);
+            label4.ForeColor = System.Drawing.Color.FromArgb(134, 132, 217);
+            label4.Location = new System.Drawing.Point(261, 241);
+            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(52, 17);
+            label4.TabIndex = 7;
+            label4.Text = "Sign Up";
+            label4.Click += label4_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Century Gothic", 9F);
+            label3.Location = new System.Drawing.Point(110, 241);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(152, 17);
+            label3.TabIndex = 6;
+            label3.Text = "Don't have an account?";
+            // 
+            // loginButton
+            // 
+            loginButton.BackColor = System.Drawing.Color.FromArgb(134, 132, 217);
+            loginButton.FlatAppearance.BorderSize = 0;
+            loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            loginButton.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            loginButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            loginButton.Location = new System.Drawing.Point(43, 187);
+            loginButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            loginButton.Name = "loginButton";
+            loginButton.Size = new System.Drawing.Size(341, 39);
+            loginButton.TabIndex = 5;
+            loginButton.Text = "Log In";
+            loginButton.UseVisualStyleBackColor = false;
+            loginButton.Click += loginButton_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label2.Location = new System.Drawing.Point(55, 126);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(106, 23);
+            label2.TabIndex = 3;
+            label2.Text = "Password: ";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label1.Location = new System.Drawing.Point(49, 70);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(108, 23);
+            label1.TabIndex = 2;
+            label1.Text = "Username:";
+            label1.Click += label1_Click_1;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.panel2.Controls.Add(this.loginLabel);
-            this.panel2.Location = new System.Drawing.Point(107, 214);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(369, 37);
-            this.panel2.TabIndex = 2;
+            panel2.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
+            panel2.Controls.Add(loginLabel);
+            panel2.Location = new System.Drawing.Point(125, 247);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(430, 43);
+            panel2.TabIndex = 2;
             // 
             // loginLabel
             // 
-            this.loginLabel.AutoSize = true;
-            this.loginLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(113, 5);
-            this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(138, 23);
-            this.loginLabel.TabIndex = 1;
-            this.loginLabel.Text = "Student Log In";
-            this.loginLabel.Click += new System.EventHandler(this.label1_Click);
+            loginLabel.AutoSize = true;
+            loginLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            loginLabel.Location = new System.Drawing.Point(181, 10);
+            loginLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            loginLabel.Name = "loginLabel";
+            loginLabel.Size = new System.Drawing.Size(64, 23);
+            loginLabel.TabIndex = 1;
+            loginLabel.Text = "Log In";
+            loginLabel.Click += label1_Click;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(272, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 38);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "GeoMind";
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold);
+            label5.Location = new System.Drawing.Point(317, 117);
+            label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(161, 38);
+            label5.TabIndex = 2;
+            label5.Text = "GeoMind";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label6.Location = new System.Drawing.Point(278, 139);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Learn geography the fun way.";
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Century Gothic", 10F);
+            label6.Location = new System.Drawing.Point(324, 160);
+            label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(219, 19);
+            label6.TabIndex = 3;
+            label6.Text = "Learn geography the fun way.";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(119, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(139, 67);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(175, 173);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // incorrectLabel
             // 
-            this.incorrectLabel.AutoSize = true;
-            this.incorrectLabel.Enabled = false;
-            this.incorrectLabel.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.incorrectLabel.ForeColor = System.Drawing.Color.IndianRed;
-            this.incorrectLabel.Location = new System.Drawing.Point(210, 464);
-            this.incorrectLabel.Name = "incorrectLabel";
-            this.incorrectLabel.Size = new System.Drawing.Size(0, 17);
-            this.incorrectLabel.TabIndex = 8;
-            this.incorrectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.incorrectLabel.Click += new System.EventHandler(this.incorrectLabel_Click);
+            incorrectLabel.AutoSize = true;
+            incorrectLabel.Enabled = false;
+            incorrectLabel.Font = new System.Drawing.Font("Century Gothic", 9F);
+            incorrectLabel.ForeColor = System.Drawing.Color.IndianRed;
+            incorrectLabel.Location = new System.Drawing.Point(245, 535);
+            incorrectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            incorrectLabel.Name = "incorrectLabel";
+            incorrectLabel.Size = new System.Drawing.Size(0, 17);
+            incorrectLabel.TabIndex = 8;
+            incorrectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            incorrectLabel.Click += incorrectLabel_Click;
             // 
             // errorLabel
             // 
-            this.errorLabel.AutoSize = true;
-            this.errorLabel.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(104, 464);
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(71, 17);
-            this.errorLabel.TabIndex = 12;
-            this.errorLabel.Text = "VisibleText";
+            errorLabel.AutoSize = true;
+            errorLabel.Font = new System.Drawing.Font("Century Gothic", 9F);
+            errorLabel.ForeColor = System.Drawing.Color.Red;
+            errorLabel.Location = new System.Drawing.Point(121, 535);
+            errorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            errorLabel.Name = "errorLabel";
+            errorLabel.Size = new System.Drawing.Size(71, 17);
+            errorLabel.TabIndex = 12;
+            errorLabel.Text = "VisibleText";
+            // 
+            // loadingSpinner
+            // 
+            loadingSpinner.Image = (System.Drawing.Image)resources.GetObject("loadingSpinner.Image");
+            loadingSpinner.Location = new System.Drawing.Point(109, 329);
+            loadingSpinner.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            loadingSpinner.Name = "loadingSpinner";
+            loadingSpinner.Size = new System.Drawing.Size(460, 111);
+            loadingSpinner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            loadingSpinner.TabIndex = 13;
+            loadingSpinner.TabStop = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(578, 653);
-            this.Controls.Add(this.errorLabel);
-            this.Controls.Add(this.incorrectLabel);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "LoginForm";
-            this.Text = "GeoMind";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(674, 753);
+            Controls.Add(errorLabel);
+            Controls.Add(incorrectLabel);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(pictureBox1);
+            Controls.Add(loadingSpinner);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "LoginForm";
+            Text = "GeoMind";
+            FormClosed += LoginForm_FormClosed;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)loadingSpinner).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -260,5 +290,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label incorrectLabel;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.PictureBox loadingSpinner;
     }
 }

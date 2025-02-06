@@ -64,6 +64,8 @@ namespace defaultwinform
             if (inputtedPassword.Equals("MASTER"))
             {
 
+                hidePanels();
+
                 UserAccount account = new UserAccount();
 
                 account.setUserName("MASTER");
@@ -96,8 +98,13 @@ namespace defaultwinform
                     if (account.getEncryptedPassword().Equals(encryptedPassword))
                     {
 
+                        hidePanels();
+
                         Program.currentAccount = account;
                         Form1 form = new Form1();
+
+                        QuizDAO.retrieveQuizzes();
+
                         form.Show();
                         this.Close();
                     } else
@@ -106,6 +113,20 @@ namespace defaultwinform
                     }
                 }
             }
+        }
+
+        private void hidePanels()
+        {
+            panel2.Visible = false;
+            panel1.Visible = false;
+            usernameField.Visible = false;
+            loginLabel.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            loginButton.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            errorLabel.Visible = false;
         }
 
         private void incorrectLabel_Click(object sender, EventArgs e)

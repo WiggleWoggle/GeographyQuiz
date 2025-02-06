@@ -175,12 +175,22 @@ namespace defaultwinform
         {
         }
 
-        private void leaderboardButton_Click(object sender, EventArgs e)
+        private void leaderboardButton_MouseHover(object sender, EventArgs e)
         {
         }
 
-        private void leaderboardButton_MouseHover(object sender, EventArgs e)
+        private void homeButton_Click(object sender, EventArgs e)
         {
+            Form1 form = new Form1();
+            form.Show();
+            this.Close();
+        }
+
+        private void leaderboardButton_Click(object sender, EventArgs e)
+        {
+            LeaderboardForm form = new LeaderboardForm();
+            form.Show();
+            this.Close();
         }
 
         private void shopButton_Click(object sender, EventArgs e)
@@ -199,6 +209,13 @@ namespace defaultwinform
         private void teachersButton_Click(object sender, EventArgs e)
         {
             TeacherPortal form = new TeacherPortal();
+            form.Show();
+            this.Close();
+        }
+
+        private void gradesButton_Click(object sender, EventArgs e)
+        {
+            GradesForm form = new GradesForm();
             form.Show();
             this.Close();
         }

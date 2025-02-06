@@ -110,3 +110,5 @@ C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\net8.0-windows\refint\defa
 C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\net8.0-windows\defaultwinform.pdb
 C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\net8.0-windows\defaultwinform.genruntimeconfig.cache
 C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\net8.0-windows\ref\defaultwinform.dll
+C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\net8.0-windows\defaultwinform.LeaderboardForm.resources
+C:\Users\s195870\source\repos\GeographyQuiz\obj\Debug\net8.0-windows\defaultwinform.GradesForm.resources
