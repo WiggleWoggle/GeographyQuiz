@@ -84,6 +84,22 @@ namespace defaultwinform
 
                 QuizDAO.retrieveQuizzes();
 
+                AccountDAO.userAccounts.Add(account);
+
+
+                for (int i = 0; i < 20; i++)
+                {
+
+                    Random random = new Random();
+
+                    UserAccount tempAccount = new UserAccount();
+                    tempAccount.setUserName("TEST ACCOUNT");
+                    tempAccount.setName("TEST ACCOUNT");
+                    tempAccount.setStarsCount(random.Next(99));
+
+                    AccountDAO.userAccounts.Add(tempAccount);
+                }
+
                 Form1 form = new Form1();
                 form.Show();
                 this.Close();

@@ -60,7 +60,7 @@ namespace defaultwinform
 
         public void buildQuizPanels()
         {
-            foreach (Quiz quiz in QuizDAO.getQuizzes())
+            foreach (Quiz quiz in QuizDAO.getAssignedQuizzes())
             {
                 if (!builtQuizzes.Contains(quiz))
                 {
@@ -128,6 +128,75 @@ namespace defaultwinform
                     builtQuizzes.Add(quiz);
                 }
             }
+
+            foreach (Quiz quiz in QuizDAO.getUnAssignedQuizzes())
+            {
+                if (!builtQuizzes.Contains(quiz))
+                {
+                    Panel panel = new Panel();
+                    panel.Size = new Size(236, 207);
+                    panel.BackColor = Color.FromArgb(228, 234, 239);
+
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.ImageLocation = quiz.getImage();
+                    pictureBox.Size = new Size(236, 125);
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    Label quizName = new Label();
+                    quizName.Text = quiz.getTitle();
+                    quizName.Font = new Font("Century Gothic", 14, FontStyle.Bold);
+                    quizName.Location = new Point(2, 127);
+
+                    Label quizTopic = new Label();
+                    quizTopic.Text = "Topic: " + quiz.getTopic();
+                    quizTopic.Font = new Font("Century Gothic", 10);
+                    quizTopic.Size = new Size(quizTopic.Size.Width + 100, quizTopic.Size.Height);
+                    quizTopic.Location = new Point(2, 155);
+
+                    Label questionCount = new Label();
+                    questionCount.Text = quiz.getQuestions().Count + "";
+
+                    if (quiz.getQuestions().Count != 1)
+                    {
+                        questionCount.Text += " Questions";
+                    }
+                    else
+                    {
+                        questionCount.Text += " Question";
+                    }
+
+                    questionCount.Font = new Font("Century Gothic", 10);
+                    questionCount.Location = new Point(2, 178);
+
+                    Label attemptedStatus = new Label();
+                    attemptedStatus.Text = "Unattempted";
+                    attemptedStatus.Font = new Font("Century Gothic", 10);
+                    attemptedStatus.TextAlign = ContentAlignment.MiddleRight;
+                    attemptedStatus.Size = new Size(attemptedStatus.Size.Width + 40, attemptedStatus.Size.Height);
+                    attemptedStatus.Location = new Point(90, 127);
+
+                    panel.Controls.Add(pictureBox);
+                    panel.Controls.Add(quizName);
+                    panel.Controls.Add(quizTopic);
+                    panel.Controls.Add(questionCount);
+                    panel.Controls.Add(attemptedStatus);
+
+                    completedFlowLayout.Controls.Add(panel);
+
+                    QuizPanel quizPanel = new QuizPanel(quiz, panel, quizName, questionCount, quizTopic, attemptedStatus, pictureBox);
+
+                    QuizDAO.addQuizPanel(quizPanel);
+
+                    panel.Click += openQuiz;
+                    questionCount.Click += openQuiz;
+                    quizName.Click += openQuiz;
+                    quizTopic.Click += openQuiz;
+                    attemptedStatus.Click += openQuiz;
+                    pictureBox.Click += openQuiz;
+
+                    builtQuizzes.Add(quiz);
+                }
+            }
         }
 
         private void profileOverlay_Click(object sender, EventArgs e)
@@ -138,7 +207,7 @@ namespace defaultwinform
         private void openQuiz(object sender, EventArgs e)
         {
 
-            foreach (Quiz quiz in QuizDAO.getQuizzes())
+            foreach (Quiz quiz in QuizDAO.getAssignedQuizzes())
             {
 
                 foreach (QuizPanel panel in QuizDAO.getQuizPanels())

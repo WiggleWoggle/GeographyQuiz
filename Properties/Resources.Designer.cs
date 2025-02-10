@@ -433,6 +433,16 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap star {
+            get {
+                object obj = ResourceManager.GetObject("star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap trashIcon {
             get {
                 object obj = ResourceManager.GetObject("trashIcon", resourceCulture);
@@ -446,6 +456,16 @@ namespace defaultwinform.Properties {
         public static System.Drawing.Bitmap unavailableNext {
             get {
                 object obj = ResourceManager.GetObject("unavailableNext", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap viewIcon {
+            get {
+                object obj = ResourceManager.GetObject("viewIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -91,8 +91,6 @@
             pictureBox2 = new System.Windows.Forms.PictureBox();
             label11 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
-            profileUnderlay = new RoundedPanel();
-            profileOverlay = new System.Windows.Forms.PictureBox();
             label2 = new System.Windows.Forms.Label();
             homeButton = new System.Windows.Forms.PictureBox();
             panel1 = new System.Windows.Forms.Panel();
@@ -107,6 +105,7 @@
             roundedPanel7 = new RoundedPanel();
             accountStarLabel = new System.Windows.Forms.Label();
             pictureBox14 = new System.Windows.Forms.PictureBox();
+            profileOverlay = new System.Windows.Forms.PictureBox();
             shopFlowLayout.SuspendLayout();
             multiplierPanel.SuspendLayout();
             roundedPanel3.SuspendLayout();
@@ -150,8 +149,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
             roundedPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            profileUnderlay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)profileOverlay).BeginInit();
             ((System.ComponentModel.ISupportInitialize)homeButton).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)teachersButton).BeginInit();
@@ -160,6 +157,7 @@
             ((System.ComponentModel.ISupportInitialize)leaderboardButton).BeginInit();
             roundedPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)profileOverlay).BeginInit();
             SuspendLayout();
             // 
             // shopFlowLayout
@@ -944,30 +942,6 @@
             label17.TabIndex = 18;
             label17.Text = "Student1";
             // 
-            // profileUnderlay
-            // 
-            profileUnderlay.BackColor = System.Drawing.Color.FromArgb(147, 179, 191);
-            profileUnderlay.BorderRadius = 60;
-            profileUnderlay.Controls.Add(profileOverlay);
-            profileUnderlay.ForeColor = System.Drawing.Color.Black;
-            profileUnderlay.Location = new System.Drawing.Point(980, 14);
-            profileUnderlay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            profileUnderlay.Name = "profileUnderlay";
-            profileUnderlay.Size = new System.Drawing.Size(70, 69);
-            profileUnderlay.TabIndex = 17;
-            // 
-            // profileOverlay
-            // 
-            profileOverlay.BackColor = System.Drawing.Color.Transparent;
-            profileOverlay.Image = Properties.Resources.profileOverlay;
-            profileOverlay.Location = new System.Drawing.Point(1, 5);
-            profileOverlay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            profileOverlay.Name = "profileOverlay";
-            profileOverlay.Size = new System.Drawing.Size(70, 69);
-            profileOverlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            profileOverlay.TabIndex = 0;
-            profileOverlay.TabStop = false;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -1130,17 +1104,29 @@
             pictureBox14.TabIndex = 24;
             pictureBox14.TabStop = false;
             // 
+            // profileOverlay
+            // 
+            profileOverlay.BackColor = System.Drawing.Color.Transparent;
+            profileOverlay.Image = Properties.Resources.profileOverlay;
+            profileOverlay.Location = new System.Drawing.Point(980, 12);
+            profileOverlay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            profileOverlay.Name = "profileOverlay";
+            profileOverlay.Size = new System.Drawing.Size(70, 69);
+            profileOverlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            profileOverlay.TabIndex = 0;
+            profileOverlay.TabStop = false;
+            // 
             // Shop
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1095, 680);
+            Controls.Add(profileOverlay);
             Controls.Add(roundedPanel7);
             Controls.Add(panel1);
             Controls.Add(label17);
             Controls.Add(shopFlowLayout);
-            Controls.Add(profileUnderlay);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             Name = "Shop";
@@ -1207,8 +1193,6 @@
             roundedPanel2.ResumeLayout(false);
             roundedPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            profileUnderlay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)profileOverlay).EndInit();
             ((System.ComponentModel.ISupportInitialize)homeButton).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -1218,6 +1202,7 @@
             ((System.ComponentModel.ISupportInitialize)leaderboardButton).EndInit();
             roundedPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)profileOverlay).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1243,8 +1228,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label17;
-        private RoundedPanel profileUnderlay;
-        private System.Windows.Forms.PictureBox profileOverlay;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox homeButton;
         private System.Windows.Forms.Panel panel1;
@@ -1301,5 +1284,6 @@
         private RoundedPanel roundedPanel7;
         private System.Windows.Forms.Label accountStarLabel;
         private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox profileOverlay;
     }
 }

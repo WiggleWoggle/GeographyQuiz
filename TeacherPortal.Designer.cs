@@ -42,8 +42,8 @@
             leaderboardButton = new System.Windows.Forms.PictureBox();
             quizTitle = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
-            flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            assignedFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            unassignedFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             createQuizPanel = new System.Windows.Forms.Panel();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             label7 = new System.Windows.Forms.Label();
@@ -201,19 +201,19 @@
             label6.TabIndex = 5;
             label6.Text = "Unassigned Quizzes:";
             // 
-            // flowLayoutPanel1
+            // assignedFlowLayoutPanel
             // 
-            flowLayoutPanel1.Location = new System.Drawing.Point(158, 67);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new System.Drawing.Size(868, 196);
-            flowLayoutPanel1.TabIndex = 6;
+            assignedFlowLayoutPanel.Location = new System.Drawing.Point(158, 67);
+            assignedFlowLayoutPanel.Name = "assignedFlowLayoutPanel";
+            assignedFlowLayoutPanel.Size = new System.Drawing.Size(868, 196);
+            assignedFlowLayoutPanel.TabIndex = 6;
             // 
-            // flowLayoutPanel2
+            // unassignedFlowLayoutPanel
             // 
-            flowLayoutPanel2.Location = new System.Drawing.Point(158, 302);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new System.Drawing.Size(868, 196);
-            flowLayoutPanel2.TabIndex = 7;
+            unassignedFlowLayoutPanel.Location = new System.Drawing.Point(158, 302);
+            unassignedFlowLayoutPanel.Name = "unassignedFlowLayoutPanel";
+            unassignedFlowLayoutPanel.Size = new System.Drawing.Size(868, 196);
+            unassignedFlowLayoutPanel.TabIndex = 7;
             // 
             // createQuizPanel
             // 
@@ -254,8 +254,8 @@
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1095, 680);
             Controls.Add(createQuizPanel);
-            Controls.Add(flowLayoutPanel2);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(unassignedFlowLayoutPanel);
+            Controls.Add(assignedFlowLayoutPanel);
             Controls.Add(label6);
             Controls.Add(quizTitle);
             Controls.Add(panel1);
@@ -263,6 +263,7 @@
             Name = "TeacherPortal";
             Text = "GeoMind";
             AutoSizeChanged += TeacherPortal_AutoSizeChanged;
+            Click += TeacherPortal_Click;
             ((System.ComponentModel.ISupportInitialize)homeButton).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -292,8 +293,8 @@
         private System.Windows.Forms.PictureBox leaderboardButton;
         private System.Windows.Forms.Label quizTitle;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel assignedFlowLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel unassignedFlowLayoutPanel;
         private System.Windows.Forms.Panel createQuizPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;

@@ -33,11 +33,15 @@ namespace defaultwinform
         private static List<QuizPanel> quizPanels = new List<QuizPanel>();
 
         private static List<Quiz> assignedQuizzes = new List<Quiz>();
+        private static List<Quiz> unAssignedQuizzes = new List<Quiz>();
+
 
         private static Quiz currentQuiz = null;
 
         private static string ServiceAccountJsonPath = "key.json"; 
-        private static string folderId = "1CAEl8_9X2kugGUYdAkd088jXmpPMVDhp";
+        private static string assignedFolderId = "1MPP1FmEsDWfNFq0qkQx6XiZnveA3BgU_";
+        private static string unassignedFolderID = "1GxMQiy0y-W64NBCEW14vcbF231uC60v6";
+
 
         private static string decryptionKey = "geomind";
 
@@ -50,6 +54,7 @@ namespace defaultwinform
             //createQuizObjectsFromFile();
 
             createQuizObjectsFromFile();
+            createUnassignedQuizzes();
 
 
             Console.WriteLine("COMPLETED QUEUE");
@@ -95,9 +100,14 @@ namespace defaultwinform
             assignedQuizzes.Add(quiz);
         }
 
-        public static List<Quiz> getQuizzes()
+        public static List<Quiz> getAssignedQuizzes()
         {
             return assignedQuizzes;
+        }
+
+        public static List<Quiz> getUnAssignedQuizzes()
+        {
+            return unAssignedQuizzes;
         }
 
         public static List<QuizPanel> getQuizPanels()
@@ -134,7 +144,7 @@ namespace defaultwinform
             var fileMetadata = new Google.Apis.Drive.v3.Data.File()
             {
                 Name = Path.GetFileName(filePath),
-                Parents = new string[] { folderId } 
+                Parents = new string[] { unassignedFolderID } 
             };
 
             FilesResource.CreateMediaUpload request;
@@ -278,7 +288,20 @@ namespace defaultwinform
         {
             var service = authenticateDriveService();
             var request = service.Files.List();
-            request.Q = $"'{folderId}' in parents and mimeType='text/plain'";
+            request.Q = $"'{assignedFolderId}' in parents and mimeType='text/plain'";
+
+            request.Fields = "files(id, name)";
+
+            var result = request.Execute();
+
+            return result.Files.ToList();
+        }
+
+        public static async Task<List<Google.Apis.Drive.v3.Data.File>> retrieveUnassignedDriveFiles()
+        {
+            var service = authenticateDriveService();
+            var request = service.Files.List();
+            request.Q = $"'{unassignedFolderID}' in parents and mimeType='text/plain'";
 
             request.Fields = "files(id, name)";
 
@@ -295,17 +318,32 @@ namespace defaultwinform
 
             foreach (var file in files)
             {
-                tasks.Add(processFile(file.Id));
+                tasks.Add(processFile(file.Id, true));
                 expectedQueuedQuizzes++;
             }
 
             await Task.WhenAll(tasks);  
         }
 
-        private static async Task processFile(string fileId)
+        public async static Task createUnassignedQuizzes()
+        {
+            List<Google.Apis.Drive.v3.Data.File> files = await retrieveUnassignedDriveFiles();
+
+            List<Task> tasks = new List<Task>();
+
+            foreach (var file in files)
+            {
+                tasks.Add(processFile(file.Id, false));
+                expectedQueuedQuizzes++;
+            }
+
+            await Task.WhenAll(tasks);
+        }
+
+        private static async Task processFile(string fileId, Boolean assigned)
         {
             string content = await readQuizFileAsync(fileId);
-            await Task.Run(() => buildQuizObject(content));
+            await Task.Run(() => buildQuizObject(content, assigned));
         }
 
         public static async Task<string> readQuizFileAsync(String fileID)
@@ -324,16 +362,16 @@ namespace defaultwinform
             }
         }
 
-        public static async Task buildQuizObject(String content)
+        public static async Task buildQuizObject(String content, Boolean assigned)
         {
             Quiz quiz = new Quiz();
 
 
-            await Task.Run(() => readLines(quiz, content));
+            await Task.Run(() => readLines(quiz, content, assigned));
 
         }
 
-        public static async Task readLines(Quiz quiz, String content)
+        public static async Task readLines(Quiz quiz, String content, Boolean assigned)
         {
             using (StringReader reader = new StringReader(content))
             {
@@ -385,7 +423,14 @@ namespace defaultwinform
             
             Console.ReadLine();
 
-            assignedQuizzes.Add(quiz);
+            if (assigned)
+            {
+                assignedQuizzes.Add(quiz);
+
+            } else
+            {
+                unAssignedQuizzes.Add(quiz);
+            }
 
             queueProgress++;
         }

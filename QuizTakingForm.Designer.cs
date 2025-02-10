@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuizTakingForm));
             panel1 = new System.Windows.Forms.Panel();
-            eliminateCount = new System.Windows.Forms.Label();
             roundedPanel6 = new RoundedPanel();
             immunityCount = new System.Windows.Forms.Label();
             roundedPanel5 = new RoundedPanel();
@@ -111,10 +110,12 @@
             additionalBackPanel = new RoundedPanel();
             starValueLabel = new System.Windows.Forms.Label();
             additionalStarIcon = new System.Windows.Forms.PictureBox();
+            eliminateCount = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             roundedPanel6.SuspendLayout();
             roundedPanel5.SuspendLayout();
             roundedPanel4.SuspendLayout();
+            roundedPanel3.SuspendLayout();
             roundedPanel2.SuspendLayout();
             roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)skipPowerup).BeginInit();
@@ -157,7 +158,6 @@
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
-            panel1.Controls.Add(eliminateCount);
             panel1.Controls.Add(roundedPanel6);
             panel1.Controls.Add(roundedPanel5);
             panel1.Controls.Add(roundedPanel4);
@@ -182,19 +182,6 @@
             panel1.Size = new System.Drawing.Size(173, 831);
             panel1.TabIndex = 3;
             // 
-            // eliminateCount
-            // 
-            eliminateCount.AutoSize = true;
-            eliminateCount.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
-            eliminateCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            eliminateCount.ForeColor = System.Drawing.Color.White;
-            eliminateCount.Location = new System.Drawing.Point(19, 744);
-            eliminateCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            eliminateCount.Name = "eliminateCount";
-            eliminateCount.Size = new System.Drawing.Size(18, 19);
-            eliminateCount.TabIndex = 15;
-            eliminateCount.Text = "1";
-            // 
             // roundedPanel6
             // 
             roundedPanel6.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
@@ -209,15 +196,16 @@
             // 
             // immunityCount
             // 
-            immunityCount.AutoSize = true;
+            immunityCount.Dock = System.Windows.Forms.DockStyle.Fill;
             immunityCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             immunityCount.ForeColor = System.Drawing.Color.White;
-            immunityCount.Location = new System.Drawing.Point(10, 9);
+            immunityCount.Location = new System.Drawing.Point(0, 0);
             immunityCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             immunityCount.Name = "immunityCount";
-            immunityCount.Size = new System.Drawing.Size(18, 19);
+            immunityCount.Size = new System.Drawing.Size(41, 40);
             immunityCount.TabIndex = 16;
             immunityCount.Text = "1";
+            immunityCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roundedPanel5
             // 
@@ -233,15 +221,16 @@
             // 
             // highStakesCount
             // 
-            highStakesCount.AutoSize = true;
+            highStakesCount.Dock = System.Windows.Forms.DockStyle.Fill;
             highStakesCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             highStakesCount.ForeColor = System.Drawing.Color.White;
-            highStakesCount.Location = new System.Drawing.Point(10, 9);
+            highStakesCount.Location = new System.Drawing.Point(0, 0);
             highStakesCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             highStakesCount.Name = "highStakesCount";
-            highStakesCount.Size = new System.Drawing.Size(18, 19);
+            highStakesCount.Size = new System.Drawing.Size(41, 40);
             highStakesCount.TabIndex = 15;
             highStakesCount.Text = "1";
+            highStakesCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roundedPanel4
             // 
@@ -257,20 +246,22 @@
             // 
             // doubleStarsCount
             // 
-            doubleStarsCount.AutoSize = true;
+            doubleStarsCount.Dock = System.Windows.Forms.DockStyle.Fill;
             doubleStarsCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             doubleStarsCount.ForeColor = System.Drawing.Color.White;
-            doubleStarsCount.Location = new System.Drawing.Point(10, 9);
+            doubleStarsCount.Location = new System.Drawing.Point(0, 0);
             doubleStarsCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             doubleStarsCount.Name = "doubleStarsCount";
-            doubleStarsCount.Size = new System.Drawing.Size(18, 19);
+            doubleStarsCount.Size = new System.Drawing.Size(41, 40);
             doubleStarsCount.TabIndex = 14;
             doubleStarsCount.Text = "1";
+            doubleStarsCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roundedPanel3
             // 
             roundedPanel3.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
             roundedPanel3.BorderRadius = 40;
+            roundedPanel3.Controls.Add(eliminateCount);
             roundedPanel3.ForeColor = System.Drawing.Color.Black;
             roundedPanel3.Location = new System.Drawing.Point(8, 734);
             roundedPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -292,16 +283,16 @@
             // 
             // skipCount
             // 
-            skipCount.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            skipCount.AutoSize = true;
+            skipCount.Dock = System.Windows.Forms.DockStyle.Fill;
             skipCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             skipCount.ForeColor = System.Drawing.Color.White;
-            skipCount.Location = new System.Drawing.Point(10, 7);
+            skipCount.Location = new System.Drawing.Point(0, 0);
             skipCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             skipCount.Name = "skipCount";
-            skipCount.Size = new System.Drawing.Size(18, 19);
+            skipCount.Size = new System.Drawing.Size(41, 40);
             skipCount.TabIndex = 14;
             skipCount.Text = "1";
+            skipCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             skipCount.Click += skipCount_Click;
             // 
             // roundedPanel1
@@ -318,15 +309,16 @@
             // 
             // multiplierCount
             // 
-            multiplierCount.AutoSize = true;
+            multiplierCount.Dock = System.Windows.Forms.DockStyle.Fill;
             multiplierCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             multiplierCount.ForeColor = System.Drawing.Color.White;
-            multiplierCount.Location = new System.Drawing.Point(10, 9);
+            multiplierCount.Location = new System.Drawing.Point(0, 0);
             multiplierCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             multiplierCount.Name = "multiplierCount";
-            multiplierCount.Size = new System.Drawing.Size(18, 19);
+            multiplierCount.Size = new System.Drawing.Size(41, 40);
             multiplierCount.TabIndex = 13;
             multiplierCount.Text = "1";
+            multiplierCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -1181,6 +1173,19 @@
             additionalStarIcon.TabStop = false;
             additionalStarIcon.Click += pictureBox2_Click;
             // 
+            // eliminateCount
+            // 
+            eliminateCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            eliminateCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            eliminateCount.ForeColor = System.Drawing.Color.White;
+            eliminateCount.Location = new System.Drawing.Point(0, 0);
+            eliminateCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            eliminateCount.Name = "eliminateCount";
+            eliminateCount.Size = new System.Drawing.Size(41, 40);
+            eliminateCount.TabIndex = 15;
+            eliminateCount.Text = "1";
+            eliminateCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // QuizTakingForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1226,15 +1231,11 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             roundedPanel6.ResumeLayout(false);
-            roundedPanel6.PerformLayout();
             roundedPanel5.ResumeLayout(false);
-            roundedPanel5.PerformLayout();
             roundedPanel4.ResumeLayout(false);
-            roundedPanel4.PerformLayout();
+            roundedPanel3.ResumeLayout(false);
             roundedPanel2.ResumeLayout(false);
-            roundedPanel2.PerformLayout();
             roundedPanel1.ResumeLayout(false);
-            roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)skipPowerup).EndInit();
             ((System.ComponentModel.ISupportInitialize)eliminatePowerup).EndInit();
             ((System.ComponentModel.ISupportInitialize)multiplierPowerup).EndInit();
@@ -1308,7 +1309,6 @@
         private System.Windows.Forms.PictureBox truePanel;
         private System.Windows.Forms.PictureBox falsePanel;
         private System.Windows.Forms.Label multiplierCount;
-        private System.Windows.Forms.Label eliminateCount;
         private System.Windows.Forms.Label immunityCount;
         private System.Windows.Forms.Label highStakesCount;
         private System.Windows.Forms.Label doubleStarsCount;
@@ -1361,5 +1361,6 @@
         private System.Windows.Forms.ToolTip longQuestionTip;
         private System.Windows.Forms.PictureBox powerupDisplay;
         private System.Windows.Forms.Label powerupDisplayLabel;
+        private System.Windows.Forms.Label eliminateCount;
     }
 }

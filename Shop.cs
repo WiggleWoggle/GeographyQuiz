@@ -1,4 +1,5 @@
-﻿using System;
+﻿using defaultwinform.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,14 @@ namespace defaultwinform
             this.CenterToScreen();
 
             accountStarLabel.Text = "x " + Program.currentAccount.getStarsCount();
+
+            if (Program.profilePicPath != null)
+            {
+                profileOverlay.Image = new Bitmap(Program.profilePicPath);
+            } else
+            {
+                profileOverlay.Image = Resources.defaultProfile;
+            }
         }
 
         private void homeButton_Click(object sender, EventArgs e)

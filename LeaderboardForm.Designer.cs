@@ -44,6 +44,7 @@
             studentNameDisplay = new System.Windows.Forms.Label();
             profilePicture = new System.Windows.Forms.PictureBox();
             userFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            todoLabel = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)teachersButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gradesButton).BeginInit();
@@ -212,10 +213,23 @@
             // 
             // userFlowLayout
             // 
-            userFlowLayout.Location = new System.Drawing.Point(177, 118);
+            userFlowLayout.AutoScroll = true;
+            userFlowLayout.Location = new System.Drawing.Point(164, 120);
             userFlowLayout.Name = "userFlowLayout";
-            userFlowLayout.Size = new System.Drawing.Size(837, 550);
+            userFlowLayout.Size = new System.Drawing.Size(931, 548);
             userFlowLayout.TabIndex = 19;
+            userFlowLayout.Click += userFlowLayout_Click;
+            // 
+            // todoLabel
+            // 
+            todoLabel.AutoSize = true;
+            todoLabel.BackColor = System.Drawing.Color.Transparent;
+            todoLabel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            todoLabel.Location = new System.Drawing.Point(164, 77);
+            todoLabel.Name = "todoLabel";
+            todoLabel.Size = new System.Drawing.Size(131, 23);
+            todoLabel.TabIndex = 20;
+            todoLabel.Text = "Leaderboard";
             // 
             // LeaderboardForm
             // 
@@ -223,6 +237,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1095, 680);
+            Controls.Add(todoLabel);
             Controls.Add(userFlowLayout);
             Controls.Add(panel2);
             Controls.Add(profilePicture);
@@ -242,6 +257,7 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)profilePicture).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -261,5 +277,6 @@
         private System.Windows.Forms.Label studentNameDisplay;
         private System.Windows.Forms.PictureBox profilePicture;
         private System.Windows.Forms.FlowLayoutPanel userFlowLayout;
+        private System.Windows.Forms.Label todoLabel;
     }
 }

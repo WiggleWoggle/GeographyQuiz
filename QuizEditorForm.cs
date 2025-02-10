@@ -140,7 +140,7 @@ namespace defaultwinform
                         quiz.setTopic(quizTopicField.Text);
                         quiz.setImage(imageURLField.Text);
 
-                        QuizDAO.addQuiz(quiz);
+                        //QuizDAO.addQuiz(quiz);
                         QuizDAO.uploadToDrive(quiz);
 
                         Form1 form = new Form1();
