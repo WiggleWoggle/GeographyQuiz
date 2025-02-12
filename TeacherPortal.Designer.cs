@@ -184,33 +184,34 @@
             // quizTitle
             // 
             quizTitle.AutoSize = true;
-            quizTitle.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            quizTitle.Location = new System.Drawing.Point(152, 32);
+            quizTitle.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            quizTitle.Location = new System.Drawing.Point(152, 42);
             quizTitle.Name = "quizTitle";
-            quizTitle.Size = new System.Drawing.Size(247, 32);
+            quizTitle.Size = new System.Drawing.Size(174, 23);
             quizTitle.TabIndex = 4;
             quizTitle.Text = "Assigned Quizzes:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            label6.Location = new System.Drawing.Point(152, 266);
+            label6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            label6.Location = new System.Drawing.Point(152, 239);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(279, 32);
+            label6.Size = new System.Drawing.Size(197, 23);
             label6.TabIndex = 5;
             label6.Text = "Unassigned Quizzes:";
             // 
             // assignedFlowLayoutPanel
             // 
-            assignedFlowLayoutPanel.Location = new System.Drawing.Point(158, 67);
+            assignedFlowLayoutPanel.AutoScroll = true;
+            assignedFlowLayoutPanel.Location = new System.Drawing.Point(154, 67);
             assignedFlowLayoutPanel.Name = "assignedFlowLayoutPanel";
-            assignedFlowLayoutPanel.Size = new System.Drawing.Size(868, 196);
+            assignedFlowLayoutPanel.Size = new System.Drawing.Size(868, 146);
             assignedFlowLayoutPanel.TabIndex = 6;
             // 
             // unassignedFlowLayoutPanel
             // 
-            unassignedFlowLayoutPanel.Location = new System.Drawing.Point(158, 302);
+            unassignedFlowLayoutPanel.Location = new System.Drawing.Point(154, 264);
             unassignedFlowLayoutPanel.Name = "unassignedFlowLayoutPanel";
             unassignedFlowLayoutPanel.Size = new System.Drawing.Size(868, 196);
             unassignedFlowLayoutPanel.TabIndex = 7;
@@ -219,7 +220,7 @@
             // 
             createQuizPanel.Controls.Add(pictureBox1);
             createQuizPanel.Controls.Add(label7);
-            createQuizPanel.Location = new System.Drawing.Point(152, 504);
+            createQuizPanel.Location = new System.Drawing.Point(148, 469);
             createQuizPanel.Name = "createQuizPanel";
             createQuizPanel.Size = new System.Drawing.Size(200, 56);
             createQuizPanel.TabIndex = 8;

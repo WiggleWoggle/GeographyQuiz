@@ -65,6 +65,16 @@ namespace defaultwinform
             assignedQuizzes.Add(quiz);
         }
 
+        public static void addUnassignedQuiz(Quiz quiz)
+        {
+           unAssignedQuizzes.Add((Quiz)quiz);
+        }
+
+        public static void removeUnassignedQuiz(Quiz quiz)
+        {
+            unAssignedQuizzes.Remove((Quiz)quiz);
+        }
+
         public static void tempQuiz()
         {
             Quiz quiz = new Quiz(true);
@@ -156,6 +166,10 @@ namespace defaultwinform
             }
 
             var file = request.ResponseBody;
+        }
+
+        public static void deleteFromDrive(Quiz quiz)
+        {
 
         }
 

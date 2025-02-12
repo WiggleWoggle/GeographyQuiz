@@ -1408,5 +1408,10 @@ namespace defaultwinform
         {
 
         }
+
+        private void QuizTakingForm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

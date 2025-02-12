@@ -139,8 +139,9 @@ namespace defaultwinform
                         quiz.setTitle(quizTitleField.Text);
                         quiz.setTopic(quizTopicField.Text);
                         quiz.setImage(imageURLField.Text);
+                      
 
-                        //QuizDAO.addQuiz(quiz);
+                        QuizDAO.addUnassignedQuiz(quiz);
                         QuizDAO.uploadToDrive(quiz);
 
                         Form1 form = new Form1();

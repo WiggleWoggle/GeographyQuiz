@@ -83,6 +83,7 @@ namespace defaultwinform
                 Program.currentAccount = account;
 
                 QuizDAO.retrieveQuizzes();
+                UserQuizInformationDAO.retrieveUserQuizInformation();
 
                 AccountDAO.userAccounts.Add(account);
 

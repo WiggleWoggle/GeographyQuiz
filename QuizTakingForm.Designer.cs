@@ -38,6 +38,7 @@
             roundedPanel4 = new RoundedPanel();
             doubleStarsCount = new System.Windows.Forms.Label();
             roundedPanel3 = new RoundedPanel();
+            eliminateCount = new System.Windows.Forms.Label();
             roundedPanel2 = new RoundedPanel();
             skipCount = new System.Windows.Forms.Label();
             roundedPanel1 = new RoundedPanel();
@@ -110,7 +111,6 @@
             additionalBackPanel = new RoundedPanel();
             starValueLabel = new System.Windows.Forms.Label();
             additionalStarIcon = new System.Windows.Forms.PictureBox();
-            eliminateCount = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             roundedPanel6.SuspendLayout();
             roundedPanel5.SuspendLayout();
@@ -268,6 +268,19 @@
             roundedPanel3.Name = "roundedPanel3";
             roundedPanel3.Size = new System.Drawing.Size(41, 40);
             roundedPanel3.TabIndex = 5;
+            // 
+            // eliminateCount
+            // 
+            eliminateCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            eliminateCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            eliminateCount.ForeColor = System.Drawing.Color.White;
+            eliminateCount.Location = new System.Drawing.Point(0, 0);
+            eliminateCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            eliminateCount.Name = "eliminateCount";
+            eliminateCount.Size = new System.Drawing.Size(41, 40);
+            eliminateCount.TabIndex = 15;
+            eliminateCount.Text = "1";
+            eliminateCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roundedPanel2
             // 
@@ -1173,19 +1186,6 @@
             additionalStarIcon.TabStop = false;
             additionalStarIcon.Click += pictureBox2_Click;
             // 
-            // eliminateCount
-            // 
-            eliminateCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            eliminateCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            eliminateCount.ForeColor = System.Drawing.Color.White;
-            eliminateCount.Location = new System.Drawing.Point(0, 0);
-            eliminateCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            eliminateCount.Name = "eliminateCount";
-            eliminateCount.Size = new System.Drawing.Size(41, 40);
-            eliminateCount.TabIndex = 15;
-            eliminateCount.Text = "1";
-            eliminateCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // QuizTakingForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1228,6 +1228,7 @@
             Name = "QuizTakingForm";
             Text = " GeoMind";
             SizeChanged += QuizTakingForm_SizeChanged;
+            Click += QuizTakingForm_Click;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             roundedPanel6.ResumeLayout(false);

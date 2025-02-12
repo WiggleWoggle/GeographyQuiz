@@ -63,6 +63,16 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap addIcon {
+            get {
+                object obj = ResourceManager.GetObject("addIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap blueButton {
             get {
                 object obj = ResourceManager.GetObject("blueButton", resourceCulture);
@@ -76,6 +86,16 @@ namespace defaultwinform.Properties {
         public static System.Drawing.Bitmap defaultProfile {
             get {
                 object obj = ResourceManager.GetObject("defaultProfile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap deleteIcon {
+            get {
+                object obj = ResourceManager.GetObject("deleteIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,6 +443,16 @@ namespace defaultwinform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap settingsIcon {
+            get {
+                object obj = ResourceManager.GetObject("settingsIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap skip {
             get {
                 object obj = ResourceManager.GetObject("skip", resourceCulture);
@@ -436,6 +466,16 @@ namespace defaultwinform.Properties {
         public static System.Drawing.Bitmap star {
             get {
                 object obj = ResourceManager.GetObject("star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap studentViewIcon {
+            get {
+                object obj = ResourceManager.GetObject("studentViewIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

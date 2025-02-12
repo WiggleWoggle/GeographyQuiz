@@ -52,6 +52,15 @@ namespace defaultwinform
         {
             return title;
         }
+        public void setQuizID(String quizID)
+        {
+            this.quizID = quizID;
+        }
+
+        public String getQuizID()
+        {
+            return quizID;
+        }
 
         public void setImage(String imageURL)
         {

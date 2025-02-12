@@ -1,4 +1,5 @@
-﻿using System;
+﻿using defaultwinform.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,41 +39,59 @@ namespace defaultwinform
                 if (!builtQuizzes.Contains(quiz))
                 {
                     Panel panel = new Panel();
-                    panel.Size = new Size(236, 207);
+                    panel.Size = new Size(236, 140);
                     panel.BackColor = Color.FromArgb(228, 234, 239);
 
                     Panel header = new Panel();
-                    header.Size = new Size(236, 50);
+                    header.Size = new Size(236, 42);
                     header.BackColor = Color.FromArgb(209, 216, 221);
 
                     Label quizName = new Label();
                     quizName.Text = quiz.getTitle();
                     quizName.Font = new Font("Century Gothic", 14, FontStyle.Bold);
-                    quizName.Location = new Point(30, 10);
+                    quizName.Location = new Point(35, 10);
 
                     Label average = new Label();
-                    average.Text = "Student Average: xx%" ;
+                    average.Text = "Student Average: xx%";
                     average.Font = new Font("Century Gothic", 10);
                     average.Size = new Size(average.Size.Width + 100, average.Size.Height);
-                    average.Location = new Point(10, 60);
+                    average.Location = new Point(10, 55);
 
                     Label attemptedStatus = new Label();
                     attemptedStatus.Text = "Unattempted";
                     attemptedStatus.Font = new Font("Century Gothic", 10);
-                    attemptedStatus.TextAlign = ContentAlignment.MiddleRight;
+                    attemptedStatus.TextAlign = ContentAlignment.MiddleLeft;
                     attemptedStatus.Size = new Size(attemptedStatus.Size.Width + 40, attemptedStatus.Size.Height);
-                    attemptedStatus.Location = new Point(90, 127);
+                    attemptedStatus.Location = new Point(10, 100);
+
+                    PictureBox deleteIcon = new PictureBox();
+                    deleteIcon.Image = Resources.deleteIcon;
+                    deleteIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+                    deleteIcon.Size = new Size(25, 25);
+                    deleteIcon.Location = new Point(10, 10);
+
+                    Panel statusBarUnderlay = new Panel();
+                    statusBarUnderlay.BackColor = Color.FromArgb(255, 0, 0);
+                    statusBarUnderlay.Size = new Size(200, 10);
+                    panel.Controls.Add(statusBarUnderlay);
+                    statusBarUnderlay.Location = new Point(13, 83);
+
+
+                    //int newWidth = (int)((amountRight / (double)questionCount) * 316);
+
+                    //performanceOverlay.Width = newWidth;
 
                     panel.Controls.Add(header);
                     header.Controls.Add(quizName);
+                    header.Controls.Add(deleteIcon);
                     panel.Controls.Add(average);
                     panel.Controls.Add(attemptedStatus);
 
                     assignedFlowLayoutPanel.Controls.Add(panel);
 
-                    //QuizPanel quizPanel = new QuizPanel(quiz, panel, quizName, questionCount, quizTopic, attemptedStatus, header);
+                    QuizPanel quizPanel = new QuizPanel(quiz, panel, deleteIcon);
 
-                    //QuizDAO.addQuizPanel(quizPanel);
+                    QuizDAO.addQuizPanel(quizPanel);
 
 
                     builtQuizzes.Add(quiz);
@@ -84,61 +103,113 @@ namespace defaultwinform
                 if (!builtQuizzes.Contains(quiz))
                 {
                     Panel panel = new Panel();
-                    panel.Size = new Size(236, 207);
+                    panel.Size = new Size(236, 140);
                     panel.BackColor = Color.FromArgb(228, 234, 239);
 
-                    PictureBox pictureBox = new PictureBox();
-                    pictureBox.ImageLocation = quiz.getImage();
-                    pictureBox.Size = new Size(236, 125);
-                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    Panel header = new Panel();
+                    header.Size = new Size(236, 42);
+                    header.BackColor = Color.FromArgb(209, 216, 221);
 
                     Label quizName = new Label();
                     quizName.Text = quiz.getTitle();
                     quizName.Font = new Font("Century Gothic", 14, FontStyle.Bold);
-                    quizName.Location = new Point(2, 127);
+                    quizName.Location = new Point(40, 10);
 
-                    Label quizTopic = new Label();
-                    quizTopic.Text = "Topic: " + quiz.getTopic();
-                    quizTopic.Font = new Font("Century Gothic", 10);
-                    quizTopic.Size = new Size(quizTopic.Size.Width + 100, quizTopic.Size.Height);
-                    quizTopic.Location = new Point(2, 155);
+                    Label edit = new Label();
+                    edit.Text = "Edit Questions";
+                    edit.Font = new Font("Century Gothic", 10);
+                    edit.Size = new Size(edit.Size.Width + 100, edit.Size.Height);
+                    edit.Location = new Point(35, 55);
 
-                    Label questionCount = new Label();
-                    questionCount.Text = quiz.getQuestions().Count + "";
+                    Label settings = new Label();
+                    settings.Text = "Settings";
+                    settings.Font = new Font("Century Gothic", 10);
+                    settings.TextAlign = ContentAlignment.MiddleLeft;
+                    settings.Size = new Size(settings.Size.Width + 40, settings.Size.Height);
+                    settings.Location = new Point(35, 75);
 
-                    if (quiz.getQuestions().Count != 1)
-                    {
-                        questionCount.Text += " Questions";
-                    }
-                    else
-                    {
-                        questionCount.Text += " Question";
-                    }
+                    Label view = new Label();
+                    view.Text = "View as Student";
+                    view.Font = new Font("Century Gothic", 10);
+                    view.TextAlign = ContentAlignment.MiddleLeft;
+                    view.Size = new Size(view.Size.Width + 40, view.Size.Height);
+                    view.Location = new Point(35, 100);
 
-                    questionCount.Font = new Font("Century Gothic", 10);
-                    questionCount.Location = new Point(2, 178);
+                    PictureBox deleteIcon = new PictureBox();
+                    deleteIcon.Image = Resources.addIcon;
+                    deleteIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+                    deleteIcon.Size = new Size(25, 25);
+                    deleteIcon.Location = new Point(10, 10);
 
-                    Label attemptedStatus = new Label();
-                    attemptedStatus.Text = "Unattempted";
-                    attemptedStatus.Font = new Font("Century Gothic", 10);
-                    attemptedStatus.TextAlign = ContentAlignment.MiddleRight;
-                    attemptedStatus.Size = new Size(attemptedStatus.Size.Width + 40, attemptedStatus.Size.Height);
-                    attemptedStatus.Location = new Point(90, 127);
 
-                    panel.Controls.Add(pictureBox);
-                    panel.Controls.Add(quizName);
-                    panel.Controls.Add(quizTopic);
-                    panel.Controls.Add(questionCount);
-                    panel.Controls.Add(attemptedStatus);
+                    PictureBox editIcon = new PictureBox();
+                    editIcon.Image = Resources.editIcon;
+                    editIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+                    editIcon.Size = new Size(15, 15);
+                    editIcon.Location = new Point(15, 57);
+
+                    PictureBox settingsIcon = new PictureBox();
+                    settingsIcon.Image = Resources.settingsIcon;
+                    settingsIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+                    settingsIcon.Size = new Size(15, 15);
+                    settingsIcon.Location = new Point(15, 80);
+
+                    PictureBox studentIcon = new PictureBox();
+                    studentIcon.Image = Resources.studentViewIcon;
+                    studentIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+                    studentIcon.Size = new Size(15, 15);
+                    studentIcon.Location = new Point(15, 105);
+
+
+                    //int newWidth = (int)((amountRight / (double)questionCount) * 316);
+
+                    //performanceOverlay.Width = newWidth;
+
+                    panel.Controls.Add(header);
+                    header.Controls.Add(quizName);
+                    header.Controls.Add(deleteIcon);
+                    panel.Controls.Add(edit);
+                    panel.Controls.Add(settings);
+                    panel.Controls.Add(view);
+                    panel.Controls.Add(editIcon);
+                    panel.Controls.Add(settingsIcon);
+                    panel.Controls.Add(studentIcon);
+
+                    deleteIcon.Click += assignClick;
 
                     unassignedFlowLayoutPanel.Controls.Add(panel);
 
-                    QuizPanel quizPanel = new QuizPanel(quiz, panel, quizName, questionCount, quizTopic, attemptedStatus, pictureBox);
+                    QuizPanel quizPanel = new QuizPanel(quiz, panel, deleteIcon);
 
                     QuizDAO.addQuizPanel(quizPanel);
 
-
                     builtQuizzes.Add(quiz);
+                }
+            }
+        }
+
+        private void assignClick(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                foreach (QuizPanel quizPanel in QuizDAO.getQuizPanels().ToList())
+                {
+                    if (quizPanel.getAddIcon() != null)
+                    {
+                        if (quizPanel.getAddIcon().Equals(control))
+                        {
+                            QuizDAO.deleteFromDrive(quizPanel.getQuiz());
+                            QuizDAO.addQuiz(quizPanel.getQuiz());
+                            QuizDAO.removeUnassignedQuiz(quizPanel.getQuiz());
+
+                            unassignedFlowLayoutPanel.Controls.Clear();
+                            assignedFlowLayoutPanel.Controls.Clear();
+
+                            builtQuizzes.Clear();
+
+                            buildQuizPanels();
+                        }
+                    }
                 }
             }
         }

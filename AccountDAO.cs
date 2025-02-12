@@ -30,7 +30,6 @@ namespace defaultwinform
             {
                 //server down
                 Program.successfulConnection = false;
-                Console.Write("FALLBACK");
             }
 
             if (Program.successfulConnection) {
