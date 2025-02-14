@@ -41,9 +41,10 @@
             label2 = new System.Windows.Forms.Label();
             homeButton = new System.Windows.Forms.PictureBox();
             todoFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            panel3 = new System.Windows.Forms.Panel();
             todoLabel = new System.Windows.Forms.Label();
+            completedMargin = new System.Windows.Forms.Panel();
             label6 = new System.Windows.Forms.Label();
-            completedFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             profilePicture = new System.Windows.Forms.PictureBox();
             studentNameDisplay = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
@@ -53,6 +54,9 @@
             ((System.ComponentModel.ISupportInitialize)shopButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leaderboardButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)homeButton).BeginInit();
+            todoFlowLayout.SuspendLayout();
+            panel3.SuspendLayout();
+            completedMargin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)profilePicture).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -186,40 +190,52 @@
             // todoFlowLayout
             // 
             todoFlowLayout.AutoScroll = true;
-            todoFlowLayout.Location = new System.Drawing.Point(143, 111);
+            todoFlowLayout.Controls.Add(panel3);
+            todoFlowLayout.Controls.Add(completedMargin);
+            todoFlowLayout.Location = new System.Drawing.Point(143, 81);
             todoFlowLayout.Name = "todoFlowLayout";
-            todoFlowLayout.Size = new System.Drawing.Size(940, 220);
+            todoFlowLayout.Size = new System.Drawing.Size(953, 571);
             todoFlowLayout.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = System.Drawing.Color.White;
+            panel3.Controls.Add(todoLabel);
+            panel3.Location = new System.Drawing.Point(3, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new System.Drawing.Size(922, 33);
+            panel3.TabIndex = 14;
             // 
             // todoLabel
             // 
             todoLabel.AutoSize = true;
             todoLabel.BackColor = System.Drawing.Color.Transparent;
             todoLabel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            todoLabel.Location = new System.Drawing.Point(141, 85);
+            todoLabel.Location = new System.Drawing.Point(-3, 0);
             todoLabel.Name = "todoLabel";
             todoLabel.Size = new System.Drawing.Size(65, 23);
             todoLabel.TabIndex = 13;
             todoLabel.Text = "To Do:";
+            // 
+            // completedMargin
+            // 
+            completedMargin.BackColor = System.Drawing.Color.White;
+            completedMargin.Controls.Add(label6);
+            completedMargin.Location = new System.Drawing.Point(3, 42);
+            completedMargin.Name = "completedMargin";
+            completedMargin.Size = new System.Drawing.Size(922, 54);
+            completedMargin.TabIndex = 15;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = System.Drawing.Color.Transparent;
             label6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            label6.Location = new System.Drawing.Point(139, 345);
+            label6.Location = new System.Drawing.Point(-3, 15);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(121, 23);
-            label6.TabIndex = 14;
+            label6.TabIndex = 13;
             label6.Text = "Completed:";
-            // 
-            // completedFlowLayout
-            // 
-            completedFlowLayout.AutoScroll = true;
-            completedFlowLayout.Location = new System.Drawing.Point(143, 373);
-            completedFlowLayout.Name = "completedFlowLayout";
-            completedFlowLayout.Size = new System.Drawing.Size(940, 220);
-            completedFlowLayout.TabIndex = 4;
             // 
             // profilePicture
             // 
@@ -260,9 +276,6 @@
             ClientSize = new System.Drawing.Size(1095, 680);
             Controls.Add(panel2);
             Controls.Add(profilePicture);
-            Controls.Add(completedFlowLayout);
-            Controls.Add(label6);
-            Controls.Add(todoLabel);
             Controls.Add(todoFlowLayout);
             Controls.Add(panel1);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
@@ -275,11 +288,15 @@
             ((System.ComponentModel.ISupportInitialize)shopButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)leaderboardButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)homeButton).EndInit();
+            todoFlowLayout.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            completedMargin.ResumeLayout(false);
+            completedMargin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)profilePicture).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -296,11 +313,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel todoFlowLayout;
         private System.Windows.Forms.Label todoLabel;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.FlowLayoutPanel completedFlowLayout;
         private System.Windows.Forms.PictureBox profilePicture;
         private System.Windows.Forms.Label studentNameDisplay;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel completedMargin;
+        private System.Windows.Forms.Label label6;
     }
 }
 

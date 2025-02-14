@@ -2,6 +2,7 @@
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
+using Mysqlx.Notice;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -409,7 +410,14 @@ namespace defaultwinform
 
                     if (line.Contains("DISPLAYURL"))
                     {
-                        quiz.setImage(formatURL(line));
+                        String questionImageURL = line;
+
+                        questionImageURL = questionImageURL.Replace("DISPLAYURL: ", "");
+
+                        //MessageBox.Show("TEST" + questionImageURL, "Error Creating Quiz", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                        quiz.setImage(questionImageURL);
                     }
 
                     if (line.Contains("MCQ"))
