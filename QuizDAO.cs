@@ -76,6 +76,11 @@ namespace defaultwinform
             unAssignedQuizzes.Remove((Quiz)quiz);
         }
 
+        public static void removeAssignedQuiz(Quiz quiz)
+        {
+            assignedQuizzes.Remove((Quiz)quiz);
+        }
+
         public static void tempQuiz()
         {
             Quiz quiz = new Quiz(true);
@@ -108,7 +113,7 @@ namespace defaultwinform
             quiz.addQuestion(new ShortResponse("Explain why Hawaii's geography makes it unique among U.S. states. List at least three specific geographical features in your response.", 2, new List<String> { "Volcanic", "Tropical", "Pacific", "Pacific Ocean", "Volcano", "Volcanoes", "Island", "Islands" }, "https://i.natgeofe.com/n/5c6b3a4b-7b1a-410b-bcb2-7a2e83afd409/22328.jpg"));
             quiz.addQuestion(new ShortResponse("Describe how the Mississippi River impacts the geography and borders of U.S. states. Name at least four states affected and explain how the river influences their boundaries.", 2, new List<String> { "Tennessee", "Arkansas", "Mississippi", "Louisiana", "Minnesota", "Wisconsin", "Iowa", "Illinois", "Missouri", "Kentucky" }, "https://www.jsonline.com/gcdn/presto/2023/09/19/PMJS/481b3316-cf67-4f2d-ab1a-0fe13270d3b8-Mississippi_Wisconsin_River_LightHawk_Flight_052523_080.jpg?crop=5958,4469,x336,y0"));
 
-            assignedQuizzes.Add(quiz);
+            //assignedQuizzes.Add(quiz);
         }
 
         public static List<Quiz> getAssignedQuizzes()
@@ -171,6 +176,7 @@ namespace defaultwinform
 
         public static void deleteFromDrive(Quiz quiz)
         {
+
 
         }
 

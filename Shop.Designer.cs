@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Shop));
             shopFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            multiplierPanel = new System.Windows.Forms.Panel();
-            roundedPanel3 = new RoundedPanel();
-            label18 = new System.Windows.Forms.Label();
-            pictureBox5 = new System.Windows.Forms.PictureBox();
-            pictureBox3 = new System.Windows.Forms.PictureBox();
             immunityPanel = new System.Windows.Forms.Panel();
             roundedPanel8 = new RoundedPanel();
             label12 = new System.Windows.Forms.Label();
@@ -72,15 +67,6 @@
             label14 = new System.Windows.Forms.Label();
             pictureBox10 = new System.Windows.Forms.PictureBox();
             label8 = new System.Windows.Forms.Label();
-            panel8 = new System.Windows.Forms.Panel();
-            roundedPanel13 = new RoundedPanel();
-            label25 = new System.Windows.Forms.Label();
-            pictureBox22 = new System.Windows.Forms.PictureBox();
-            pictureBox17 = new System.Windows.Forms.PictureBox();
-            roundedPanel1 = new RoundedPanel();
-            label6 = new System.Windows.Forms.Label();
-            pictureBox1 = new System.Windows.Forms.PictureBox();
-            label7 = new System.Windows.Forms.Label();
             panel9 = new System.Windows.Forms.Panel();
             roundedPanel14 = new RoundedPanel();
             label26 = new System.Windows.Forms.Label();
@@ -107,10 +93,6 @@
             pictureBox14 = new System.Windows.Forms.PictureBox();
             profileOverlay = new System.Windows.Forms.PictureBox();
             shopFlowLayout.SuspendLayout();
-            multiplierPanel.SuspendLayout();
-            roundedPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             immunityPanel.SuspendLayout();
             roundedPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -137,12 +119,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             roundedPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            panel8.SuspendLayout();
-            roundedPanel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
-            roundedPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel9.SuspendLayout();
             roundedPanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
@@ -163,13 +139,11 @@
             // shopFlowLayout
             // 
             shopFlowLayout.AutoScroll = true;
-            shopFlowLayout.Controls.Add(multiplierPanel);
             shopFlowLayout.Controls.Add(immunityPanel);
             shopFlowLayout.Controls.Add(eliminatePanel);
             shopFlowLayout.Controls.Add(highStakesPanel);
             shopFlowLayout.Controls.Add(doublerPanel);
             shopFlowLayout.Controls.Add(skipPanel);
-            shopFlowLayout.Controls.Add(panel8);
             shopFlowLayout.Controls.Add(panel9);
             shopFlowLayout.Location = new System.Drawing.Point(142, 94);
             shopFlowLayout.Margin = new System.Windows.Forms.Padding(12);
@@ -177,75 +151,12 @@
             shopFlowLayout.Size = new System.Drawing.Size(932, 643);
             shopFlowLayout.TabIndex = 4;
             // 
-            // multiplierPanel
-            // 
-            multiplierPanel.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
-            multiplierPanel.Controls.Add(roundedPanel3);
-            multiplierPanel.Controls.Add(pictureBox3);
-            multiplierPanel.Location = new System.Drawing.Point(12, 12);
-            multiplierPanel.Margin = new System.Windows.Forms.Padding(12);
-            multiplierPanel.Name = "multiplierPanel";
-            multiplierPanel.Size = new System.Drawing.Size(206, 232);
-            multiplierPanel.TabIndex = 0;
-            multiplierPanel.Click += multiplierPanel_Click;
-            // 
-            // roundedPanel3
-            // 
-            roundedPanel3.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
-            roundedPanel3.BorderRadius = 40;
-            roundedPanel3.Controls.Add(label18);
-            roundedPanel3.Controls.Add(pictureBox5);
-            roundedPanel3.ForeColor = System.Drawing.Color.Black;
-            roundedPanel3.Location = new System.Drawing.Point(44, 171);
-            roundedPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            roundedPanel3.Name = "roundedPanel3";
-            roundedPanel3.Size = new System.Drawing.Size(117, 45);
-            roundedPanel3.TabIndex = 21;
-            roundedPanel3.Click += multiplierPanel_Click;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.BackColor = System.Drawing.Color.Transparent;
-            label18.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
-            label18.ForeColor = System.Drawing.Color.White;
-            label18.Location = new System.Drawing.Point(51, 6);
-            label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label18.Name = "label18";
-            label18.Size = new System.Drawing.Size(52, 32);
-            label18.TabIndex = 16;
-            label18.Text = "x 8";
-            label18.Click += multiplierPanel_Click;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = (System.Drawing.Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new System.Drawing.Point(15, 6);
-            pictureBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new System.Drawing.Size(35, 33);
-            pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 0;
-            pictureBox5.TabStop = false;
-            pictureBox5.Click += multiplierPanel_Click;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.multiplier;
-            pictureBox3.Location = new System.Drawing.Point(33, 17);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new System.Drawing.Size(140, 140);
-            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += multiplierPanel_Click;
-            // 
             // immunityPanel
             // 
             immunityPanel.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
             immunityPanel.Controls.Add(roundedPanel8);
             immunityPanel.Controls.Add(pictureBox6);
-            immunityPanel.Location = new System.Drawing.Point(242, 12);
+            immunityPanel.Location = new System.Drawing.Point(12, 12);
             immunityPanel.Margin = new System.Windows.Forms.Padding(12);
             immunityPanel.Name = "immunityPanel";
             immunityPanel.Size = new System.Drawing.Size(206, 232);
@@ -308,7 +219,7 @@
             eliminatePanel.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
             eliminatePanel.Controls.Add(pictureBox8);
             eliminatePanel.Controls.Add(roundedPanel9);
-            eliminatePanel.Location = new System.Drawing.Point(472, 12);
+            eliminatePanel.Location = new System.Drawing.Point(242, 12);
             eliminatePanel.Margin = new System.Windows.Forms.Padding(12);
             eliminatePanel.Name = "eliminatePanel";
             eliminatePanel.Size = new System.Drawing.Size(206, 232);
@@ -373,7 +284,7 @@
             highStakesPanel.Controls.Add(pictureBox11);
             highStakesPanel.Controls.Add(label15);
             highStakesPanel.Controls.Add(roundedPanel6);
-            highStakesPanel.Location = new System.Drawing.Point(702, 12);
+            highStakesPanel.Location = new System.Drawing.Point(472, 12);
             highStakesPanel.Margin = new System.Windows.Forms.Padding(12);
             highStakesPanel.Name = "highStakesPanel";
             highStakesPanel.Size = new System.Drawing.Size(206, 232);
@@ -487,7 +398,7 @@
             doublerPanel.Controls.Add(pictureBox13);
             doublerPanel.Controls.Add(label9);
             doublerPanel.Controls.Add(roundedPanel4);
-            doublerPanel.Location = new System.Drawing.Point(12, 268);
+            doublerPanel.Location = new System.Drawing.Point(702, 12);
             doublerPanel.Margin = new System.Windows.Forms.Padding(12);
             doublerPanel.Name = "doublerPanel";
             doublerPanel.Size = new System.Drawing.Size(206, 232);
@@ -601,7 +512,7 @@
             skipPanel.Controls.Add(pictureBox16);
             skipPanel.Controls.Add(roundedPanel5);
             skipPanel.Controls.Add(label8);
-            skipPanel.Location = new System.Drawing.Point(242, 268);
+            skipPanel.Location = new System.Drawing.Point(12, 268);
             skipPanel.Margin = new System.Windows.Forms.Padding(12);
             skipPanel.Name = "skipPanel";
             skipPanel.Size = new System.Drawing.Size(206, 232);
@@ -710,116 +621,6 @@
             label8.TabIndex = 14;
             label8.Text = "Double Stars";
             // 
-            // panel8
-            // 
-            panel8.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
-            panel8.Controls.Add(roundedPanel13);
-            panel8.Controls.Add(pictureBox17);
-            panel8.Controls.Add(roundedPanel1);
-            panel8.Controls.Add(label7);
-            panel8.Location = new System.Drawing.Point(472, 268);
-            panel8.Margin = new System.Windows.Forms.Padding(12);
-            panel8.Name = "panel8";
-            panel8.Size = new System.Drawing.Size(206, 232);
-            panel8.TabIndex = 20;
-            // 
-            // roundedPanel13
-            // 
-            roundedPanel13.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
-            roundedPanel13.BorderRadius = 40;
-            roundedPanel13.Controls.Add(label25);
-            roundedPanel13.Controls.Add(pictureBox22);
-            roundedPanel13.ForeColor = System.Drawing.Color.Black;
-            roundedPanel13.Location = new System.Drawing.Point(46, 173);
-            roundedPanel13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            roundedPanel13.Name = "roundedPanel13";
-            roundedPanel13.Size = new System.Drawing.Size(117, 45);
-            roundedPanel13.TabIndex = 31;
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.BackColor = System.Drawing.Color.Transparent;
-            label25.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
-            label25.ForeColor = System.Drawing.Color.White;
-            label25.Location = new System.Drawing.Point(51, 6);
-            label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label25.Name = "label25";
-            label25.Size = new System.Drawing.Size(52, 32);
-            label25.TabIndex = 16;
-            label25.Text = "x 8";
-            // 
-            // pictureBox22
-            // 
-            pictureBox22.Image = (System.Drawing.Image)resources.GetObject("pictureBox22.Image");
-            pictureBox22.Location = new System.Drawing.Point(15, 6);
-            pictureBox22.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new System.Drawing.Size(35, 33);
-            pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox22.TabIndex = 0;
-            pictureBox22.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            pictureBox17.Image = Properties.Resources.multiplier;
-            pictureBox17.Location = new System.Drawing.Point(35, 21);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new System.Drawing.Size(140, 140);
-            pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox17.TabIndex = 27;
-            pictureBox17.TabStop = false;
-            // 
-            // roundedPanel1
-            // 
-            roundedPanel1.BackColor = System.Drawing.Color.FromArgb(182, 189, 202);
-            roundedPanel1.BorderRadius = 40;
-            roundedPanel1.Controls.Add(label6);
-            roundedPanel1.Controls.Add(pictureBox1);
-            roundedPanel1.ForeColor = System.Drawing.Color.Black;
-            roundedPanel1.Location = new System.Drawing.Point(83, 344);
-            roundedPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            roundedPanel1.Name = "roundedPanel1";
-            roundedPanel1.Size = new System.Drawing.Size(127, 47);
-            roundedPanel1.TabIndex = 19;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = System.Drawing.Color.Transparent;
-            label6.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
-            label6.ForeColor = System.Drawing.Color.White;
-            label6.Location = new System.Drawing.Point(54, 3);
-            label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            label6.Size = new System.Drawing.Size(52, 32);
-            label6.TabIndex = 16;
-            label6.Text = "x 6";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new System.Drawing.Point(18, 5);
-            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(35, 35);
-            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = System.Drawing.Color.Transparent;
-            label7.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
-            label7.Location = new System.Drawing.Point(49, 298);
-            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(176, 32);
-            label7.TabIndex = 14;
-            label7.Text = "Double Stars";
-            // 
             // panel9
             // 
             panel9.BackColor = System.Drawing.Color.FromArgb(228, 234, 239);
@@ -827,7 +628,7 @@
             panel9.Controls.Add(pictureBox18);
             panel9.Controls.Add(roundedPanel2);
             panel9.Controls.Add(label11);
-            panel9.Location = new System.Drawing.Point(702, 268);
+            panel9.Location = new System.Drawing.Point(242, 268);
             panel9.Margin = new System.Windows.Forms.Padding(12);
             panel9.Name = "panel9";
             panel9.Size = new System.Drawing.Size(206, 232);
@@ -1133,11 +934,6 @@
             Text = "GeoMind";
             Click += Shop_Click;
             shopFlowLayout.ResumeLayout(false);
-            multiplierPanel.ResumeLayout(false);
-            roundedPanel3.ResumeLayout(false);
-            roundedPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             immunityPanel.ResumeLayout(false);
             roundedPanel8.ResumeLayout(false);
             roundedPanel8.PerformLayout();
@@ -1175,15 +971,6 @@
             roundedPanel5.ResumeLayout(false);
             roundedPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            roundedPanel13.ResumeLayout(false);
-            roundedPanel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
-            roundedPanel1.ResumeLayout(false);
-            roundedPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
             roundedPanel14.ResumeLayout(false);
@@ -1209,7 +996,6 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel shopFlowLayout;
-        private System.Windows.Forms.Panel multiplierPanel;
         private System.Windows.Forms.Panel immunityPanel;
         private System.Windows.Forms.Panel eliminatePanel;
         private System.Windows.Forms.Panel skipPanel;
@@ -1239,20 +1025,11 @@
         private System.Windows.Forms.PictureBox shopButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox leaderboardButton;
-        private System.Windows.Forms.Panel panel8;
-        private RoundedPanel roundedPanel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel9;
         private RoundedPanel roundedPanel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private RoundedPanel roundedPanel3;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private RoundedPanel roundedPanel8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -1267,7 +1044,6 @@
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.PictureBox pictureBox18;
         private RoundedPanel roundedPanel11;
         private System.Windows.Forms.Label label23;
@@ -1275,9 +1051,6 @@
         private RoundedPanel roundedPanel12;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pictureBox21;
-        private RoundedPanel roundedPanel13;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.PictureBox pictureBox22;
         private RoundedPanel roundedPanel14;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.PictureBox pictureBox23;

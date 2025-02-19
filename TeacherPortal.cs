@@ -89,6 +89,9 @@ namespace defaultwinform
 
                     assignedFlowLayoutPanel.Controls.Add(panel);
 
+                    deleteIcon.Click += unassignClick;
+
+
                     QuizPanel quizPanel = new QuizPanel(quiz, panel, deleteIcon);
 
                     QuizDAO.addQuizPanel(quizPanel);
@@ -184,6 +187,32 @@ namespace defaultwinform
                     QuizDAO.addQuizPanel(quizPanel);
 
                     builtQuizzes.Add(quiz);
+                }
+            }
+        }
+
+        private void unassignClick(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                foreach (QuizPanel quizPanel in QuizDAO.getQuizPanels().ToList())
+                {
+                    if (quizPanel.getAddIcon() != null)
+                    {
+                        if (quizPanel.getAddIcon().Equals(control))
+                        {
+                            QuizDAO.deleteFromDrive(quizPanel.getQuiz());
+                            QuizDAO.removeAssignedQuiz(quizPanel.getQuiz());
+                            QuizDAO.addUnassignedQuiz(quizPanel.getQuiz());
+
+                            unassignedFlowLayoutPanel.Controls.Clear();
+                            assignedFlowLayoutPanel.Controls.Clear();
+
+                            builtQuizzes.Clear();
+
+                            buildQuizPanels();
+                        }
+                    }
                 }
             }
         }

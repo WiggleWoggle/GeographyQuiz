@@ -179,20 +179,8 @@ namespace defaultwinform
 
             String question = questionLabel.Text;
 
-            secondaryQuestionLabel.Visible = false;
-            questionLabel.Location = new Point(4, 0);
-
-            //
-            if (question.Length > 60)
-            {
-                questionLabel.Text = splitQuestion(question, true);
-                secondaryQuestionLabel.Visible = true;
-                questionLabel.Location = new Point(4, 20);
-                secondaryQuestionLabel.Text = splitQuestion(question, false);
-            }
-
-            //questionLabel.Text = splitQuestion(question, true);
-            //secondaryQuestionLabel.Text = splitQuestion(question, false);
+            questionLabel.Text = splitQuestion(question, true);
+            secondaryQuestionLabel.Text = splitQuestion(question, false);
             currentQuestionValue = currentQuestion.getStarValue();
 
             starValueLabel.Text = "+ " + currentQuestionValue;
