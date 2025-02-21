@@ -118,11 +118,15 @@ namespace defaultwinform
 
         public static List<Quiz> getAssignedQuizzes()
         {
+            assignedQuizzes = assignedQuizzes.OrderBy(quiz => quiz.getTitle()).ToList();
+
             return assignedQuizzes;
         }
 
         public static List<Quiz> getUnAssignedQuizzes()
         {
+            unAssignedQuizzes = unAssignedQuizzes.OrderBy(quiz => quiz.getTitle()).ToList();
+
             return unAssignedQuizzes;
         }
 
@@ -291,13 +295,16 @@ namespace defaultwinform
 
         public static DriveService authenticateDriveService()
         {
+            //create an empty google credential
             GoogleCredential credential;
+            //open a new filestream passing in the google service key path, the permission to open files, and the permission to read files
             using (var stream = new FileStream(ServiceAccountJsonPath, FileMode.Open, FileAccess.Read))
             {
+                //build the credential from the result of a successful filestream opening and give it the specific scopes
                 credential = GoogleCredential.FromStream(stream)
                     .CreateScoped(DriveService.ScopeConstants.Drive);
             }
-
+            //return the result of building a basic client Drive Service from the credential and assign it a name for clarity
             return new DriveService(new BaseClientService.Initializer()
             {
                 HttpClientInitializer = credential,
@@ -307,14 +314,17 @@ namespace defaultwinform
 
         public static async Task<List<Google.Apis.Drive.v3.Data.File>> retrieveDriveFiles()
         {
+            //create a driveservice
             var service = authenticateDriveService();
+            //format the request thatll be sent into a list of Google Drive Files but make it ambiguous
             var request = service.Files.List();
+            //format the request so that it will only go to the folder its assigned and only retrieve text files
             request.Q = $"'{assignedFolderId}' in parents and mimeType='text/plain'";
-
+            //format the request so it retrieves the fields id and name
             request.Fields = "files(id, name)";
-
+            //execute the request and assign the returned Drive Files to another ambiguous var
             var result = request.Execute();
-
+            //return result
             return result.Files.ToList();
         }
 

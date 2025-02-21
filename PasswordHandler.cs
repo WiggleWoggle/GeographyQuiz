@@ -154,12 +154,12 @@ namespace defaultwinform
 
         public static Boolean containsLetters(String field)
         {
-
+            //if the string contains a letter from a-z uppercase or lowercase return true
             if (Regex.IsMatch(field, ".*?[a-zA-Z].*?"))
             {
                 return true;
             }
-
+            //otherwise return false
             return false;
         }
 
@@ -256,17 +256,18 @@ namespace defaultwinform
         //SHA256 Encryption
         public static String SHA256Hash(String password)
         {
-
+            //create a sha hashing object
             var sha256 = SHA256.Create();
+            //split the password into bytes, hash the bytes, and return them as a list of hashed bytes
             byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-
+            //create a stringbuilder object
             StringBuilder stringBuilder = new StringBuilder();
-
+            //for every byte, append it to the string
             for (int i = 0; i < bytes.Length; i++)
             {
                 stringBuilder.Append(bytes[i].ToString("x2"));
             }
-
+            //build and return the string
             return stringBuilder.ToString();
         }
     }

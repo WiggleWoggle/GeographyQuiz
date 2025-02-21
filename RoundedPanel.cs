@@ -40,19 +40,24 @@ namespace defaultwinform
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            //override the onPaint event
             base.OnPaint(e);
-
+            //create a paintable rectangle drawing passing in the width and height the control is scaled to
             RectangleF rectangleF = new RectangleF(0, 0, this.Width, this.Height);
-
+            //keep the panel from having a radius below 2 that would cause visual errors
             if (borderRadius > 2)
             {
+                //start drawing a bordered rectangle
                 using (GraphicsPath path = GetPanelPath(rectangleF, borderRadius))
+                //assign a color to the drawn shape
                 using (Pen pen = new Pen(this.Parent.BackColor, 2))
                 {
+                    //update the shape and draw it
                     this.Region = new Region(path);
                     e.Graphics.DrawPath(pen, path);
                 }
             }
+            //default to a normal rectangle if under 2 radius
             else
             {
                 this.Region = new Region(rectangleF);
