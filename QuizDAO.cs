@@ -178,11 +178,7 @@ namespace defaultwinform
             var file = request.ResponseBody;
         }
 
-        public static void deleteFromDrive(Quiz quiz)
-        {
-
-
-        }
+       
 
         private static String createQuizFile(String fileName, Quiz quiz)
         {
@@ -341,6 +337,27 @@ namespace defaultwinform
             return result.Files.ToList();
         }
 
+        public static void deleteFromDrive(Quiz quiz)
+        {
+
+            var service = authenticateDriveService();
+
+            var request = service.Files.List();
+            request.Q = $"'{assignedFolderId}' in parents and mimeType='text/plain'";
+
+            request.Fields = "files(id, name)";
+
+            var result = request.Execute();
+
+            List<Google.Apis.Drive.v3.Data.File> fileList = result.Files.ToList();
+
+            foreach (var file in fileList)
+            {
+                FilesResource.DeleteRequest deleteRequest = service.Files.Delete(file.Id);
+                deleteRequest.Execute();
+            }
+        }
+
         public async static Task createQuizObjectsFromFile()
         {
             List<Google.Apis.Drive.v3.Data.File> files = await retrieveDriveFiles(); 
@@ -374,7 +391,7 @@ namespace defaultwinform
         private static async Task processFile(string fileId, Boolean assigned)
         {
             string content = await readQuizFileAsync(fileId);
-            await Task.Run(() => buildQuizObject(content, assigned));
+            await Task.Run(() => buildQuizObject(content, assigned, fileId));
         }
 
         public static async Task<string> readQuizFileAsync(String fileID)
@@ -393,10 +410,10 @@ namespace defaultwinform
             }
         }
 
-        public static async Task buildQuizObject(String content, Boolean assigned)
+        public static async Task buildQuizObject(String content, Boolean assigned, String fileID)
         {
             Quiz quiz = new Quiz();
-
+            quiz.setFileID(fileID);
 
             await Task.Run(() => readLines(quiz, content, assigned));
 

@@ -201,6 +201,7 @@ namespace defaultwinform
                     {
                         if (quizPanel.getAddIcon().Equals(control))
                         {
+
                             QuizDAO.deleteFromDrive(quizPanel.getQuiz());
                             QuizDAO.removeAssignedQuiz(quizPanel.getQuiz());
                             QuizDAO.addUnassignedQuiz(quizPanel.getQuiz());

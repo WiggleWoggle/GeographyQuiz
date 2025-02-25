@@ -13,6 +13,7 @@ namespace defaultwinform
         String imageURL;
         String topic;
         String title;
+        String fileID;
 
         String quizID;
 
@@ -52,6 +53,17 @@ namespace defaultwinform
         {
             return title;
         }
+
+        public void setFileID(String fileID)
+        {
+            this.fileID = fileID;
+        }
+
+        public String getFileID()
+        {
+            return fileID;
+        }
+
         public void setQuizID(String quizID)
         {
             this.quizID = quizID;

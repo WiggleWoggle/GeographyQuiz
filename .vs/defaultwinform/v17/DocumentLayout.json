@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\quizdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quizdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\teacherportal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:teacherportal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\quiztakingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quiztakingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\quizpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quizpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\userquizinformationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:userquizinformationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\passwordhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:passwordhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\quiztakingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quiztakingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\truefalsequestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\userquizinformationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:userquizinformationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\quizeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quizeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -103,14 +115,6 @@
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\quizpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quizpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\teacherportal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:teacherportal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -125,10 +129,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|solutionrelative:quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1C1E38-1959-4A27-ABA3-4A204E2EAA22}|defaultwinform.csproj|c:\\users\\s195870\\source\\repos\\geographyquiz\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -146,65 +146,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "LeaderboardForm.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\LeaderboardForm.cs",
               "RelativeDocumentMoniker": "LeaderboardForm.cs",
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\LeaderboardForm.cs",
               "RelativeToolTip": "LeaderboardForm.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAewBUAAAAzAAAA",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAEwBUAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T16:07:52.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 5,
               "Title": "UserQuizInformationDAO.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\UserQuizInformationDAO.cs",
               "RelativeDocumentMoniker": "UserQuizInformationDAO.cs",
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\UserQuizInformationDAO.cs",
               "RelativeToolTip": "UserQuizInformationDAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAgwCoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T16:06:51.387Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 4,
               "Title": "QuizPanel.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizPanel.cs",
               "RelativeDocumentMoniker": "QuizPanel.cs",
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizPanel.cs",
               "RelativeToolTip": "QuizPanel.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAcwEoAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAgwEoAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T15:45:38.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "QuizTakingForm.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizTakingForm.cs",
               "RelativeDocumentMoniker": "QuizTakingForm.cs",
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizTakingForm.cs",
               "RelativeToolTip": "QuizTakingForm.cs",
-              "ViewState": "AQIAAKgAAAAAAAAAAAAawNsAAAAAAAAA",
+              "ViewState": "AQIAACUCAAAAAAAAAAAvwNsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T15:11:54.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "QuizEditorForm.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizEditorForm.cs",
               "RelativeDocumentMoniker": "QuizEditorForm.cs",
@@ -217,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "GradesForm.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\GradesForm.cs",
               "RelativeDocumentMoniker": "GradesForm.cs",
@@ -230,20 +226,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 1,
               "Title": "TeacherPortal.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\TeacherPortal.cs",
               "RelativeDocumentMoniker": "TeacherPortal.cs",
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\TeacherPortal.cs",
               "RelativeToolTip": "TeacherPortal.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA8wMsAAAAtAAAA",
+              "ViewState": "AQIAALsAAAAAAAAAAAAlwMoAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T15:41:16.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -256,19 +252,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "QuizDAO.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizDAO.cs",
               "RelativeDocumentMoniker": "QuizDAO.cs",
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizDAO.cs",
               "RelativeToolTip": "QuizDAO.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAAAH0AAAA3AAAA",
+              "ViewState": "AQIAAFYBAAAAAAAAAAAWwGoBAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:00:56.699Z"
+              "WhenOpened": "2024-12-12T16:00:56.699Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "AccountDAO.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\AccountDAO.cs",
               "RelativeDocumentMoniker": "AccountDAO.cs",
@@ -280,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "UserAccount.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\UserAccount.cs",
               "RelativeDocumentMoniker": "UserAccount.cs",
@@ -292,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "MultipleChoice.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\MultipleChoice.cs",
               "RelativeDocumentMoniker": "MultipleChoice.cs",
@@ -316,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "ShortResponse.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\ShortResponse.cs",
               "RelativeDocumentMoniker": "ShortResponse.cs",
@@ -328,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "PasswordHandler.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\PasswordHandler.cs",
               "RelativeDocumentMoniker": "PasswordHandler.cs",
@@ -340,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Shop.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Shop.cs",
               "RelativeDocumentMoniker": "Shop.cs",
@@ -353,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "TrueFalseQuestion.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\TrueFalseQuestion.cs",
               "RelativeDocumentMoniker": "TrueFalseQuestion.cs",
@@ -377,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -389,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "SignupForm.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\SignupForm.cs",
               "RelativeDocumentMoniker": "SignupForm.cs",
@@ -402,19 +399,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 2,
               "Title": "Quiz.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Quiz.cs",
               "RelativeDocumentMoniker": "Quiz.cs",
               "ToolTip": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Quiz.cs",
               "RelativeToolTip": "Quiz.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAawDsAAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T20:13:40.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "RoundedPanel.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\RoundedPanel.cs",
               "RelativeDocumentMoniker": "RoundedPanel.cs",
@@ -426,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
@@ -438,8 +435,12 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "GradesForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\GradesForm.cs",
               "RelativeDocumentMoniker": "GradesForm.cs",
@@ -450,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "TeacherPortal.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\TeacherPortal.cs",
               "RelativeDocumentMoniker": "TeacherPortal.cs",
@@ -461,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "LeaderboardForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\LeaderboardForm.cs",
               "RelativeDocumentMoniker": "LeaderboardForm.cs",
@@ -472,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -483,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "QuizEditorForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizEditorForm.cs",
               "RelativeDocumentMoniker": "QuizEditorForm.cs",
@@ -494,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "QuestionEditingPrompt.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuestionEditingPrompt.cs",
               "RelativeDocumentMoniker": "QuestionEditingPrompt.cs",
@@ -505,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "QuizTakingForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\QuizTakingForm.cs",
               "RelativeDocumentMoniker": "QuizTakingForm.cs",
@@ -516,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",
@@ -527,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Shop.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\Shop.cs",
               "RelativeDocumentMoniker": "Shop.cs",
@@ -538,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "SignupForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\SignupForm.cs",
               "RelativeDocumentMoniker": "SignupForm.cs",
@@ -549,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\s195870\\source\\repos\\GeographyQuiz\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
